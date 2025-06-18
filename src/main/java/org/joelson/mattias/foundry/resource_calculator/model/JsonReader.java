@@ -7,15 +7,23 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class JsonReader {
+class JsonReader {
 
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    public JsonCalculatorConfig readJsonCalculatorConfig(Path calculatorConfigPath) throws IOException {
+    private JsonReader() throws InstantiationException {
+        throw new InstantiationException("Should not be instantiated.");
+    }
+
+    public static JsonCalculatorConfig readJsonCalculatorConfig(Path calculatorConfigPath) throws IOException {
         return readValue(Files.readString(calculatorConfigPath), JsonCalculatorConfig.class);
     }
 
-    private <T> T readValue(String content, Class<T> valueType) throws JsonProcessingException {
+    public static JsonCalculatorGoals readJsonCalculatorGoals(Path calculatorGoalsPath) throws IOException {
+        return readValue(Files.readString(calculatorGoalsPath), JsonCalculatorGoals.class);
+    }
+
+    private static <T> T readValue(String content, Class<T> valueType) throws JsonProcessingException {
         return objectMapper.readValue(content, valueType);
     }
 }

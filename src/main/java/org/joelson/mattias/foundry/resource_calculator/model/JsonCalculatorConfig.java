@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-public record JsonCalculatorConfig(
+record JsonCalculatorConfig(
         List<JsonMaker> makers,
         List<JsonItem> items,
         List<JsonRecipe> recipes)

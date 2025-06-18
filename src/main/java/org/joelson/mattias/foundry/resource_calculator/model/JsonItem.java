@@ -3,13 +3,12 @@ package org.joelson.mattias.foundry.resource_calculator.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public record JsonItem(
+record JsonItem(
         String name,
         String gameName,
         String description,
         int stackSize,
-        float weight)
-        implements JsonNamedObject {
+        float weight) {
 
     @JsonCreator
     public JsonItem(

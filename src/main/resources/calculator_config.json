@@ -36,7 +36,7 @@
       "description": "",
       "itemName": "xenoferrite-plates",
       "ingredients": {
-        "xeneferrite-ore": 1
+        "xenoferrite-ore-rubble": 1
       },
       "itemsProduced": 1,
       "time": 3,

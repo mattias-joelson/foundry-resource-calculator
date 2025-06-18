@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 import java.util.Map;
 
-public record JsonRecipe(
+record JsonRecipe(
         String name,
         String gameName,
         String description,
@@ -14,8 +14,7 @@ public record JsonRecipe(
         Map<String, Integer> ingredients,
         int itemsProduced,
         int time,
-        List<String> makerNames)
-        implements JsonNamedObject {
+        List<String> makerNames) {
 
     @JsonCreator
     public JsonRecipe(
