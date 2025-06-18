@@ -1,0 +1,49 @@
+{
+  "makers": [
+    {
+      "name": "smelter",
+      "gameName": "Smelter (small)",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
+      "name": "advanced-smelter",
+      "gameName": "Advanced Smelter",
+      "description": "",
+      "speedMultiplier": 1.5
+    }
+  ],
+  "items": [
+    {
+      "name": "xenoferrite-ore-rubble",
+      "gameName": "Xenoferrite Ore Rubble",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1
+    },
+    {
+      "name": "xenoferrite-plates",
+      "gameName": "Xenoferrite Plates",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1
+    }
+  ],
+  "recipes": [
+    {
+      "name": "xenoferrite-plates-1",
+      "gameName": "Xenoferrite Plates (Tier 1)",
+      "description": "",
+      "itemName": "xenoferrite-plates",
+      "ingredients": {
+        "xeneferrite-ore": 1
+      },
+      "itemsProduced": 1,
+      "time": 3,
+      "makerNames": [
+        "smelter",
+        "advanced-smelter"
+      ]
+    }
+  ]
+}
