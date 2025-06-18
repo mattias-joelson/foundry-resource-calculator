@@ -1,0 +1,16 @@
+[
+  {
+    "name": "xenoferrite-ore-rubble",
+    "gameName": "Xenoferrite Ore Rubble",
+    "description": "",
+    "stackSize": 200,
+    "weight": 1
+  },
+  {
+    "name": "xenoferrite-plates",
+    "gameName": "Xenoferrite Plates",
+    "description": "",
+    "stackSize": 200,
+    "weight": 1
+  }
+]

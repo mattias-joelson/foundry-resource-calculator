@@ -1,0 +1,14 @@
+[
+  {
+    "name": "smelter",
+    "gameName": "Smelter (small)",
+    "description": "",
+    "speedMultiplier": 1.0
+  },
+  {
+    "name": "advanced-smelter",
+    "gameName": "Advanced Smelter",
+    "description": "",
+    "speedMultiplier": 1.5
+  }
+]

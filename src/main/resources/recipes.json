@@ -1,0 +1,17 @@
+[
+  {
+    "name": "xenoferrite-plates-1",
+    "gameName": "Xenoferrite Plates (Tier 1)",
+    "description": "",
+    "itemName": "xenoferrite-plates",
+    "ingredients": {
+      "xeneferrite-ore": 1
+    },
+    "itemsProduced": 1,
+    "time": 3,
+    "makerNames": [
+      "smelter",
+      "advanced-smelter"
+    ]
+  }
+]
