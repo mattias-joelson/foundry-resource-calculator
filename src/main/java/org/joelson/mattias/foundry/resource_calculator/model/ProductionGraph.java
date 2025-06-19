@@ -55,11 +55,19 @@ public class ProductionGraph {
             for (ProductionGraphNode productionGraphNode : productionGraphLevels.get(level)) {
                 float itemsPerMinute = productionGraphNode.getItemsPerMinute();
                 if (itemsPerMinute > 0) {
-                    System.out.printf("%s: %.3f (%.3f -> %.0f belts-2)%n", productionGraphNode.getItem().gameName(),
-                            itemsPerMinute, itemsPerMinute / 320, Math.ceil(itemsPerMinute / 320));
+                    System.out.printf("%s%s: %.3f (%.3f -> %.0f belts-2)%n", productionGraphNode.getItem().gameName(),
+                            recipeGameNameOf(productionGraphNode), itemsPerMinute, itemsPerMinute / 320,
+                            Math.ceil(itemsPerMinute / 320));
                 }
             }
         }
+    }
+
+    private String recipeGameNameOf(ProductionGraphNode productionGraphNode) {
+        if (productionGraphNode.getRecipe() != null) {
+            return String.format(" (%s)", productionGraphNode.getRecipe().gameName());
+        }
+        return "";
     }
 
     public static ProductionGraph from(CalculatorConfig calculatorConfig) {
