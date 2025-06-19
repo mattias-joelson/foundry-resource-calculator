@@ -12,7 +12,7 @@ public class ProductionGraph {
     private final Map<String, ProductionGraphNode> itemNodeMap;
     private final ArrayList<Set<ProductionGraphNode>> productionGraphLevels;
 
-    public ProductionGraph(
+    private ProductionGraph(
             Map<String, ProductionGraphNode> itemNodeMap,
             ArrayList<Set<ProductionGraphNode>> productionGraphLevels) {
         this.itemNodeMap = Objects.requireNonNull(itemNodeMap);
