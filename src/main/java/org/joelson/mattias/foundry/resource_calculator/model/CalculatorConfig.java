@@ -2,6 +2,8 @@ package org.joelson.mattias.foundry.resource_calculator.model;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -25,12 +27,28 @@ public class CalculatorConfig {
         return items.get(itemName);
     }
 
+    public Collection<Recipe> getRecipes() {
+        return recipes.values();
+    }
+
+    public Recipe getRecipe(String itemName) {
+        return recipes.get(itemName);
+    }
+
     public static CalculatorConfig fromPath(Path calculatorConfigPath) throws IOException {
         JsonCalculatorConfig jsonCalculatorConfig = JsonReader.readJsonCalculatorConfig(calculatorConfigPath);
         Set<Maker> makers = makersFrom(jsonCalculatorConfig.makers());
         Map<String, Maker> makersMap = makers.stream().collect(Collectors.toMap(Maker::name, Function.identity()));
         Map<String, Item> items = itemsFrom(jsonCalculatorConfig.items());
         Map<String, Recipe> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makersMap);
+        Set<String> itemNames = items.keySet();
+        Set<String> recipeItemNames = recipes.keySet();
+        if (!recipeItemNames.containsAll(itemNames)) {
+            itemNames = new HashSet<>(itemNames);
+            itemNames.removeAll(recipeItemNames);
+            System.err.println("Lacking recipes for " + itemNames);
+            //throw new IllegalStateException("Lacking recipes for " + itemNames);
+        }
         return new CalculatorConfig(makers, items, recipes);
     }
 
@@ -61,7 +79,8 @@ public class CalculatorConfig {
         Map<Item, Integer> ingredients = jsonRecipe.ingredients().entrySet().stream()
                 .map(nameIntegerEntry -> Map.entry(items.get(nameIntegerEntry.getKey()), nameIntegerEntry.getValue()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        Set<Maker> recipeMakers = jsonRecipe.makerNames().stream().map(makers::get).collect(Collectors.toSet());
+        Set<Maker> recipeMakers = jsonRecipe.makerNames().stream()
+                .map(makerName -> Objects.requireNonNull(makers.get(makerName))).collect(Collectors.toSet());
         return new Recipe(jsonRecipe.name(), jsonRecipe.gameName(), items.get(jsonRecipe.itemName()), ingredients,
                 jsonRecipe.itemsProduced(), jsonRecipe.time(), recipeMakers);
     }

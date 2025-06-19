@@ -14,10 +14,15 @@ public class CalculatorGoals {
         this.productionGoals = Objects.requireNonNull(productionGoals);
     }
 
+    public Map<Item, Integer> getProductionGoals() {
+        return productionGoals;
+    }
+
     public static CalculatorGoals fromPath(Path goalsPath, CalculatorConfig calculatorConfig) throws IOException {
         JsonCalculatorGoals jsonCalculatorGoals = JsonReader.readJsonCalculatorGoals(goalsPath);
         Map<Item, Integer> productionGoals = jsonCalculatorGoals.productionGoals().entrySet().stream().collect(
-                Collectors.toMap(entry -> calculatorConfig.getItem(entry.getKey()), Map.Entry::getValue));
+                Collectors.toMap(entry -> Objects.requireNonNull(calculatorConfig.getItem(entry.getKey())),
+                        Map.Entry::getValue));
         return new CalculatorGoals(productionGoals);
     }
 }

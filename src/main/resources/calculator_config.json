@@ -11,6 +11,12 @@
       "gameName": "Advanced Smelter",
       "description": "",
       "speedMultiplier": 1.5
+    },
+    {
+      "name": "assembler-1",
+      "gameName": "Assembler I",
+      "description": "",
+      "speedMultiplier": 1.0
     }
   ],
   "items": [
@@ -19,30 +25,168 @@
       "gameName": "Xenoferrite Ore Rubble",
       "description": "",
       "stackSize": 200,
-      "weight": 1
+      "weight": 1.0
+    },
+    {
+      "name": "technum-ore-rubble",
+      "gameName": "Technum Ore Rubble",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
     },
     {
       "name": "xenoferrite-plates",
       "gameName": "Xenoferrite Plates",
       "description": "",
       "stackSize": 200,
-      "weight": 1
+      "weight": 1.0
+    },
+    {
+      "name": "building-block",
+      "gameName": "Building Block",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-1",
+      "gameName": "Conveyor I",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "machinery-parts",
+      "gameName": "Machinery Parts",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "technum-rods",
+      "gameName": "Technum Rods",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "science-pack-1",
+      "gameName": "Science Pack I",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
+    },
+    {
+      "name": "science-pack-2",
+      "gameName": "Science Pack II",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
     }
   ],
   "recipes": [
     {
       "name": "xenoferrite-plates-1",
-      "gameName": "Xenoferrite Plates (Tier 1)",
+      "gameName": "Xenoferrite Plates (Tier 1) (Recipe)",
       "description": "",
       "itemName": "xenoferrite-plates",
       "ingredients": {
         "xenoferrite-ore-rubble": 1
       },
       "itemsProduced": 1,
-      "time": 3,
+      "time": 3.0,
       "makerNames": [
         "smelter",
         "advanced-smelter"
+      ]
+    },
+    {
+      "name": "technum-rods-1",
+      "gameName": "Technum Rods (Tier 1) (Recipe)",
+      "description": "",
+      "itemName": "technum-rods",
+      "ingredients": {
+        "technum-ore-rubble": 1
+      },
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerNames": [
+        "smelter",
+        "advanced-smelter"
+      ]
+    },
+    {
+      "name": "building-block",
+      "gameName": "Building Block (Recipe)",
+      "description": "",
+      "itemName": "building-block",
+      "ingredients": {
+        "xenoferrite-plates": 6,
+        "technum-rods": 4
+      },
+      "itemsProduced": 20,
+      "time": 5.0,
+      "makerNames": [
+        "assembler-1"
+      ]
+    },
+    {
+      "name": "conveyor-1",
+      "gameName": "Conveyor I (Recipe)",
+      "description": "",
+      "itemName": "conveyor-1",
+      "ingredients": {
+        "xenoferrite-plates": 1,
+        "machinery-parts": 1
+      },
+      "itemsProduced": 2,
+      "time": 3.0,
+      "makerNames": [
+        "assembler-1"
+      ]
+    },
+    {
+      "name": "machinery-parts",
+      "gameName": "Machinery Parts (Recipe)",
+      "description": "",
+      "itemName": "machinery-parts",
+      "ingredients": {
+        "xenoferrite-plates": 1
+      },
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerNames": [
+        "assembler-1"
+      ]
+    },
+    {
+      "name": "science-pack-1",
+      "gameName": "Science Pack I (Recipe)",
+      "description": "",
+      "itemName": "science-pack-1",
+      "ingredients": {
+        "machinery-parts": 5,
+        "technum-rods": 4
+      },
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerNames": [
+        "assembler-1"
+      ]
+    },
+    {
+      "name": "science-pack-2",
+      "gameName": "Science Pack II (Recipe)",
+      "description": "",
+      "itemName": "science-pack-2",
+      "ingredients": {
+        "conveyor-1": 3,
+        "building-block": 6
+      },
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerNames": [
+        "assembler-1"
       ]
     }
   ]
