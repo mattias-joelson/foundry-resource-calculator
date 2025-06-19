@@ -6,16 +6,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public class CalculatorGoals {
-
-    private final Map<Item, Integer> productionGoals;
+public record CalculatorGoals(Map<Item, Integer> productionGoals) {
 
     public CalculatorGoals(Map<Item, Integer> productionGoals) {
         this.productionGoals = Objects.requireNonNull(productionGoals);
-    }
-
-    public Map<Item, Integer> getProductionGoals() {
-        return productionGoals;
     }
 
     public static CalculatorGoals fromPath(Path goalsPath, CalculatorConfig calculatorConfig) throws IOException {
