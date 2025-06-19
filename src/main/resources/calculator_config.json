@@ -17,8 +17,31 @@
       "gameName": "Assembler I",
       "description": "",
       "speedMultiplier": 1.0
+    },
+    {
+      "name": "assembler-2",
+      "gameName": "Assembler II",
+      "description": "",
+      "speedMultiplier": 1.5
+    },
+    {
+      "name": "assembler-3",
+      "gameName": "Assembler III",
+      "description": "",
+      "speedMultiplier": 2.0
     }
   ],
+  "makerGroups": {
+    "assemblers": [
+      "assembler-1",
+      "assembler-2",
+      "assembler-3"
+    ],
+    "smelters": [
+      "smelter",
+      "advanced-smelter"
+    ]
+  },
   "items": [
     {
       "name": "xenoferrite-ore-rubble",
@@ -95,10 +118,7 @@
       },
       "itemsProduced": 1,
       "time": 3.0,
-      "makerNames": [
-        "smelter",
-        "advanced-smelter"
-      ]
+      "makerName": "smelters"
     },
     {
       "name": "technum-rods-1",
@@ -110,10 +130,7 @@
       },
       "itemsProduced": 1,
       "time": 3.0,
-      "makerNames": [
-        "smelter",
-        "advanced-smelter"
-      ]
+      "makerName": "smelters"
     },
     {
       "name": "building-block",
@@ -126,9 +143,7 @@
       },
       "itemsProduced": 20,
       "time": 5.0,
-      "makerNames": [
-        "assembler-1"
-      ]
+      "makerName": "assemblers"
     },
     {
       "name": "conveyor-1",
@@ -141,9 +156,7 @@
       },
       "itemsProduced": 2,
       "time": 3.0,
-      "makerNames": [
-        "assembler-1"
-      ]
+      "makerName": "assemblers"
     },
     {
       "name": "machinery-parts",
@@ -155,9 +168,7 @@
       },
       "itemsProduced": 1,
       "time": 1.5,
-      "makerNames": [
-        "assembler-1"
-      ]
+      "makerName": "assemblers"
     },
     {
       "name": "science-pack-1",
@@ -170,9 +181,7 @@
       },
       "itemsProduced": 1,
       "time": 30.0,
-      "makerNames": [
-        "assembler-1"
-      ]
+      "makerName": "assemblers"
     },
     {
       "name": "science-pack-2",
@@ -185,9 +194,7 @@
       },
       "itemsProduced": 1,
       "time": 30.0,
-      "makerNames": [
-        "assembler-1"
-      ]
+      "makerName": "assemblers"
     }
   ]
 }
