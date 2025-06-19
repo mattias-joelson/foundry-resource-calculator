@@ -49,7 +49,7 @@ public class FoundryResourceCalculator {
     private void calculate() {
         ProductionGraph productionGraph = ProductionGraph.from(calculatorConfig);
 
-        productionGraph.addGoals(calculatorGoals.getProductionGoals());
+        productionGraph.addGoals(calculatorGoals.productionGoals());
         productionGraph.calculateProduction();
     }
 }
