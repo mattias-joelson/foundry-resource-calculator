@@ -75,7 +75,7 @@ public class ProductionGraph {
         ArrayList<Set<ProductionGraphNode>> productionGraphLevels = new ArrayList<>();
         Map<String, Integer> productionLevels = new HashMap<>();
 
-        Map<String, String> chosenRecipes = calculatorGoals.recipes();
+        Map<String, Recipe> chosenRecipes = lookupChosenRecipes(calculatorConfig, calculatorGoals.recipes());
 
         for (Item item : calculatorConfig.getItems()) {
             Recipe recipe = chooseRecipe(calculatorConfig, chosenRecipes, item.name());
@@ -87,34 +87,45 @@ public class ProductionGraph {
         return new ProductionGraph(itemNodeMap, productionGraphLevels);
     }
 
+    private static Map<String, Recipe> lookupChosenRecipes(
+            CalculatorConfig calculatorConfig, Map<String, String> chosenRecipeNames) {
+        Map<String, Recipe> chosenRecipes = new HashMap<>();
+        for (Map.Entry<String, String> chosenRecipeName : chosenRecipeNames.entrySet()) {
+            chosenRecipes.put(chosenRecipeName.getKey(),
+                    selectRecipe(calculatorConfig.getRecipes(chosenRecipeName.getKey()), chosenRecipeName.getValue()));
+        }
+        return chosenRecipes;
+    }
+
+    private static Recipe selectRecipe(Set<Recipe> recipes, String recipeName) {
+        for (Recipe recipe : recipes) {
+            if (recipe.name().equals(recipeName)) {
+                return recipe;
+            }
+        }
+        throw new IllegalArgumentException(
+                "No recipe found with name " + recipeName + " for item " + recipes.iterator().next().item().name());
+    }
+
     private static Recipe chooseRecipe(
-            CalculatorConfig calculatorConfig, Map<String, String> chosenRecipes,
+            CalculatorConfig calculatorConfig, Map<String, Recipe> chosenRecipes,
             String itemName) {
-        Set<Recipe> itemRecipes = calculatorConfig.getRecipes(itemName);
-        if (itemRecipes == null) {
+        if (chosenRecipes.containsKey(itemName)) {
+            return chosenRecipes.get(itemName);
+        }
+        Set<Recipe> recipes = calculatorConfig.getRecipes(itemName);
+        if (recipes == null) {
             return null;
         }
-        if (itemRecipes.isEmpty()) {
-            throw new IllegalArgumentException("No recipe exists for " + itemName);
+        if (recipes.size() != 1) {
+            throw new IllegalArgumentException(
+                    "There exists not a single recipe for unchosen item " + itemName + ": " + recipes);
         }
-        if (chosenRecipes.containsKey(itemName)) {
-            String recipeName = chosenRecipes.get(itemName);
-            for (Recipe recipe : itemRecipes) {
-                if (recipe.name().equals(recipeName)) {
-                    return recipe;
-                }
-            }
-            throw new IllegalArgumentException("Recipe " + recipeName + " for item " + itemName + " not found.");
-        } else {
-            if (itemRecipes.size() > 1) {
-                throw new IllegalStateException("Multiple recipes exists for " + itemName);
-            }
-            return itemRecipes.iterator().next();
-        }
+        return recipes.iterator().next();
     }
 
     private static int addRecipe(
-            CalculatorConfig calculatorConfig, Map<String, String> chosenRecipes, Recipe recipe,
+            CalculatorConfig calculatorConfig, Map<String, Recipe> chosenRecipes, Recipe recipe,
             Map<String, ProductionGraphNode> itemNodeMap,
             ArrayList<Set<ProductionGraphNode>> productionGraphLevels, Map<String, Integer> productionLevels) {
         Item item = recipe.item();
