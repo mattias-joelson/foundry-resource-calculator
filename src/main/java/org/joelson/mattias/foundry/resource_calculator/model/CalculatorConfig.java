@@ -25,6 +25,10 @@ public class CalculatorConfig {
         this.recipes = Objects.requireNonNull(recipes);
     }
 
+    public Set<Maker> getMakers(String makerGroupName) {
+        return makerGroups.get(makerGroupName);
+    }
+
     public Set<Item> getItems() {
         Collection<Item> itemCollection = items.values();
         return new HashSet<>(itemCollection);

@@ -3,6 +3,11 @@
     "xenoferrite-plates": "xenoferrite-plates-2",
     "technum-rods": "technum-rods-2"
   },
+  "makers": {
+    "smelters": "smelter",
+    "crushers": "crusher-1",
+    "assemblers": "assembler-1"
+  },
   "productionGoals": {
     "science-pack-1": 21,
     "science-pack-2": 21,
