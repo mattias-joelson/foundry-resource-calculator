@@ -1,14 +1,24 @@
 package org.joelson.mattias.foundry.resource_calculator.model;
 
+import java.util.Objects;
+
 class ProductionGraphNode {
 
     private final Item item;
     private final Recipe recipe;
+    private final Maker maker;
     private float itemsPerMinute = 0;
 
-    public ProductionGraphNode(Item item, Recipe recipe) {
-        this.item = item;
+    public ProductionGraphNode(Item item, Recipe recipe, Maker maker) {
+        this.item = Objects.requireNonNull(item);
         this.recipe = recipe;
+        this.maker = maker;
+
+        if (recipe != null) {
+            Objects.requireNonNull(maker);
+        } else if (maker != null) {
+            throw new NullPointerException();
+        }
     }
 
     public Item getItem() {
@@ -17,6 +27,10 @@ class ProductionGraphNode {
 
     public Recipe getRecipe() {
         return recipe;
+    }
+
+    public Maker getMaker() {
+        return maker;
     }
 
     public float getItemsPerMinute() {

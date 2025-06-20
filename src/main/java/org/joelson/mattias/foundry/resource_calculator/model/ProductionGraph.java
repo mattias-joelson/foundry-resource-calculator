@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class ProductionGraph {
 
@@ -55,12 +56,16 @@ public class ProductionGraph {
             for (ProductionGraphNode productionGraphNode : productionGraphLevels.get(level)) {
                 float itemsPerMinute = productionGraphNode.getItemsPerMinute();
                 if (itemsPerMinute > 0) {
-                    System.out.printf("%s%s: %.3f (%.3f -> %.0f belts-2)%n", productionGraphNode.getItem().gameName(),
-                            recipeGameNameOf(productionGraphNode), itemsPerMinute, itemsPerMinute / 320,
-                            Math.ceil(itemsPerMinute / 320));
+                    printItemProduction(productionGraphNode, itemsPerMinute);
                 }
             }
         }
+    }
+
+    private void printItemProduction(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
+        System.out.printf("%s%s: %.3f (%s)%s%n",
+                productionGraphNode.getItem().gameName(), recipeGameNameOf(productionGraphNode), itemsPerMinute,
+                logisticsOf(productionGraphNode, itemsPerMinute), makersOf(productionGraphNode, itemsPerMinute));
     }
 
     private String recipeGameNameOf(ProductionGraphNode productionGraphNode) {
@@ -70,21 +75,88 @@ public class ProductionGraph {
         return "";
     }
 
+    private String logisticsOf(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
+        if (productionGraphNode.getItem().stackSize() > 0) {
+            return String.format("%.3f -> %.0f conveyor-2", itemsPerMinute / 320, Math.ceil(itemsPerMinute / 320));
+        } else {
+            return String.format("%.3f -> %.0f pipes", itemsPerMinute / 36000, Math.ceil(itemsPerMinute / 36000));
+        }
+    }
+
+    private Object makersOf(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
+        Maker maker = productionGraphNode.getMaker();
+        if (maker != null) {
+            Recipe recipe = productionGraphNode.getRecipe();
+            float productionCyclesPerMinute = 60.0f / recipe.time() * maker.speedMultiplier();
+            String ingredients = recipe.ingredients().entrySet().stream()
+                    .map(itemIntegerEntry -> itemsPerMinute(itemIntegerEntry.getKey(), itemIntegerEntry.getValue(),
+                            productionCyclesPerMinute))
+                    .collect(Collectors.joining(", "));
+            String products = itemsPerMinute(recipe.item(), recipe.itemsProduced(), productionCyclesPerMinute);
+            return String.format(" by %.3f %s (%s -> %s)",
+                    itemsPerMinute / recipe.itemsProduced() / productionCyclesPerMinute, maker.gameName(), ingredients,
+                    products);
+        }
+        return "";
+    }
+
+    private static String itemsPerMinute(Item item, int numberOfItems, float productionCyclesPerMinute) {
+        return String.format("%s %.1f/min", item.gameName(), numberOfItems * productionCyclesPerMinute);
+    }
+
     public static ProductionGraph from(CalculatorConfig calculatorConfig, CalculatorGoals calculatorGoals) {
         Map<String, ProductionGraphNode> itemNodeMap = new HashMap<>();
         ArrayList<Set<ProductionGraphNode>> productionGraphLevels = new ArrayList<>();
         Map<String, Integer> productionLevels = new HashMap<>();
 
+        Map<String, Maker> chosenMakers = lookupChosenMakers(calculatorConfig, calculatorGoals.makers());
         Map<String, Recipe> chosenRecipes = lookupChosenRecipes(calculatorConfig, calculatorGoals.recipes());
 
         for (Item item : calculatorConfig.getItems()) {
             Recipe recipe = chooseRecipe(calculatorConfig, chosenRecipes, item.name());
             if (recipe != null) {
-                addRecipe(calculatorConfig, chosenRecipes, recipe, itemNodeMap, productionGraphLevels,
+                Maker maker = chooseMaker(chosenMakers, recipe.makers());
+                addRecipe(calculatorConfig, chosenRecipes, chosenMakers, recipe, maker, itemNodeMap,
+                        productionGraphLevels,
                         productionLevels);
             }
         }
         return new ProductionGraph(itemNodeMap, productionGraphLevels);
+    }
+
+    private static Map<String, Maker> lookupChosenMakers(
+            CalculatorConfig calculatorConfig, Map<String, String> chosenMakerNames) {
+        Map<String, Maker> chosenMakers = new HashMap<>();
+        for (Map.Entry<String, String> chosenMakerName : chosenMakerNames.entrySet()) {
+            chosenMakers.put(chosenMakerName.getKey(),
+                    selectMaker(calculatorConfig.getMakers(chosenMakerName.getKey()), chosenMakerName.getKey(),
+                            chosenMakerName.getValue()));
+        }
+        return chosenMakers;
+    }
+
+    private static Maker selectMaker(Set<Maker> makers, String makersGroupName, String makerName) {
+        for (Maker maker : makers) {
+            if (maker.name().equals(makerName)) {
+                return maker;
+            }
+        }
+        throw new IllegalArgumentException(
+                "No maker found with name " + makerName + " for makers group " + makersGroupName);
+    }
+
+    private static Maker chooseMaker(Map<String, Maker> chosenMakers, Set<Maker> possibleMakers) {
+        if (possibleMakers.size() == 1) {
+            return possibleMakers.iterator().next();
+        }
+        for (Maker chosenMaker : chosenMakers.values()) {
+            for (Maker possibleMaker : possibleMakers) {
+                if (possibleMaker.name().equals(chosenMaker.name())) {
+                    return chosenMaker;
+                }
+            }
+        }
+        throw new IllegalArgumentException("No chosen maker for possible makers " + possibleMakers);
     }
 
     private static Map<String, Recipe> lookupChosenRecipes(
@@ -125,8 +197,8 @@ public class ProductionGraph {
     }
 
     private static int addRecipe(
-            CalculatorConfig calculatorConfig, Map<String, Recipe> chosenRecipes, Recipe recipe,
-            Map<String, ProductionGraphNode> itemNodeMap,
+            CalculatorConfig calculatorConfig, Map<String, Recipe> chosenRecipes, Map<String, Maker> chosenMakers,
+            Recipe recipe, Maker maker, Map<String, ProductionGraphNode> itemNodeMap,
             ArrayList<Set<ProductionGraphNode>> productionGraphLevels, Map<String, Integer> productionLevels) {
         Item item = recipe.item();
         if (itemNodeMap.containsKey(item.name())) {
@@ -138,27 +210,30 @@ public class ProductionGraph {
         for (Item ingredient : ingredients) {
             Recipe ingredientRecipe = chooseRecipe(calculatorConfig, chosenRecipes, ingredient.name());
             if (ingredientRecipe == null) {
-                addProductionGraphNode(null, itemNodeMap, productionGraphLevels, productionLevels, 0, ingredient);
+                addProductionGraphNode(null, null, itemNodeMap, productionGraphLevels, productionLevels, 0, ingredient);
                 ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel, 0);
             } else {
+                Maker ingredientMaker = chooseMaker(chosenMakers, ingredientRecipe.makers());
                 ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel,
-                        addRecipe(calculatorConfig, chosenRecipes, ingredientRecipe, itemNodeMap, productionGraphLevels,
+                        addRecipe(calculatorConfig, chosenRecipes, chosenMakers, ingredientRecipe, ingredientMaker,
+                                itemNodeMap, productionGraphLevels,
                                 productionLevels));
             }
         }
         int recipeProductionLevel = ingredientsMaxProductionLevel + 1;
-        addProductionGraphNode(recipe, itemNodeMap, productionGraphLevels, productionLevels, recipeProductionLevel,
+        addProductionGraphNode(recipe, maker, itemNodeMap, productionGraphLevels, productionLevels,
+                recipeProductionLevel,
                 item);
         return recipeProductionLevel;
     }
 
     private static void addProductionGraphNode(
-            Recipe recipe, Map<String, ProductionGraphNode> itemNodeMap,
+            Recipe recipe, Maker maker, Map<String, ProductionGraphNode> itemNodeMap,
             ArrayList<Set<ProductionGraphNode>> productionGraphLevels, Map<String, Integer> productionLevels,
             int recipeProductionLevel, Item item) {
-        Set<ProductionGraphNode> productionGraphLevel = getProductionGraphLevel(productionGraphLevels,
-                recipeProductionLevel);
-        ProductionGraphNode productionGraphNode = new ProductionGraphNode(item, recipe);
+        Set<ProductionGraphNode> productionGraphLevel =
+                getProductionGraphLevel(productionGraphLevels, recipeProductionLevel);
+        ProductionGraphNode productionGraphNode = new ProductionGraphNode(item, recipe, maker);
         itemNodeMap.put(item.name(), productionGraphNode);
         productionGraphLevel.add(productionGraphNode);
         productionLevels.put(item.name(), recipeProductionLevel);
