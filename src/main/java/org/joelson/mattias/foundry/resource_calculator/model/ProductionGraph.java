@@ -70,19 +70,52 @@ public class ProductionGraph {
         return "";
     }
 
-    public static ProductionGraph from(CalculatorConfig calculatorConfig) {
+    public static ProductionGraph from(CalculatorConfig calculatorConfig, CalculatorGoals calculatorGoals) {
         Map<String, ProductionGraphNode> itemNodeMap = new HashMap<>();
         ArrayList<Set<ProductionGraphNode>> productionGraphLevels = new ArrayList<>();
         Map<String, Integer> productionLevels = new HashMap<>();
 
-        for (Recipe recipe : calculatorConfig.getRecipes()) {
-            addRecipe(calculatorConfig, recipe, itemNodeMap, productionGraphLevels, productionLevels);
+        Map<String, String> chosenRecipes = calculatorGoals.recipes();
+
+        for (Item item : calculatorConfig.getItems()) {
+            Recipe recipe = chooseRecipe(calculatorConfig, chosenRecipes, item.name());
+            if (recipe != null) {
+                addRecipe(calculatorConfig, chosenRecipes, recipe, itemNodeMap, productionGraphLevels,
+                        productionLevels);
+            }
         }
         return new ProductionGraph(itemNodeMap, productionGraphLevels);
     }
 
+    private static Recipe chooseRecipe(
+            CalculatorConfig calculatorConfig, Map<String, String> chosenRecipes,
+            String itemName) {
+        Set<Recipe> itemRecipes = calculatorConfig.getRecipes(itemName);
+        if (itemRecipes == null) {
+            return null;
+        }
+        if (itemRecipes.isEmpty()) {
+            throw new IllegalArgumentException("No recipe exists for " + itemName);
+        }
+        if (chosenRecipes.containsKey(itemName)) {
+            String recipeName = chosenRecipes.get(itemName);
+            for (Recipe recipe : itemRecipes) {
+                if (recipe.name().equals(recipeName)) {
+                    return recipe;
+                }
+            }
+            throw new IllegalArgumentException("Recipe " + recipeName + " for item " + itemName + " not found.");
+        } else {
+            if (itemRecipes.size() > 1) {
+                throw new IllegalStateException("Multiple recipes exists for " + itemName);
+            }
+            return itemRecipes.iterator().next();
+        }
+    }
+
     private static int addRecipe(
-            CalculatorConfig calculatorConfig, Recipe recipe, Map<String, ProductionGraphNode> itemNodeMap,
+            CalculatorConfig calculatorConfig, Map<String, String> chosenRecipes, Recipe recipe,
+            Map<String, ProductionGraphNode> itemNodeMap,
             ArrayList<Set<ProductionGraphNode>> productionGraphLevels, Map<String, Integer> productionLevels) {
         Item item = recipe.item();
         if (itemNodeMap.containsKey(item.name())) {
@@ -92,13 +125,13 @@ public class ProductionGraph {
         Set<Item> ingredients = recipe.ingredients().keySet();
         int ingredientsMaxProductionLevel = -1;
         for (Item ingredient : ingredients) {
-            Recipe ingredientRecipe = calculatorConfig.getRecipe(ingredient.name());
+            Recipe ingredientRecipe = chooseRecipe(calculatorConfig, chosenRecipes, ingredient.name());
             if (ingredientRecipe == null) {
                 addProductionGraphNode(null, itemNodeMap, productionGraphLevels, productionLevels, 0, ingredient);
                 ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel, 0);
             } else {
                 ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel,
-                        addRecipe(calculatorConfig, ingredientRecipe, itemNodeMap, productionGraphLevels,
+                        addRecipe(calculatorConfig, chosenRecipes, ingredientRecipe, itemNodeMap, productionGraphLevels,
                                 productionLevels));
             }
         }

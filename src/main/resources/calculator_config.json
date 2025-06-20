@@ -13,6 +13,18 @@
       "speedMultiplier": 1.5
     },
     {
+      "name": "crusher-1",
+      "gameName": "Crusher I",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
+      "name": "crusher-2",
+      "gameName": "Crusher II",
+      "description": "",
+      "speedMultiplier": 2.0
+    },
+    {
       "name": "assembler-1",
       "gameName": "Assembler I",
       "description": "",
@@ -29,6 +41,12 @@
       "gameName": "Assembler III",
       "description": "",
       "speedMultiplier": 2.0
+    },
+    {
+      "name": "casting-machine",
+      "gameName": "Casting Machine",
+      "description": "",
+      "speedMultiplier": 1.0
     }
   ],
   "makerGroups": {
@@ -36,6 +54,10 @@
       "assembler-1",
       "assembler-2",
       "assembler-3"
+    ],
+    "crushers": [
+      "crusher-1",
+      "crusher-2"
     ],
     "smelters": [
       "smelter",
@@ -58,11 +80,74 @@
       "weight": 1.0
     },
     {
+      "name": "ignium-ore-rubble",
+      "gameName": "Ignium Ore Rubble",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "mineral-rocks",
+      "gameName": "Mineral Rocks",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "firmarlite-bar",
+      "gameName": "Firmarlite Bar",
+      "description": "",
+      "stackSize": 200,
+      "weight": 10.0
+    },
+    {
+      "name": "water",
+      "gameName": "Water",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
+      "name": "xenoferrite-ore",
+      "gameName": "Xenoferrite Ore",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
       "name": "xenoferrite-plates",
       "gameName": "Xenoferrite Plates",
       "description": "",
       "stackSize": 200,
       "weight": 1.0
+    },
+    {
+      "name": "technum-ore",
+      "gameName": "Technum Ore",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "technum-rods",
+      "gameName": "Technum Rods",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "xenoferrite-ignium-ore-blend",
+      "gameName": "Xenoferrite Ignium Ore Blend",
+      "description": "",
+      "stackSize": 200,
+      "weight": 3.0
+    },
+    {
+      "name": "steel-beams",
+      "gameName": "Steel Beams",
+      "description": "",
+      "stackSize": 200,
+      "weight": 3.0
     },
     {
       "name": "building-block",
@@ -86,11 +171,32 @@
       "weight": 1.0
     },
     {
-      "name": "technum-rods",
-      "gameName": "Technum Rods",
+      "name": "advanced-machinery-parts",
+      "gameName": "Advanced Machinery Parts",
       "description": "",
       "stackSize": 200,
-      "weight": 1.0
+      "weight": 3.0
+    },
+    {
+      "name": "gravel",
+      "gameName": "Gravel",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.5
+    },
+    {
+      "name": "cement",
+      "gameName": "Cement",
+      "description": "",
+      "stackSize": 200,
+      "weight": 6.0
+    },
+    {
+      "name": "concrete",
+      "gameName": "Concrete",
+      "description": "",
+      "stackSize": 200,
+      "weight": 10.0
     },
     {
       "name": "science-pack-1",
@@ -105,9 +211,28 @@
       "description": "",
       "stackSize": 100,
       "weight": 0.0
+    },
+    {
+      "name": "science-pack-3",
+      "gameName": "Science Pack III",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
     }
   ],
   "recipes": [
+    {
+      "name": "xenoferrite-ore",
+      "gameName": "Xenoferrite Ore (Recipe)",
+      "description": "",
+      "itemName": "xenoferrite-ore",
+      "ingredients": {
+        "xenoferrite-ore-rubble": 1
+      },
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerName": "crushers"
+    },
     {
       "name": "xenoferrite-plates-1",
       "gameName": "Xenoferrite Plates (Tier 1) (Recipe)",
@@ -121,6 +246,30 @@
       "makerName": "smelters"
     },
     {
+      "name": "xenoferrite-plates-2",
+      "gameName": "Xenoferrite Plates (Tier 2) (Recipe)",
+      "description": "",
+      "itemName": "xenoferrite-plates",
+      "ingredients": {
+        "xenoferrite-ore": 2
+      },
+      "itemsProduced": 3,
+      "time": 6.0,
+      "makerName": "smelters"
+    },
+    {
+      "name": "technum-ore",
+      "gameName": "Technum Ore (Recipe)",
+      "description": "",
+      "itemName": "technum-ore",
+      "ingredients": {
+        "technum-ore-rubble": 1
+      },
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerName": "crushers"
+    },
+    {
       "name": "technum-rods-1",
       "gameName": "Technum Rods (Tier 1) (Recipe)",
       "description": "",
@@ -130,6 +279,43 @@
       },
       "itemsProduced": 1,
       "time": 3.0,
+      "makerName": "smelters"
+    },
+    {
+      "name": "technum-rods-2",
+      "gameName": "Technum Rods (Tier 2) (Recipe)",
+      "description": "",
+      "itemName": "technum-rods",
+      "ingredients": {
+        "technum-ore": 2
+      },
+      "itemsProduced": 3,
+      "time": 6.0,
+      "makerName": "smelters"
+    },
+    {
+      "name": "xenoferrite-ignium-ore-blend",
+      "gameName": "Xenoferrite Ignium Ore Blend (Recipe)",
+      "description": "",
+      "itemName": "xenoferrite-ignium-ore-blend",
+      "ingredients": {
+        "xenoferrite-ore-rubble": 4,
+        "ignium-ore-rubble": 2
+      },
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerName": "smelters"
+    },
+    {
+      "name": "steel-beams-1",
+      "gameName": "Steel Beams (T1) (Recipe)",
+      "description": "",
+      "itemName": "steel-beams",
+      "ingredients": {
+        "xenoferrite-ignium-ore-blend": 1
+      },
+      "itemsProduced": 1,
+      "time": 6.0,
       "makerName": "smelters"
     },
     {
@@ -171,6 +357,58 @@
       "makerName": "assemblers"
     },
     {
+      "name": "advanced-machinery-parts",
+      "gameName": "Advanced Machinery Parts (Recipe)",
+      "description": "",
+      "itemName": "advanced-machinery-parts",
+      "ingredients": {
+        "machinery-parts": 2,
+        "steel-beams": 1
+      },
+      "itemsProduced": 2,
+      "time": 4.0,
+      "makerName": "assemblers"
+    },
+    {
+      "name": "gravel",
+      "gameName": "Gravel (Recipe)",
+      "description": "",
+      "itemName": "gravel",
+      "ingredients": {
+        "mineral-rocks": 2
+      },
+      "itemsProduced": 6,
+      "time": 12.0,
+      "makerName": "crushers"
+    },
+    {
+      "name": "cement",
+      "gameName": "Cement (Recipe)",
+      "description": "",
+      "itemName": "cement",
+      "ingredients": {
+        "mineral-rocks": 2,
+        "xenoferrite-ore-rubble": 1
+      },
+      "itemsProduced": 2,
+      "time": 12.0,
+      "makerName": "crushers"
+    },
+    {
+      "name": "concrete",
+      "gameName": "Concrete (Recipe)",
+      "description": "",
+      "itemName": "concrete",
+      "ingredients": {
+        "cement": 2,
+        "gravel": 4,
+        "water": 20
+      },
+      "itemsProduced": 4,
+      "time": 15.0,
+      "makerName": "casting-machine"
+    },
+    {
       "name": "science-pack-1",
       "gameName": "Science Pack I (Recipe)",
       "description": "",
@@ -194,6 +432,20 @@
       },
       "itemsProduced": 1,
       "time": 30.0,
+      "makerName": "assemblers"
+    },
+    {
+      "name": "science-pack-3",
+      "gameName": "Science Pack III (Recipe)",
+      "description": "",
+      "itemName": "science-pack-3",
+      "ingredients": {
+        "advanced-machinery-parts": 2,
+        "concrete": 12,
+        "firmarlite-bar": 2
+      },
+      "itemsProduced": 1,
+      "time": 60.0,
       "makerName": "assemblers"
     }
   ]

@@ -16,32 +16,34 @@ public class CalculatorConfig {
 
     private final Map<String, Set<Maker>> makerGroups;
     private final Map<String, Item> items;
-    private final Map<String, Recipe> recipes;
+    private final Map<String, Set<Recipe>> recipes;
 
-    public CalculatorConfig(Map<String, Set<Maker>> makerGroups, Map<String, Item> items, Map<String, Recipe> recipes) {
-        this.makerGroups = makerGroups;
+    public CalculatorConfig(
+            Map<String, Set<Maker>> makerGroups, Map<String, Item> items, Map<String, Set<Recipe>> recipes) {
+        this.makerGroups = Objects.requireNonNull(makerGroups);
         this.items = Objects.requireNonNull(items);
         this.recipes = Objects.requireNonNull(recipes);
+    }
+
+    public Set<Item> getItems() {
+        Collection<Item> itemCollection = items.values();
+        return new HashSet<>(itemCollection);
     }
 
     public Item getItem(String itemName) {
         return items.get(itemName);
     }
 
-    public Collection<Recipe> getRecipes() {
-        return recipes.values();
-    }
-
-    public Recipe getRecipe(String itemName) {
+    public Set<Recipe> getRecipes(String itemName) {
         return recipes.get(itemName);
     }
 
     public static CalculatorConfig fromPath(Path calculatorConfigPath) throws IOException {
         JsonCalculatorConfig jsonCalculatorConfig = JsonReader.readJsonCalculatorConfig(calculatorConfigPath);
         Set<Maker> makers = makersFrom(jsonCalculatorConfig.makers());
-        Map<String, Set<Maker>> makerGroupsMap = makerGroupsFrom(makers, jsonCalculatorConfig.makerGroups());
+        Map<String, Set<Maker>> makerGroups = makerGroupsFrom(makers, jsonCalculatorConfig.makerGroups());
         Map<String, Item> items = itemsFrom(jsonCalculatorConfig.items());
-        Map<String, Recipe> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makerGroupsMap);
+        Map<String, Set<Recipe>> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makerGroups);
         Set<String> itemNames = items.keySet();
         Set<String> recipeItemNames = recipes.keySet();
         if (!recipeItemNames.containsAll(itemNames)) {
@@ -50,7 +52,7 @@ public class CalculatorConfig {
             System.err.println("Lacking recipes for " + itemNames);
             //throw new IllegalStateException("Lacking recipes for " + itemNames);
         }
-        return new CalculatorConfig(makerGroupsMap, items, recipes);
+        return new CalculatorConfig(makerGroups, items, recipes);
     }
 
     private static Set<Maker> makersFrom(Set<JsonMaker> jsonMakers) {
@@ -95,18 +97,28 @@ public class CalculatorConfig {
         return new Item(jsonItem.name(), jsonItem.gameName(), jsonItem.stackSize(), jsonItem.weight());
     }
 
-    private static Map<String, Recipe> recipesFrom(
-            Set<JsonRecipe> jsonRecipes, Map<String, Item> items, Map<String, Set<Maker>> makerGroupsMap) {
-        return jsonRecipes.stream().map(jsonRecipe -> recipeFrom(jsonRecipe, items, makerGroupsMap)).collect(
-                Collectors.toMap(recipe -> recipe.item().name(), Function.identity()));
+    private static Map<String, Set<Recipe>> recipesFrom(
+            Set<JsonRecipe> jsonRecipes, Map<String, Item> items, Map<String, Set<Maker>> makerGroups) {
+        Map<String, Set<Recipe>> recipes = new HashMap<>();
+        Set<String> recipeNames = new HashSet<>();
+        for (JsonRecipe jsonRecipe : jsonRecipes) {
+            String recipeName = jsonRecipe.name();
+            if (recipeNames.contains(recipeName)) {
+                throw new IllegalArgumentException("Multiple recipes with name " + recipeName);
+            }
+            recipeNames.add(recipeName);
+            Recipe recipe = recipeFrom(jsonRecipe, items, makerGroups);
+            recipes.computeIfAbsent(recipe.item().name(), s -> new HashSet<>()).add(recipe);
+        }
+        return recipes;
     }
 
     private static Recipe recipeFrom(
-            JsonRecipe jsonRecipe, Map<String, Item> items, Map<String, Set<Maker>> makerGroupsMap) {
+            JsonRecipe jsonRecipe, Map<String, Item> items, Map<String, Set<Maker>> makerGroups) {
         Map<Item, Integer> ingredients = jsonRecipe.ingredients().entrySet().stream()
                 .map(nameIntegerEntry -> Map.entry(items.get(nameIntegerEntry.getKey()), nameIntegerEntry.getValue()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
-        Set<Maker> recipeMakers = Objects.requireNonNull(makerGroupsMap.get(jsonRecipe.makerName()));
+        Set<Maker> recipeMakers = Objects.requireNonNull(makerGroups.get(jsonRecipe.makerName()));
         return new Recipe(jsonRecipe.name(), jsonRecipe.gameName(), items.get(jsonRecipe.itemName()), ingredients,
                 jsonRecipe.itemsProduced(), jsonRecipe.time(), recipeMakers);
     }

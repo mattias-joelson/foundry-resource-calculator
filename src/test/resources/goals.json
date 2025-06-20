@@ -1,6 +1,11 @@
 {
+  "recipes": {
+    "xenoferrite-plates": "xenoferrite-plates-2",
+    "technum-rods": "technum-rods-2"
+  },
   "productionGoals": {
     "science-pack-1": 21,
-    "science-pack-2": 21
+    "science-pack-2": 21,
+    "science-pack-3": 21
   }
 }

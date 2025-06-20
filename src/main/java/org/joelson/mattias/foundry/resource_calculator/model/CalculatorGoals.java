@@ -6,9 +6,12 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-public record CalculatorGoals(Map<Item, Integer> productionGoals) {
+public record CalculatorGoals(
+        Map<String, String> recipes,
+        Map<Item, Integer> productionGoals) {
 
-    public CalculatorGoals(Map<Item, Integer> productionGoals) {
+    public CalculatorGoals(Map<String, String> recipes, Map<Item, Integer> productionGoals) {
+        this.recipes = Objects.requireNonNull(recipes);
         this.productionGoals = Objects.requireNonNull(productionGoals);
     }
 
@@ -17,6 +20,6 @@ public record CalculatorGoals(Map<Item, Integer> productionGoals) {
         Map<Item, Integer> productionGoals = jsonCalculatorGoals.productionGoals().entrySet().stream().collect(
                 Collectors.toMap(entry -> Objects.requireNonNull(calculatorConfig.getItem(entry.getKey())),
                         Map.Entry::getValue));
-        return new CalculatorGoals(productionGoals);
+        return new CalculatorGoals(jsonCalculatorGoals.recipes(), productionGoals);
     }
 }

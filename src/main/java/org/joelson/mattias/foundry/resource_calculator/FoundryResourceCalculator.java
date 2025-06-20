@@ -47,7 +47,7 @@ public class FoundryResourceCalculator {
     }
 
     private void calculate() {
-        ProductionGraph productionGraph = ProductionGraph.from(calculatorConfig);
+        ProductionGraph productionGraph = ProductionGraph.from(calculatorConfig, calculatorGoals);
 
         productionGraph.addGoals(calculatorGoals.productionGoals());
         productionGraph.calculateProduction();
