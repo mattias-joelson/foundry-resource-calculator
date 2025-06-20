@@ -222,7 +222,7 @@
   ],
   "recipes": [
     {
-      "name": "xenoferrite-ore",
+      "name": "xenoferrite-ore-recipe",
       "gameName": "Xenoferrite Ore (Recipe)",
       "description": "",
       "itemName": "xenoferrite-ore",
@@ -234,7 +234,7 @@
       "makerName": "crushers"
     },
     {
-      "name": "xenoferrite-plates-1",
+      "name": "xenoferrite-plates-1-recipe",
       "gameName": "Xenoferrite Plates (Tier 1) (Recipe)",
       "description": "",
       "itemName": "xenoferrite-plates",
@@ -246,7 +246,7 @@
       "makerName": "smelters"
     },
     {
-      "name": "xenoferrite-plates-2",
+      "name": "xenoferrite-plates-2-recipe",
       "gameName": "Xenoferrite Plates (Tier 2) (Recipe)",
       "description": "",
       "itemName": "xenoferrite-plates",
@@ -258,7 +258,7 @@
       "makerName": "smelters"
     },
     {
-      "name": "technum-ore",
+      "name": "technum-ore-recipe",
       "gameName": "Technum Ore (Recipe)",
       "description": "",
       "itemName": "technum-ore",
@@ -270,7 +270,7 @@
       "makerName": "crushers"
     },
     {
-      "name": "technum-rods-1",
+      "name": "technum-rods-1-recipe",
       "gameName": "Technum Rods (Tier 1) (Recipe)",
       "description": "",
       "itemName": "technum-rods",
@@ -282,7 +282,7 @@
       "makerName": "smelters"
     },
     {
-      "name": "technum-rods-2",
+      "name": "technum-rods-2-recipe",
       "gameName": "Technum Rods (Tier 2) (Recipe)",
       "description": "",
       "itemName": "technum-rods",
@@ -294,7 +294,7 @@
       "makerName": "smelters"
     },
     {
-      "name": "xenoferrite-ignium-ore-blend",
+      "name": "xenoferrite-ignium-ore-blend-recipe",
       "gameName": "Xenoferrite Ignium Ore Blend (Recipe)",
       "description": "",
       "itemName": "xenoferrite-ignium-ore-blend",
@@ -307,7 +307,7 @@
       "makerName": "crushers"
     },
     {
-      "name": "steel-beams-1",
+      "name": "steel-beams-1-recipe",
       "gameName": "Steel Beams (T1) (Recipe)",
       "description": "",
       "itemName": "steel-beams",
@@ -319,7 +319,7 @@
       "makerName": "smelters"
     },
     {
-      "name": "building-block",
+      "name": "building-block-recipe",
       "gameName": "Building Block (Recipe)",
       "description": "",
       "itemName": "building-block",
@@ -332,7 +332,7 @@
       "makerName": "assemblers"
     },
     {
-      "name": "conveyor-1",
+      "name": "conveyor-1-recipe",
       "gameName": "Conveyor I (Recipe)",
       "description": "",
       "itemName": "conveyor-1",
@@ -345,7 +345,7 @@
       "makerName": "assemblers"
     },
     {
-      "name": "machinery-parts",
+      "name": "machinery-parts-recipe",
       "gameName": "Machinery Parts (Recipe)",
       "description": "",
       "itemName": "machinery-parts",
@@ -357,7 +357,7 @@
       "makerName": "assemblers"
     },
     {
-      "name": "advanced-machinery-parts",
+      "name": "advanced-machinery-parts-recipe",
       "gameName": "Advanced Machinery Parts (Recipe)",
       "description": "",
       "itemName": "advanced-machinery-parts",
@@ -370,7 +370,7 @@
       "makerName": "assemblers"
     },
     {
-      "name": "gravel",
+      "name": "gravel-recipe",
       "gameName": "Gravel (Recipe)",
       "description": "",
       "itemName": "gravel",
@@ -382,7 +382,7 @@
       "makerName": "crushers"
     },
     {
-      "name": "cement",
+      "name": "cement-recipe",
       "gameName": "Cement (Recipe)",
       "description": "",
       "itemName": "cement",
@@ -395,7 +395,7 @@
       "makerName": "crushers"
     },
     {
-      "name": "concrete",
+      "name": "concrete-recipe",
       "gameName": "Concrete (Recipe)",
       "description": "",
       "itemName": "concrete",
@@ -409,7 +409,7 @@
       "makerName": "casting-machine"
     },
     {
-      "name": "science-pack-1",
+      "name": "science-pack-1-recipe",
       "gameName": "Science Pack I (Recipe)",
       "description": "",
       "itemName": "science-pack-1",
@@ -422,7 +422,7 @@
       "makerName": "assemblers"
     },
     {
-      "name": "science-pack-2",
+      "name": "science-pack-2-recipe",
       "gameName": "Science Pack II (Recipe)",
       "description": "",
       "itemName": "science-pack-2",
@@ -435,7 +435,7 @@
       "makerName": "assemblers"
     },
     {
-      "name": "science-pack-3",
+      "name": "science-pack-3-recipe",
       "gameName": "Science Pack III (Recipe)",
       "description": "",
       "itemName": "science-pack-3",
