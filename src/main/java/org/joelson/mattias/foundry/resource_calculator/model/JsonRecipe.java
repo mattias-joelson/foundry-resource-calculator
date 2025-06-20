@@ -12,7 +12,7 @@ record JsonRecipe(
         String itemName,
         Map<String, Integer> ingredients,
         int itemsProduced,
-        int time,
+        float time,
         String makerName) {
 
     @JsonCreator
@@ -23,7 +23,7 @@ record JsonRecipe(
             @JsonProperty(value = "itemName", required = true) String itemName,
             @JsonProperty(value = "ingredients", required = true) Map<String, Integer> ingredients,
             @JsonProperty(value = "itemsProduced", required = true) int itemsProduced,
-            @JsonProperty(value = "time", required = true) int time,
+            @JsonProperty(value = "time", required = true) float time,
             @JsonProperty(value = "makerName", required = true) String makerName) {
         this.name = name;
         this.gameName = gameName;

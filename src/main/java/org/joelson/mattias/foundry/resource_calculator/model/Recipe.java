@@ -9,6 +9,6 @@ public record Recipe(
         Item item,
         Map<Item, Integer> ingredients,
         int itemsProduced,
-        int time,
+        float time,
         Set<Maker> makers) {
 }
