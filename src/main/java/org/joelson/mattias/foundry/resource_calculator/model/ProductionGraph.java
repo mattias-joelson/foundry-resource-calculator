@@ -77,7 +77,7 @@ public class ProductionGraph {
 
     private String logisticsOf(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
         if (productionGraphNode.getItem().stackSize() > 0) {
-            return String.format("%.3f -> %.0f conveyor-2", itemsPerMinute / 320, Math.ceil(itemsPerMinute / 320));
+            return String.format("%.3f -> %.0f conveyor-4", itemsPerMinute / 1280, Math.ceil(itemsPerMinute / 1280));
         } else {
             return String.format("%.3f -> %.0f pipes", itemsPerMinute / 36000, Math.ceil(itemsPerMinute / 36000));
         }
@@ -88,19 +88,24 @@ public class ProductionGraph {
         if (maker != null) {
             Recipe recipe = productionGraphNode.getRecipe();
             float productionCyclesPerMinute = 60.0f / recipe.time() * maker.speedMultiplier();
-            String ingredients = recipe.ingredientAmounts().entrySet().stream()
-                    .map(itemIntegerEntry -> itemsPerMinute(itemIntegerEntry.getKey(), itemIntegerEntry.getValue(),
-                            productionCyclesPerMinute))
-                    .collect(Collectors.joining(", "));
+            String ingredients = ingredientsPerMinuter(recipe, productionCyclesPerMinute);
             String products = itemsPerMinute(recipe.item(), recipe.itemsProduced(), productionCyclesPerMinute);
-            return String.format(" by %.3f %s (%s -> %s)",
+            String totalIngredients = ingredientsPerMinuter(recipe, itemsPerMinute / recipe.itemsProduced());
+            return String.format(" by %.3f %s (%s -> %s) needing %s",
                     itemsPerMinute / recipe.itemsProduced() / productionCyclesPerMinute, maker.gameName(), ingredients,
-                    products);
+                    products, totalIngredients);
         }
         return "";
     }
 
-    private static String itemsPerMinute(Item item, int numberOfItems, float productionCyclesPerMinute) {
+    private static String ingredientsPerMinuter(Recipe recipe, float productionCyclesPerMinute) {
+        return recipe.ingredientAmounts().entrySet().stream()
+                .map(itemIntegerEntry -> itemsPerMinute(itemIntegerEntry.getKey(), itemIntegerEntry.getValue(),
+                        productionCyclesPerMinute))
+                .collect(Collectors.joining(", "));
+    }
+
+    private static String itemsPerMinute(Item item, float numberOfItems, float productionCyclesPerMinute) {
         return String.format("%s %.2f/min", item.gameName(), numberOfItems * productionCyclesPerMinute);
     }
 

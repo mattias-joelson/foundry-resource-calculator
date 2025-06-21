@@ -2,11 +2,11 @@
   "chosenRecipes": [
     {
       "itemName": "xenoferrite-plates",
-      "recipeName": "xenoferrite-plates-1-recipe"
+      "recipeName": "xenoferrite-plates-2-recipe"
     },
     {
       "itemName": "technum-rods",
-      "recipeName": "technum-rods-1-recipe"
+      "recipeName": "technum-rods-2-recipe"
     },
     {
       "itemName": "steel-beams",
@@ -16,41 +16,41 @@
   "chosenMakers": [
     {
       "makerGroupName": "smelters",
-      "makerName": "smelter"
+      "makerName": "advanced-smelter"
     },
     {
       "makerGroupName": "lava-smelters",
-      "makerName": "lava-smelter-1"
+      "makerName": "lava-smelter-2"
     },
     {
       "makerGroupName": "crushers",
-      "makerName": "crusher-1"
+      "makerName": "crusher-2"
     },
     {
       "makerGroupName": "assemblers",
-      "makerName": "assembler-2"
+      "makerName": "assembler-3"
     }
   ],
   "productionGoals": [
     {
       "itemName": "science-pack-1",
-      "amount": 20
+      "amount": 384
     },
     {
       "itemName": "science-pack-2",
-      "amount": 20
+      "amount": 384
     },
     {
       "itemName": "science-pack-3",
-      "amount": 20
+      "amount": 384
     },
     {
       "itemName": "science-pack-4",
-      "amount": 20
+      "amount": 384
     },
     {
       "itemName": "science-pack-5",
-      "amount": 20
+      "amount": 384
     }
   ]
 }
