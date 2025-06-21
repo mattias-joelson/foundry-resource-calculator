@@ -37,24 +37,56 @@
   ],
   "productionGoals": [
     {
-      "itemName": "science-pack-1",
-      "amount": 384
+      "itemName": "maintenance-drone",
+      "amount": 320
     },
     {
-      "itemName": "science-pack-2",
-      "amount": 384
+      "itemName": "planter-drone",
+      "amount": 320
     },
     {
-      "itemName": "science-pack-3",
-      "amount": 384
+      "itemName": "vacuum-bot",
+      "amount": 320
     },
     {
-      "itemName": "science-pack-4",
-      "amount": 384
+      "itemName": "heavy-duty-transport-bot",
+      "amount": 320
     },
     {
-      "itemName": "science-pack-5",
-      "amount": 384
+      "itemName": "light-bot",
+      "amount": 320
+    },
+    {
+      "itemName": "combat-drone",
+      "amount": 320
+    },
+    {
+      "itemName": "mining-drone",
+      "amount": 320
+    },
+    {
+      "itemName": "science-assistant-drone",
+      "amount": 320
+    },
+    {
+      "itemName": "screen-bot",
+      "amount": 320
+    },
+    {
+      "itemName": "snack-bot",
+      "amount": 320
+    },
+    {
+      "itemName": "transport-bot",
+      "amount": 320
+    },
+    {
+      "itemName": "transport-drone",
+      "amount": 320
+    },
+    {
+      "itemName": "cleaning-bot",
+      "amount": 320
     }
   ]
 }

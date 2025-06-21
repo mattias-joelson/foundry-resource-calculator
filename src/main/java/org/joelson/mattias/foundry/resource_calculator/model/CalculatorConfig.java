@@ -48,13 +48,13 @@ public class CalculatorConfig {
         Map<String, Set<Maker>> makerGroups = makerGroupsFrom(makers, jsonCalculatorConfig.makerGroups());
         Map<String, Item> items = itemsFrom(jsonCalculatorConfig.items());
         Map<String, Set<Recipe>> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makerGroups);
-        Set<String> itemNames = items.keySet();
-        Set<String> recipeItemNames = recipes.keySet();
-        if (!recipeItemNames.containsAll(itemNames)) {
-            itemNames = new HashSet<>(itemNames);
-            itemNames.removeAll(recipeItemNames);
-            System.err.println("Lacking chosen recipe for " + itemNames);
-            //throw new IllegalStateException("Lacking chosenRecipes for " + itemNames);
+        Set<String> itemNamesWithoutRecipes = new HashSet<>(items.keySet());
+        itemNamesWithoutRecipes.removeAll(
+                Set.of("biomass", "xenoferrite-ore-rubble", "technum-ore-rubble", "ignium-ore-rubble", "mineral-rocks",
+                        "telluxite-ore-rubble", "firmarlite-bar", "water", "crude-olumite"));
+        itemNamesWithoutRecipes.removeAll(recipes.keySet());
+        if (!itemNamesWithoutRecipes.isEmpty()) {
+            throw new IllegalStateException("Lacking recipes for " + itemNamesWithoutRecipes);
         }
         return new CalculatorConfig(makerGroups, items, recipes);
     }

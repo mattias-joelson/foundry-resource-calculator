@@ -118,6 +118,13 @@
   ],
   "items": [
     {
+      "name": "biomass",
+      "gameName": "Biomass",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
+    },
+    {
       "name": "xenoferrite-ore-rubble",
       "gameName": "Xenoferrite Ore Rubble",
       "description": "",
@@ -377,6 +384,20 @@
       "weight": 10.0
     },
     {
+      "name": "explosives",
+      "gameName": "Explosives",
+      "description": "",
+      "stackSize": 50,
+      "weight": 1.0
+    },
+    {
+      "name": "hover-engine",
+      "gameName": "Hover Engine",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
       "name": "telluxite-wafer",
       "gameName": "Telluxite Wafer",
       "description": "",
@@ -398,6 +419,13 @@
       "weight": 1.0
     },
     {
+      "name": "weapon-components",
+      "gameName": "Weapon Components",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
       "name": "building-block",
       "gameName": "Building Block",
       "description": "",
@@ -410,6 +438,97 @@
       "description": "",
       "stackSize": 200,
       "weight": 0.0
+    },
+    {
+      "name": "maintenance-drone",
+      "gameName": "Maintenance Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 70.0
+    },
+    {
+      "name": "planter-drone",
+      "gameName": "Planter Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 50.0
+    },
+    {
+      "name": "vacuum-bot",
+      "gameName": "Vacuum Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 30.0
+    },
+    {
+      "name": "heavy-duty-transport-bot",
+      "gameName": "Heavy Duty Transport Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0
+    },
+    {
+      "name": "light-bot",
+      "gameName": "Light Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 50.0
+    },
+    {
+      "name": "combat-drone",
+      "gameName": "Combat Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 90.0
+    },
+    {
+      "name": "mining-drone",
+      "gameName": "Mining Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 85.0
+    },
+    {
+      "name": "science-assistant-drone",
+      "gameName": "Science Assistant Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0
+    },
+    {
+      "name": "screen-bot",
+      "gameName": "Screen Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 40.0
+    },
+    {
+      "name": "snack-bot",
+      "gameName": "Snack Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 45.0
+    },
+    {
+      "name": "transport-bot",
+      "gameName": "Transport Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 40.0
+    },
+    {
+      "name": "transport-drone",
+      "gameName": "Transport Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 75.0
+    },
+    {
+      "name": "cleaning-bot",
+      "gameName": "Cleaning Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 55.0
     },
     {
       "name": "science-pack-1",
@@ -1005,6 +1124,71 @@
       "makerGroupName": "casting-machine"
     },
     {
+      "name": "explosives-primitive-recipe",
+      "gameName": "Explosives (Primitive) (Recipe)",
+      "description": "",
+      "itemName": "explosives",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-ore-rubble",
+          "amount": 2
+        },
+        {
+          "itemName": "technum-ore-rubble",
+          "amount": 2
+        },
+        {
+          "itemName": "biomass",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "explosives-recipe",
+      "gameName": "Explosives (Recipe)",
+      "description": "",
+      "itemName": "explosives",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-powder",
+          "amount": 4
+        },
+        {
+          "itemName": "low-density-olumite",
+          "amount": 50
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "fluid-assembler"
+    },
+    {
+      "name": "hover-engine-recipe",
+      "gameName": "Hover Engine (Recipe)",
+      "description": "",
+      "itemName": "hover-engine",
+      "ingredientAmounts": [
+        {
+          "itemName": "technum-rods",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "telluxite-wafer",
       "gameName": "Telluxite Wafer (Recipe)",
       "description": "",
@@ -1050,6 +1234,29 @@
       "makerGroupName": "casting-machine"
     },
     {
+      "name": "weapon-components-recipe",
+      "gameName": "Weapon Components (Recipe)",
+      "description": "",
+      "itemName": "weapon-components",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "explosives",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "building-block-recipe",
       "gameName": "Building Block (Recipe)",
       "description": "",
@@ -1085,6 +1292,365 @@
       ],
       "itemsProduced": 2,
       "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "maintenance-drone-recipe",
+      "gameName": "Maintenance Drone (Recipe)",
+      "description": "",
+      "itemName": "maintenance-drone",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "planter-drone-recipe",
+      "gameName": "Planter Drone (Recipe)",
+      "description": "",
+      "itemName": "planter-drone",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 2
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "vacuum-bot-recipe",
+      "gameName": "Vacuum Bot (Recipe)",
+      "description": "",
+      "itemName": "vacuum-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "heavy-duty-transport-bot-recipe",
+      "gameName": "Heavy Duty Transport Bot (Recipe)",
+      "description": "",
+      "itemName": "heavy-duty-transport-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "light-bot-recipe",
+      "gameName": "Light Bot (Recipe)",
+      "description": "",
+      "itemName": "light-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        },
+        {
+          "itemName": "glass",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "combat-drone-recipe",
+      "gameName": "Combat Drone (Recipe)",
+      "description": "",
+      "itemName": "combat-drone",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 1
+        },
+        {
+          "itemName": "weapon-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "mining-drone-recipe",
+      "gameName": "Mining Drone (Recipe)",
+      "description": "",
+      "itemName": "mining-drone",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-assistant-drone-recipe",
+      "gameName": "Science Assistant Drone (Recipe)",
+      "description": "",
+      "itemName": "science-assistant-drone",
+      "ingredientAmounts": [
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "screen-bot-recipe",
+      "gameName": "Screen Bot (Recipe)",
+      "description": "",
+      "itemName": "screen-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "glass",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "snack-bot-recipe",
+      "gameName": "Snack Bot (Recipe)",
+      "description": "",
+      "itemName": "snack-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        },
+        {
+          "itemName": "glass",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "transport-bot-recipe",
+      "gameName": "Transport Bot (Recipe)",
+      "description": "",
+      "itemName": "transport-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "transport-drone-recipe",
+      "gameName": "Transport Drone (Recipe)",
+      "description": "",
+      "itemName": "transport-drone",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 2
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "cleaning-bot-recipe",
+      "gameName": "Cleaning Bot (Recipe)",
+      "description": "",
+      "itemName": "cleaning-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
       "makerGroupName": "assemblers"
     },
     {

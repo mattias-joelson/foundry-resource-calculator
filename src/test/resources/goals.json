@@ -11,6 +11,10 @@
     {
       "itemName": "steel-beams",
       "recipeName": "steel-beams-1-recipe"
+    },
+    {
+      "itemName": "explosives",
+      "recipeName": "explosives-recipe"
     }
   ],
   "chosenMakers": [
