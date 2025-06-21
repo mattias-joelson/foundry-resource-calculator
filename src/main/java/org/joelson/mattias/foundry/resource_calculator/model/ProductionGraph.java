@@ -101,7 +101,7 @@ public class ProductionGraph {
     }
 
     private static String itemsPerMinute(Item item, int numberOfItems, float productionCyclesPerMinute) {
-        return String.format("%s %.1f/min", item.gameName(), numberOfItems * productionCyclesPerMinute);
+        return String.format("%s %.2f/min", item.gameName(), numberOfItems * productionCyclesPerMinute);
     }
 
     public static ProductionGraph from(CalculatorConfig calculatorConfig, CalculatorGoals calculatorGoals) {
@@ -210,14 +210,13 @@ public class ProductionGraph {
         for (Item ingredient : ingredients) {
             Recipe ingredientRecipe = chooseRecipe(calculatorConfig, chosenRecipes, ingredient.name());
             if (ingredientRecipe == null) {
-                addProductionGraphNode(null, null, itemNodeMap, productionGraphLevels, productionLevels, 0, ingredient);
-                ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel, 0);
+                ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel,
+                        addResource(itemNodeMap, productionGraphLevels, productionLevels, ingredient));
             } else {
                 Maker ingredientMaker = chooseMaker(chosenMakers, ingredientRecipe.makers());
                 ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel,
                         addRecipe(calculatorConfig, chosenRecipes, chosenMakers, ingredientRecipe, ingredientMaker,
-                                itemNodeMap, productionGraphLevels,
-                                productionLevels));
+                                itemNodeMap, productionGraphLevels, productionLevels));
             }
         }
         int recipeProductionLevel = ingredientsMaxProductionLevel + 1;
@@ -227,12 +226,32 @@ public class ProductionGraph {
         return recipeProductionLevel;
     }
 
+    private static int addResource(
+            Map<String, ProductionGraphNode> itemNodeMap, ArrayList<Set<ProductionGraphNode>> productionGraphLevels,
+            Map<String, Integer> productionLevels, Item resource) {
+        if (productionLevels.containsKey(resource.name())) {
+            return productionLevels.get(resource.name());
+        }
+        addProductionGraphNode(null, null, itemNodeMap, productionGraphLevels, productionLevels, 0, resource);
+        return 0;
+    }
+
     private static void addProductionGraphNode(
             Recipe recipe, Maker maker, Map<String, ProductionGraphNode> itemNodeMap,
             ArrayList<Set<ProductionGraphNode>> productionGraphLevels, Map<String, Integer> productionLevels,
             int recipeProductionLevel, Item item) {
         Set<ProductionGraphNode> productionGraphLevel =
                 getProductionGraphLevel(productionGraphLevels, recipeProductionLevel);
+        if (productionLevels.containsKey(item.name())) {
+            throw new IllegalStateException("ProductionGraphNode already exists in map for item " + item.name());
+        }
+        for (ProductionGraphNode productionGraphNode : productionGraphLevel) {
+            if (productionGraphNode.getItem().name().equals(item.name())) {
+                throw new IllegalStateException(
+                        "ProductionGraphNode already exists on level " + recipeProductionLevel + " for item "
+                                + item.name());
+            }
+        }
         ProductionGraphNode productionGraphNode = new ProductionGraphNode(item, recipe, maker);
         itemNodeMap.put(item.name(), productionGraphNode);
         productionGraphLevel.add(productionGraphNode);

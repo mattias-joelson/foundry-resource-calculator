@@ -13,6 +13,24 @@
       "speedMultiplier": 1.5
     },
     {
+      "name": "electric-arc-furnace",
+      "gameName": "Electric Arc Furnace",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
+      "name": "lava-smelter-1",
+      "gameName": "Lava Smelter I",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
+      "name": "lava-smelter-2",
+      "gameName": "Lava Smelter II",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
       "name": "crusher-1",
       "gameName": "Crusher I",
       "description": "",
@@ -43,8 +61,26 @@
       "speedMultiplier": 2.0
     },
     {
+      "name": "fluid-assembler",
+      "gameName": "Fluid Assembler I",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
+      "name": "distillation-column",
+      "gameName": "Distillation Column",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
       "name": "casting-machine",
       "gameName": "Casting Machine",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
+      "name": "chemical-processor",
+      "gameName": "Chemical Processor",
       "description": "",
       "speedMultiplier": 1.0
     }
@@ -70,6 +106,13 @@
       "makerNames": [
         "smelter",
         "advanced-smelter"
+      ]
+    },
+    {
+      "groupName": "lava-smelters",
+      "makerNames": [
+        "lava-smelter-1",
+        "lava-smelter-2"
       ]
     }
   ],
@@ -103,6 +146,13 @@
       "weight": 1.0
     },
     {
+      "name": "telluxite-ore-rubble",
+      "gameName": "Telluxite Ore Rubble",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
       "name": "firmarlite-bar",
       "gameName": "Firmarlite Bar",
       "description": "",
@@ -112,6 +162,13 @@
     {
       "name": "water",
       "gameName": "Water",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
+      "name": "crude-olumite",
+      "gameName": "Crude Olumite",
       "description": "",
       "stackSize": 0,
       "weight": 0.0
@@ -145,8 +202,22 @@
       "weight": 1.0
     },
     {
+      "name": "ignium-ore",
+      "gameName": "Ignium Ore",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
       "name": "xenoferrite-ignium-ore-blend",
       "gameName": "Xenoferrite Ignium Ore Blend",
+      "description": "",
+      "stackSize": 200,
+      "weight": 3.0
+    },
+    {
+      "name": "advanced-xenoferrite-ignium-ore-blend",
+      "gameName": "Advanced Xenoferrite-Ignium Ore Blend",
       "description": "",
       "stackSize": 200,
       "weight": 3.0
@@ -159,15 +230,29 @@
       "weight": 3.0
     },
     {
-      "name": "building-block",
-      "gameName": "Building Block",
+      "name": "telluxite-ore",
+      "gameName": "Telluxite Ore",
       "description": "",
       "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "telluxite-ingot",
+      "gameName": "Telluxite Ingot",
+      "description": "",
+      "stackSize": 100,
+      "weight": 5.0
+    },
+    {
+      "name": "liquid-telluxite",
+      "gameName": "Liquid Telluxite",
+      "description": "",
+      "stackSize": 0,
       "weight": 0.0
     },
     {
-      "name": "conveyor-1",
-      "gameName": "Conveyor I",
+      "name": "firmarlite-sheet",
+      "gameName": "Firmarlite Sheet",
       "description": "",
       "stackSize": 200,
       "weight": 0.0
@@ -185,6 +270,90 @@
       "description": "",
       "stackSize": 200,
       "weight": 3.0
+    },
+    {
+      "name": "hydraulic-piston",
+      "gameName": "Hydraulic Piston",
+      "description": "",
+      "stackSize": 200,
+      "weight": 4.0
+    },
+    {
+      "name": "robot-parts",
+      "gameName": "Robot Parts",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "wire-coil",
+      "gameName": "Wire Coil",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.5
+    },
+    {
+      "name": "electronic-components",
+      "gameName": "Electronic Components",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.5
+    },
+    {
+      "name": "circuit-board",
+      "gameName": "Circuit Board",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "cpu",
+      "gameName": "CPU",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "energy-cell",
+      "gameName": "Energy Cell",
+      "description": "200",
+      "stackSize": 200,
+      "weight": 4.0
+    },
+    {
+      "name": "low-density-olumite",
+      "gameName": "Low Density Olumite",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
+      "name": "liquid-polymer",
+      "gameName": "Liquid Polymer",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
+      "name": "olumite-gas",
+      "gameName": "Olumite Gas",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
+      "name": "olumic-acid",
+      "gameName": "Olumic Acid",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
+      "name": "ignium-powder",
+      "gameName": "Ignium Powder",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.5
     },
     {
       "name": "gravel",
@@ -208,6 +377,41 @@
       "weight": 10.0
     },
     {
+      "name": "telluxite-wafer",
+      "gameName": "Telluxite Wafer",
+      "description": "",
+      "stackSize": 200,
+      "weight": 50.0
+    },
+    {
+      "name": "glass",
+      "gameName": "Glass",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "polymer-board",
+      "gameName": "Polymer Board",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
+    },
+    {
+      "name": "building-block",
+      "gameName": "Building Block",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-1",
+      "gameName": "Conveyor I",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
       "name": "science-pack-1",
       "gameName": "Science Pack I",
       "description": "",
@@ -224,6 +428,20 @@
     {
       "name": "science-pack-3",
       "gameName": "Science Pack III",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
+    },
+    {
+      "name": "science-pack-4",
+      "gameName": "Science Pack IV",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
+    },
+    {
+      "name": "science-pack-5",
+      "gameName": "Science Pack V",
       "description": "",
       "stackSize": 100,
       "weight": 0.0
@@ -321,6 +539,21 @@
       "makerGroupName": "smelters"
     },
     {
+      "name": "ignium-ore-recipe",
+      "gameName": "Ignium Ore (Recipe)",
+      "description": "",
+      "itemName": "ignium-ore",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-ore-rubble",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "crushers"
+    },
+    {
       "name": "xenoferrite-ignium-ore-blend-recipe",
       "gameName": "Xenoferrite Ignium Ore Blend (Recipe)",
       "description": "",
@@ -355,42 +588,98 @@
       "makerGroupName": "smelters"
     },
     {
-      "name": "building-block-recipe",
-      "gameName": "Building Block (Recipe)",
+      "name": "advanced-xenoferrite-ignium-ore-blend-recipe",
+      "gameName": "Advanced Xenoferrite Ignium Ore Blend (Recipe)",
       "description": "",
-      "itemName": "building-block",
+      "itemName": "advanced-xenoferrite-ignium-ore-blend",
       "ingredientAmounts": [
         {
-          "itemName": "xenoferrite-plates",
-          "amount": 6
+          "itemName": "xenoferrite-ore",
+          "amount": 4
         },
         {
-          "itemName": "technum-rods",
-          "amount": 4
+          "itemName": "ignium-ore",
+          "amount": 2
         }
       ],
-      "itemsProduced": 20,
-      "time": 5.0,
-      "makerGroupName": "assemblers"
+      "itemsProduced": 1,
+      "time": 3,
+      "makerGroupName": "crushers"
     },
     {
-      "name": "conveyor-1-recipe",
-      "gameName": "Conveyor I (Recipe)",
+      "name": "steel-beams-2-recipe",
+      "gameName": "Steel Beams (T2) (Recipe)",
       "description": "",
-      "itemName": "conveyor-1",
+      "itemName": "steel-beams",
       "ingredientAmounts": [
         {
-          "itemName": "xenoferrite-plates",
-          "amount": 1
-        },
-        {
-          "itemName": "machinery-parts",
+          "itemName": "advanced-xenoferrite-ignium-ore-blend",
           "amount": 1
         }
       ],
       "itemsProduced": 2,
-      "time": 3.0,
-      "makerGroupName": "assemblers"
+      "time": 6.0,
+      "makerGroupName": "advanced-smelter"
+    },
+    {
+      "name": "telluxite-ore-recipe",
+      "gameName": "Telluxite Ore (Recipe)",
+      "description": "",
+      "itemName": "telluxite-ore",
+      "ingredientAmounts": [
+        {
+          "itemName": "telluxite-ore-rubble",
+          "amount": 4
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "crushers"
+    },
+    {
+      "name": "telluxite-ingot-recipe",
+      "gameName": "Telluxite Ingot (Recipe)",
+      "description": "",
+      "itemName": "telluxite-ingot",
+      "ingredientAmounts": [
+        {
+          "itemName": "telluxite-ore",
+          "amount": 4
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "advanced-smelter"
+    },
+    {
+      "name": "liquid-telluxite-recipe",
+      "gameName": "Liquid Telluxite (Recipe)",
+      "description": "",
+      "itemName": "liquid-telluxite",
+      "ingredientAmounts": [
+        {
+          "itemName": "telluxite-ingot",
+          "amount": 40
+        }
+      ],
+      "itemsProduced": 2000,
+      "time": 60.0,
+      "makerGroupName": "electric-arc-furnace"
+    },
+    {
+      "name": "firmarlite-sheet-recipe",
+      "gameName": "Firmarlite Sheet (recipe)",
+      "description": "",
+      "itemName": "firmarlite-sheet",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-bar",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "lava-smelters"
     },
     {
       "name": "machinery-parts-recipe",
@@ -425,6 +714,238 @@
       "itemsProduced": 2,
       "time": 4.0,
       "makerGroupName": "assemblers"
+    },
+    {
+      "name": "hydraulic-piston-recipe",
+      "gameName": "Hydraulic Piston (Recipe)",
+      "description": "",
+      "itemName": "hydraulic-piston",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        },
+        {
+          "itemName": "low-density-olumite",
+          "amount": 30
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5,
+      "makerGroupName": "fluid-assembler"
+    },
+    {
+      "name": "robot-parts-recipe",
+      "gameName": "Robot Parts (Recipe)",
+      "description": "",
+      "itemName": "robot-parts",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 2
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 4
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "wire-coil-recipe",
+      "gameName": "Wire Coil (Recipe)",
+      "description": "",
+      "itemName": "wire-coil",
+      "ingredientAmounts": [
+        {
+          "itemName": "technum-rods",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "electronics-components-recipe",
+      "gameName": "Electronics Components (Recipe)",
+      "description": "",
+      "itemName": "electronic-components",
+      "ingredientAmounts": [
+        {
+          "itemName": "technum-rods",
+          "amount": 1
+        },
+        {
+          "itemName": "wire-coil",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "circuit-board-recipe",
+      "gameName": "Circuit Board (Recipe)",
+      "description": "",
+      "itemName": "circuit-board",
+      "ingredientAmounts": [
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "cpu-recipe",
+      "gameName": "CPU (Recipe)",
+      "description": "",
+      "itemName": "cpu",
+      "ingredientAmounts": [
+        {
+          "itemName": "telluxite-wafer",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 2
+        },
+        {
+          "itemName": "olumic-acid",
+          "amount": 80
+        }
+      ],
+      "itemsProduced": 8,
+      "time": 120.0,
+      "makerGroupName": "chemical-processor"
+    },
+    {
+      "name": "energy-cell-recipe",
+      "gameName": "Energy Cell (recipe)",
+      "description": "",
+      "itemName": "energy-cell",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 3
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 6
+        },
+        {
+          "itemName": "glass",
+          "amount": 6
+        },
+        {
+          "itemName": "olumic-acid",
+          "amount": 60
+        }
+      ],
+      "itemsProduced": 6,
+      "time": 30.0,
+      "makerGroupName": "fluid-assembler"
+    },
+    {
+      "name": "low-density-olumite-recipe",
+      "gameName": "Olumite Refining: Low Density Olumite (Recipe)",
+      "description": "",
+      "itemName": "low-density-olumite",
+      "ingredientAmounts": [
+        {
+          "itemName": "crude-olumite",
+          "amount": 100
+        }
+      ],
+      "itemsProduced": 100,
+      "time": 4.0,
+      "makerGroupName": "distillation-column"
+    },
+    {
+      "name": "liquid-polymer-recipe",
+      "gameName": "Olumite Refining: Liquid Polymer (Recipe)",
+      "description": "",
+      "itemName": "liquid-polymer",
+      "ingredientAmounts": [
+        {
+          "itemName": "crude-olumite",
+          "amount": 100
+        }
+      ],
+      "itemsProduced": 75,
+      "time": 4.0,
+      "makerGroupName": "distillation-column"
+    },
+    {
+      "name": "olumite-gas-recipe",
+      "gameName": "Olumite Refining: Olumite Gas (Recipe)",
+      "description": "",
+      "itemName": "olumite-gas",
+      "ingredientAmounts": [
+        {
+          "itemName": "crude-olumite",
+          "amount": 100
+        }
+      ],
+      "itemsProduced": 90,
+      "time": 4.0,
+      "makerGroupName": "distillation-column"
+    },
+    {
+      "name": "olumic-acid",
+      "gameName": "Olumic Acid (Recipe)",
+      "description": "",
+      "itemName": "olumic-acid",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-powder",
+          "amount": 16
+        },
+        {
+          "itemName": "olumite-gas",
+          "amount": 75
+        },
+        {
+          "itemName": "water",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 40,
+      "time": 8,
+      "makerGroupName": "chemical-processor"
+    },
+    {
+      "name": "ignium-powder-recipe",
+      "gameName": "Ignium Powder (Recipe)",
+      "description": "",
+      "itemName": "ignium-powder",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-ore-rubble",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 5,
+      "time": 5.0,
+      "makerGroupName": "crushers"
     },
     {
       "name": "gravel-recipe",
@@ -482,6 +1003,89 @@
       "itemsProduced": 4,
       "time": 15.0,
       "makerGroupName": "casting-machine"
+    },
+    {
+      "name": "telluxite-wafer",
+      "gameName": "Telluxite Wafer (Recipe)",
+      "description": "",
+      "itemName": "telluxite-wafer",
+      "ingredientAmounts": [
+        {
+          "itemName": "liquid-telluxite",
+          "amount": 400
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 24.0,
+      "makerGroupName": "casting-machine"
+    },
+    {
+      "name": "glass-recipe",
+      "gameName": "Glass (Recipe)",
+      "description": "",
+      "itemName": "glass",
+      "ingredientAmounts": [
+        {
+          "itemName": "gravel",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "smelters"
+    },
+    {
+      "name": "polymer-board-recipe",
+      "gameName": "Polymer Board (Recipe)",
+      "description": "",
+      "itemName": "polymer-board",
+      "ingredientAmounts": [
+        {
+          "itemName": "liquid-polymer",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 2.0,
+      "makerGroupName": "casting-machine"
+    },
+    {
+      "name": "building-block-recipe",
+      "gameName": "Building Block (Recipe)",
+      "description": "",
+      "itemName": "building-block",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 4
+        }
+      ],
+      "itemsProduced": 20,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-1-recipe",
+      "gameName": "Conveyor I (Recipe)",
+      "description": "",
+      "itemName": "conveyor-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
     },
     {
       "name": "science-pack-1-recipe",
@@ -542,6 +1146,52 @@
       ],
       "itemsProduced": 1,
       "time": 60.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-pack-4-recipe",
+      "gameName": "Science Pack IV (Recipe)",
+      "description": "",
+      "itemName": "science-pack-4",
+      "ingredientAmounts": [
+        {
+          "itemName": "circuit-board",
+          "amount": 4
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 4
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 60.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-pack-5-recipe",
+      "gameName": "Science Pack V (Recipe)",
+      "description": "",
+      "itemName": "science-pack-5",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 12
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 4,
+      "time": 240.0,
       "makerGroupName": "assemblers"
     }
   ]

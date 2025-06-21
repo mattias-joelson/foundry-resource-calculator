@@ -7,12 +7,20 @@
     {
       "itemName": "technum-rods",
       "recipeName": "technum-rods-2-recipe"
+    },
+    {
+      "itemName": "steel-beams",
+      "recipeName": "steel-beams-1-recipe"
     }
   ],
   "chosenMakers": [
     {
       "makerGroupName": "smelters",
       "makerName": "smelter"
+    },
+    {
+      "makerGroupName": "lava-smelters",
+      "makerName": "lava-smelter-1"
     },
     {
       "makerGroupName": "crushers",

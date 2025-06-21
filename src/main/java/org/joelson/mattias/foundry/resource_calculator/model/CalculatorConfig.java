@@ -119,10 +119,13 @@ public class CalculatorConfig {
     private static Recipe recipeFrom(
             JsonRecipe jsonRecipe, Map<String, Item> items, Map<String, Set<Maker>> makerGroups) {
         Map<Item, Integer> ingredientAmounts = new HashMap<>();
+        if (items.get(jsonRecipe.itemName()) == null) {
+            throw new IllegalArgumentException("No item found for name " + jsonRecipe.itemName());
+        }
         for (JsonItemAmount jsonIngredient : jsonRecipe.ingredients()) {
             Item item = items.get(jsonIngredient.itemName());
             if (item == null) {
-                throw new IllegalArgumentException("No item found for name " + jsonIngredient.itemName());
+                throw new IllegalArgumentException("No ingredient found for name " + jsonIngredient.itemName());
             }
             ingredientAmounts.put(item, jsonIngredient.amount());
         }
