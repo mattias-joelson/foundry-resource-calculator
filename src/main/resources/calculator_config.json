@@ -49,21 +49,30 @@
       "speedMultiplier": 1.0
     }
   ],
-  "makerGroups": {
-    "assemblers": [
-      "assembler-1",
-      "assembler-2",
-      "assembler-3"
-    ],
-    "crushers": [
-      "crusher-1",
-      "crusher-2"
-    ],
-    "smelters": [
-      "smelter",
-      "advanced-smelter"
-    ]
-  },
+  "makerGroups": [
+    {
+      "groupName": "assemblers",
+      "makerNames": [
+        "assembler-1",
+        "assembler-2",
+        "assembler-3"
+      ]
+    },
+    {
+      "groupName": "crushers",
+      "makerNames": [
+        "crusher-1",
+        "crusher-2"
+      ]
+    },
+    {
+      "groupName": "smelters",
+      "makerNames": [
+        "smelter",
+        "advanced-smelter"
+      ]
+    }
+  ],
   "items": [
     {
       "name": "xenoferrite-ore-rubble",
@@ -226,227 +235,314 @@
       "gameName": "Xenoferrite Ore (Recipe)",
       "description": "",
       "itemName": "xenoferrite-ore",
-      "ingredients": {
-        "xenoferrite-ore-rubble": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-ore-rubble",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 1,
       "time": 1.5,
-      "makerName": "crushers"
+      "makerGroupName": "crushers"
     },
     {
       "name": "xenoferrite-plates-1-recipe",
       "gameName": "Xenoferrite Plates (Tier 1) (Recipe)",
       "description": "",
       "itemName": "xenoferrite-plates",
-      "ingredients": {
-        "xenoferrite-ore-rubble": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-ore-rubble",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 1,
       "time": 3.0,
-      "makerName": "smelters"
+      "makerGroupName": "smelters"
     },
     {
       "name": "xenoferrite-plates-2-recipe",
       "gameName": "Xenoferrite Plates (Tier 2) (Recipe)",
       "description": "",
       "itemName": "xenoferrite-plates",
-      "ingredients": {
-        "xenoferrite-ore": 2
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-ore",
+          "amount": 2
+        }
+      ],
       "itemsProduced": 3,
       "time": 6.0,
-      "makerName": "smelters"
+      "makerGroupName": "smelters"
     },
     {
       "name": "technum-ore-recipe",
       "gameName": "Technum Ore (Recipe)",
       "description": "",
       "itemName": "technum-ore",
-      "ingredients": {
-        "technum-ore-rubble": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "technum-ore-rubble",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 1,
       "time": 1.5,
-      "makerName": "crushers"
+      "makerGroupName": "crushers"
     },
     {
       "name": "technum-rods-1-recipe",
       "gameName": "Technum Rods (Tier 1) (Recipe)",
       "description": "",
       "itemName": "technum-rods",
-      "ingredients": {
-        "technum-ore-rubble": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "technum-ore-rubble",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 1,
       "time": 3.0,
-      "makerName": "smelters"
+      "makerGroupName": "smelters"
     },
     {
       "name": "technum-rods-2-recipe",
       "gameName": "Technum Rods (Tier 2) (Recipe)",
       "description": "",
       "itemName": "technum-rods",
-      "ingredients": {
-        "technum-ore": 2
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "technum-ore",
+          "amount": 2
+        }
+      ],
       "itemsProduced": 3,
       "time": 6.0,
-      "makerName": "smelters"
+      "makerGroupName": "smelters"
     },
     {
       "name": "xenoferrite-ignium-ore-blend-recipe",
       "gameName": "Xenoferrite Ignium Ore Blend (Recipe)",
       "description": "",
       "itemName": "xenoferrite-ignium-ore-blend",
-      "ingredients": {
-        "xenoferrite-ore-rubble": 4,
-        "ignium-ore-rubble": 2
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-ore-rubble",
+          "amount": 4
+        },
+        {
+          "itemName": "ignium-ore-rubble",
+          "amount": 2
+        }
+      ],
       "itemsProduced": 1,
       "time": 3.0,
-      "makerName": "crushers"
+      "makerGroupName": "crushers"
     },
     {
       "name": "steel-beams-1-recipe",
       "gameName": "Steel Beams (T1) (Recipe)",
       "description": "",
       "itemName": "steel-beams",
-      "ingredients": {
-        "xenoferrite-ignium-ore-blend": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-ignium-ore-blend",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 1,
       "time": 6.0,
-      "makerName": "smelters"
+      "makerGroupName": "smelters"
     },
     {
       "name": "building-block-recipe",
       "gameName": "Building Block (Recipe)",
       "description": "",
       "itemName": "building-block",
-      "ingredients": {
-        "xenoferrite-plates": 6,
-        "technum-rods": 4
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 4
+        }
+      ],
       "itemsProduced": 20,
       "time": 5.0,
-      "makerName": "assemblers"
+      "makerGroupName": "assemblers"
     },
     {
       "name": "conveyor-1-recipe",
       "gameName": "Conveyor I (Recipe)",
       "description": "",
       "itemName": "conveyor-1",
-      "ingredients": {
-        "xenoferrite-plates": 1,
-        "machinery-parts": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 2,
       "time": 3.0,
-      "makerName": "assemblers"
+      "makerGroupName": "assemblers"
     },
     {
       "name": "machinery-parts-recipe",
       "gameName": "Machinery Parts (Recipe)",
       "description": "",
       "itemName": "machinery-parts",
-      "ingredients": {
-        "xenoferrite-plates": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 1,
       "time": 1.5,
-      "makerName": "assemblers"
+      "makerGroupName": "assemblers"
     },
     {
       "name": "advanced-machinery-parts-recipe",
       "gameName": "Advanced Machinery Parts (Recipe)",
       "description": "",
       "itemName": "advanced-machinery-parts",
-      "ingredients": {
-        "machinery-parts": 2,
-        "steel-beams": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "machinery-parts",
+          "amount": 2
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 2,
       "time": 4.0,
-      "makerName": "assemblers"
+      "makerGroupName": "assemblers"
     },
     {
       "name": "gravel-recipe",
       "gameName": "Gravel (Recipe)",
       "description": "",
       "itemName": "gravel",
-      "ingredients": {
-        "mineral-rocks": 2
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "mineral-rocks",
+          "amount": 2
+        }
+      ],
       "itemsProduced": 6,
       "time": 12.0,
-      "makerName": "crushers"
+      "makerGroupName": "crushers"
     },
     {
       "name": "cement-recipe",
       "gameName": "Cement (Recipe)",
       "description": "",
       "itemName": "cement",
-      "ingredients": {
-        "mineral-rocks": 2,
-        "xenoferrite-ore-rubble": 1
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "mineral-rocks",
+          "amount": 2
+        },
+        {
+          "itemName": "xenoferrite-ore-rubble",
+          "amount": 1
+        }
+      ],
       "itemsProduced": 2,
       "time": 12.0,
-      "makerName": "crushers"
+      "makerGroupName": "crushers"
     },
     {
       "name": "concrete-recipe",
       "gameName": "Concrete (Recipe)",
       "description": "",
       "itemName": "concrete",
-      "ingredients": {
-        "cement": 2,
-        "gravel": 4,
-        "water": 20
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "cement",
+          "amount": 2
+        },
+        {
+          "itemName": "gravel",
+          "amount": 4
+        },
+        {
+          "itemName": "water",
+          "amount": 20
+        }
+      ],
       "itemsProduced": 4,
       "time": 15.0,
-      "makerName": "casting-machine"
+      "makerGroupName": "casting-machine"
     },
     {
       "name": "science-pack-1-recipe",
       "gameName": "Science Pack I (Recipe)",
       "description": "",
       "itemName": "science-pack-1",
-      "ingredients": {
-        "machinery-parts": 5,
-        "technum-rods": 4
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 4
+        }
+      ],
       "itemsProduced": 1,
       "time": 30.0,
-      "makerName": "assemblers"
+      "makerGroupName": "assemblers"
     },
     {
       "name": "science-pack-2-recipe",
       "gameName": "Science Pack II (Recipe)",
       "description": "",
       "itemName": "science-pack-2",
-      "ingredients": {
-        "conveyor-1": 3,
-        "building-block": 6
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-1",
+          "amount": 3
+        },
+        {
+          "itemName": "building-block",
+          "amount": 6
+        }
+      ],
       "itemsProduced": 1,
       "time": 30.0,
-      "makerName": "assemblers"
+      "makerGroupName": "assemblers"
     },
     {
       "name": "science-pack-3-recipe",
       "gameName": "Science Pack III (Recipe)",
       "description": "",
       "itemName": "science-pack-3",
-      "ingredients": {
-        "advanced-machinery-parts": 2,
-        "concrete": 12,
-        "firmarlite-bar": 2
-      },
+      "ingredientAmounts": [
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 2
+        },
+        {
+          "itemName": "concrete",
+          "amount": 12
+        },
+        {
+          "itemName": "firmarlite-bar",
+          "amount": 2
+        }
+      ],
       "itemsProduced": 1,
       "time": 60.0,
-      "makerName": "assemblers"
+      "makerGroupName": "assemblers"
     }
   ]
 }

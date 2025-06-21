@@ -31,6 +31,10 @@
     {
       "itemName": "science-pack-2",
       "amount": 20
+    },
+    {
+      "itemName": "science-pack-3",
+      "amount": 20
     }
   ]
 }

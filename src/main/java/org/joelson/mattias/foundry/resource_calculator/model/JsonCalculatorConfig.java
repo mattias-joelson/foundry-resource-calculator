@@ -2,25 +2,25 @@ package org.joelson.mattias.foundry.resource_calculator.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.joelson.mattias.foundry.resource_calculator.util.ListUtil;
 
-import java.util.Map;
-import java.util.Set;
+import java.util.List;
 
 record JsonCalculatorConfig(
-        Set<JsonMaker> makers,
-        Map<String, Set<String>> makerGroups,
-        Set<JsonItem> items,
-        Set<JsonRecipe> recipes)
-{
+        List<JsonMaker> makers,
+        List<JsonMakerGroup> makerGroups,
+        List<JsonItem> items,
+        List<JsonRecipe> recipes) {
+
     @JsonCreator
     public JsonCalculatorConfig(
-            @JsonProperty(value = "makers", required = true) Set<JsonMaker> makers,
-            @JsonProperty(value = "makerGroups", required = true) Map<String, Set<String>> makerGroups,
-            @JsonProperty(value = "items", required = true) Set<JsonItem> items,
-            @JsonProperty(value = "recipes", required = true) Set<JsonRecipe> recipes) {
-        this.makers = makers;
-        this.makerGroups = makerGroups;
-        this.items = items;
-        this.recipes = recipes;
+            @JsonProperty(value = "makers", required = true) List<JsonMaker> makers,
+            @JsonProperty(value = "makerGroups", required = true) List<JsonMakerGroup> makerGroups,
+            @JsonProperty(value = "items", required = true) List<JsonItem> items,
+            @JsonProperty(value = "recipes", required = true) List<JsonRecipe> recipes) {
+        this.makers = ListUtil.requireUniqueMembers(makers, JsonMaker::name);
+        this.makerGroups = ListUtil.requireUniqueMembers(makerGroups, JsonMakerGroup::groupName);
+        this.items = ListUtil.requireUniqueMembers(items, JsonItem::name);
+        this.recipes = ListUtil.requireUniqueMembers(recipes, JsonRecipe::name);
     }
 }

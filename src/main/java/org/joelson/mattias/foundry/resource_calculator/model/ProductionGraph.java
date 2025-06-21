@@ -44,9 +44,9 @@ public class ProductionGraph {
         Recipe recipe = productionGraphNode.getRecipe();
         float itemsPerMinute = productionGraphNode.getItemsPerMinute();
         float productionCycles = itemsPerMinute / recipe.itemsProduced();
-        for (Map.Entry<Item, Integer> ingredientEntry : recipe.ingredients().entrySet()) {
-            itemNodeMap.get(ingredientEntry.getKey().name()).addItemsPerMinute(
-                    productionCycles * ingredientEntry.getValue());
+        for (Map.Entry<Item, Integer> ingredientAmount : recipe.ingredientAmounts().entrySet()) {
+            itemNodeMap.get(ingredientAmount.getKey().name()).addItemsPerMinute(
+                    productionCycles * ingredientAmount.getValue());
         }
     }
 
@@ -88,7 +88,7 @@ public class ProductionGraph {
         if (maker != null) {
             Recipe recipe = productionGraphNode.getRecipe();
             float productionCyclesPerMinute = 60.0f / recipe.time() * maker.speedMultiplier();
-            String ingredients = recipe.ingredients().entrySet().stream()
+            String ingredients = recipe.ingredientAmounts().entrySet().stream()
                     .map(itemIntegerEntry -> itemsPerMinute(itemIntegerEntry.getKey(), itemIntegerEntry.getValue(),
                             productionCyclesPerMinute))
                     .collect(Collectors.joining(", "));
@@ -127,22 +127,22 @@ public class ProductionGraph {
     private static Map<String, Maker> lookupChosenMakers(
             CalculatorConfig calculatorConfig, Map<String, String> chosenMakerNames) {
         Map<String, Maker> chosenMakers = new HashMap<>();
-        for (Map.Entry<String, String> chosenMakerName : chosenMakerNames.entrySet()) {
-            chosenMakers.put(chosenMakerName.getKey(),
-                    selectMaker(calculatorConfig.getMakers(chosenMakerName.getKey()), chosenMakerName.getKey(),
-                            chosenMakerName.getValue()));
+        for (Map.Entry<String, String> chosenMakerGroupMaker : chosenMakerNames.entrySet()) {
+            chosenMakers.put(chosenMakerGroupMaker.getKey(),
+                    selectMaker(calculatorConfig.getMakers(chosenMakerGroupMaker.getKey()), chosenMakerGroupMaker.getKey(),
+                            chosenMakerGroupMaker.getValue()));
         }
         return chosenMakers;
     }
 
-    private static Maker selectMaker(Set<Maker> makers, String makersGroupName, String makerName) {
+    private static Maker selectMaker(Set<Maker> makers, String makerGroupName, String makerName) {
         for (Maker maker : makers) {
             if (maker.name().equals(makerName)) {
                 return maker;
             }
         }
         throw new IllegalArgumentException(
-                "No maker found with name " + makerName + " for makers group " + makersGroupName);
+                "No maker found with name " + makerName + " for maker group " + makerGroupName);
     }
 
     private static Maker chooseMaker(Map<String, Maker> chosenMakers, Set<Maker> possibleMakers) {
@@ -156,7 +156,7 @@ public class ProductionGraph {
                 }
             }
         }
-        throw new IllegalArgumentException("No chosen maker for possible makers " + possibleMakers);
+        throw new IllegalArgumentException("No chosen maker for possible chosenMakers " + possibleMakers);
     }
 
     private static Map<String, Recipe> lookupChosenRecipes(
@@ -205,7 +205,7 @@ public class ProductionGraph {
             return productionLevels.get(item.name());
         }
 
-        Set<Item> ingredients = recipe.ingredients().keySet();
+        Set<Item> ingredients = recipe.ingredientAmounts().keySet();
         int ingredientsMaxProductionLevel = -1;
         for (Item ingredient : ingredients) {
             Recipe ingredientRecipe = chooseRecipe(calculatorConfig, chosenRecipes, ingredient.name());

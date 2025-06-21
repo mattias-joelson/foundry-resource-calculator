@@ -7,7 +7,7 @@ public record Recipe(
         String name,
         String gameName,
         Item item,
-        Map<Item, Integer> ingredients,
+        Map<Item, Integer> ingredientAmounts,
         int itemsProduced,
         float time,
         Set<Maker> makers) {
