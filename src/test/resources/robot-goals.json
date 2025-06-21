@@ -87,6 +87,86 @@
     {
       "itemName": "cleaning-bot",
       "amount": 320
+    },
+    {
+      "itemName": "personal-assistant-robot-torso",
+      "amount": 320
+    },
+    {
+      "itemName": "personal-assistant-robot-head",
+      "amount": 320
+    },
+    {
+      "itemName": "personal-assistant-robot-arm",
+      "amount": 640
+    },
+    {
+      "itemName": "personal-assistant-robot-leg",
+      "amount": 640
+    },
+    {
+      "itemName": "farmer-robot-torso",
+      "amount": 320
+    },
+    {
+      "itemName": "farmer-robot-head",
+      "amount": 320
+    },
+    {
+      "itemName": "farmer-robot-arm",
+      "amount": 640
+    },
+    {
+      "itemName": "farmer-robot-leg",
+      "amount": 640
+    },
+    {
+      "itemName": "combat-robot-torso",
+      "amount": 320
+    },
+    {
+      "itemName": "combat-robot-head",
+      "amount": 320
+    },
+    {
+      "itemName": "combat-robot-arm",
+      "amount": 640
+    },
+    {
+      "itemName": "combat-robot-leg",
+      "amount": 640
+    },
+    {
+      "itemName": "miner-robot-torso",
+      "amount": 320
+    },
+    {
+      "itemName": "miner-robot-head",
+      "amount": 320
+    },
+    {
+      "itemName": "miner-robot-arm",
+      "amount": 640
+    },
+    {
+      "itemName": "miner-robot-leg",
+      "amount": 640
+    },
+    {
+      "itemName": "science-robot-torso",
+      "amount": 320
+    },
+    {
+      "itemName": "science-robot-head",
+      "amount": 320
+    },
+    {
+      "itemName": "science-robot-arm",
+      "amount": 640
+    },
+    {
+      "itemName": "science-robot-leg",
+      "amount": 640
     }
   ]
 }

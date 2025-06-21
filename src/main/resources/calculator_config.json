@@ -419,10 +419,24 @@
       "weight": 1.0
     },
     {
+      "name": "barrel-empty",
+      "gameName": "Barrel (Empty)",
+      "description": "",
+      "stackSize": 200,
+      "weight": 2.0
+    },
+    {
       "name": "weapon-components",
       "gameName": "Weapon Components",
       "description": "",
       "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "mining-drill",
+      "gameName": "Mining Drill",
+      "description": "",
+      "stackSize": 1,
       "weight": 0.0
     },
     {
@@ -529,6 +543,146 @@
       "description": "",
       "stackSize": 10,
       "weight": 55.0
+    },
+    {
+      "name": "personal-assistant-robot-torso",
+      "gameName": "Personal Assistant Robot Torso",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "personal-assistant-robot-head",
+      "gameName": "Personal Assistant Robot Head",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "personal-assistant-robot-arm",
+      "gameName": "Personal Assistant Robot Arm",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "personal-assistant-robot-leg",
+      "gameName": "Personal Assistant Robot Leg",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "farmer-robot-torso",
+      "gameName": "Farmer Robot Torso",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "farmer-robot-head",
+      "gameName": "Farmer Robot Head",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "farmer-robot-arm",
+      "gameName": "Farmer Robot Arm",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "farmer-robot-leg",
+      "gameName": "Farmer Robot Leg",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "combat-robot-torso",
+      "gameName": "Combat Robot Torso",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "combat-robot-head",
+      "gameName": "Combat Robot Head",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "combat-robot-arm",
+      "gameName": "Combat Robot Arm",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "combat-robot-leg",
+      "gameName": "Combat Robot Leg",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "miner-robot-torso",
+      "gameName": "Miner Robot Torso",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "miner-robot-head",
+      "gameName": "Miner Robot Head",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "miner-robot-arm",
+      "gameName": "Miner Robot Arm",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "miner-robot-leg",
+      "gameName": "Miner Robot Leg",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "science-robot-torso",
+      "gameName": "Science Robot Torso",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "science-robot-head",
+      "gameName": "Science Robot Head",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "science-robot-arm",
+      "gameName": "Science Robot Arm",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "science-robot-leg",
+      "gameName": "Science Robot Leg",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
     },
     {
       "name": "science-pack-1",
@@ -1234,6 +1388,21 @@
       "makerGroupName": "casting-machine"
     },
     {
+      "name": "barrel-empty",
+      "gameName": "Barrel (Empty) (Recipe)",
+      "description": "",
+      "itemName": "barrel-empty",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "weapon-components-recipe",
       "gameName": "Weapon Components (Recipe)",
       "description": "",
@@ -1254,6 +1423,29 @@
       ],
       "itemsProduced": 1,
       "time": 6.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "mining-drill-recipe",
+      "gameName": "Mining Drill (Recipe)",
+      "description": "",
+      "itemName": "mining-drill",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 2
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -1646,6 +1838,502 @@
         },
         {
           "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "personal-assistant-robot-torso-recipe",
+      "gameName": "Personal Assistant Robot Torso (Recipe)",
+      "description": "",
+      "itemName": "personal-assistant-robot-torso",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 2
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "personal-assistant-robot-head-recipe",
+      "gameName": "Personal Assistant Robot Head (Recipe)",
+      "description": "",
+      "itemName": "personal-assistant-robot-head",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        },
+        {
+          "itemName": "glass",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "personal-assistant-robot-arm-recipe",
+      "gameName": "Personal Assistant Robot Arm (Recipe)",
+      "description": "",
+      "itemName": "personal-assistant-robot-arm",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "personal-assistant-robot-leg-recipe",
+      "gameName": "Personal Assistant Robot Leg (Recipe)",
+      "description": "",
+      "itemName": "personal-assistant-robot-leg",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "farmer-robot-torso-recipe",
+      "gameName": "Farmer Robot Torso (Recipe)",
+      "description": "",
+      "itemName": "farmer-robot-torso",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 2
+        },
+        {
+          "itemName": "barrel-empty",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "farmer-robot-head-recipe",
+      "gameName": "Farmer Robot Head (Recipe)",
+      "description": "",
+      "itemName": "farmer-robot-head",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "farmer-robot-arm-recipe",
+      "gameName": "Farmer Robot Arm (Recipe)",
+      "description": "",
+      "itemName": "farmer-robot-arm",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "farmer-robot-leg-recipe",
+      "gameName": "Farmer Robot Leg (Recipe)",
+      "description": "",
+      "itemName": "farmer-robot-leg",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "combat-robot-torso-recipe",
+      "gameName": "Combat Robot Torso (Recipe)",
+      "description": "",
+      "itemName": "combat-robot-torso",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "combat-robot-head-recipe",
+      "gameName": "Combat Robot Head (Recipe)",
+      "description": "",
+      "itemName": "combat-robot-head",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 1
+        },
+        {
+          "itemName": "weapon-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "combat-robot-arm-recipe",
+      "gameName": "Combat Robot Arm (Recipe)",
+      "description": "",
+      "itemName": "combat-robot-arm",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        },
+        {
+          "itemName": "weapon-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "combat-robot-leg-recipe",
+      "gameName": "Combat Robot Leg (Recipe)",
+      "description": "",
+      "itemName": "combat-robot-leg",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "miner-robot-torso-recipe",
+      "gameName": "Miner Robot Torso (Recipe)",
+      "description": "",
+      "itemName": "miner-robot-torso",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 2
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "miner-robot-head-recipe",
+      "gameName": "Miner Robot Head (Recipe)",
+      "description": "",
+      "itemName": "miner-robot-head",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        },
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "miner-robot-arm-recipe",
+      "gameName": "Miner Robot Arm (Recipe)",
+      "description": "",
+      "itemName": "miner-robot-arm",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        },
+        {
+          "itemName": "mining-drill",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "miner-robot-leg-recipe",
+      "gameName": "Miner Robot Leg (Recipe)",
+      "description": "",
+      "itemName": "miner-robot-leg",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-robot-torso-recipe",
+      "gameName": "Science Robot Torso (Recipe)",
+      "description": "",
+      "itemName": "science-robot-torso",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 2
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-robot-head-recipe",
+      "gameName": "Science Robot Head (Recipe)",
+      "description": "",
+      "itemName": "science-robot-head",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 2
+        },
+        {
+          "itemName": "glass",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-robot-arm-recipe",
+      "gameName": "Science Robot Arm (Recipe)",
+      "description": "",
+      "itemName": "science-robot-arm",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-robot-leg-recipe",
+      "gameName": "Science Robot Leg (Recipe)",
+      "description": "",
+      "itemName": "science-robot-leg",
+      "ingredientAmounts": [
+        {
+          "itemName": "robot-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
           "amount": 1
         }
       ],
