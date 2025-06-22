@@ -3,7 +3,7 @@ package org.joelson.mattias.foundry.resource_calculator.model;
 import java.util.Map;
 import java.util.Set;
 
-public record Recipe(
+record Recipe(
         String name,
         String gameName,
         Item item,
