@@ -9,15 +9,18 @@ import java.util.List;
 record JsonCalculatorGoals(
         List<JsonChosenRecipe> chosenRecipes,
         List<JsonChosenMaker> chosenMakers,
-        List<JsonItemAmount> productionGoals) {
+        List<JsonItemAmount> productionGoals,
+        JsonProductionTable productionTable) {
 
     @JsonCreator
     public JsonCalculatorGoals(
             @JsonProperty(value = "chosenRecipes", required = true) List<JsonChosenRecipe> chosenRecipes,
             @JsonProperty(value = "chosenMakers", required = true) List<JsonChosenMaker> chosenMakers,
-            @JsonProperty(value = "productionGoals", required = true) List<JsonItemAmount> productionGoals) {
+            @JsonProperty(value = "productionGoals", required = true) List<JsonItemAmount> productionGoals,
+            @JsonProperty(value = "productionTable") JsonProductionTable productionTable) {
         this.chosenRecipes = ListUtil.requireUniqueMembers(chosenRecipes, JsonChosenRecipe::itemName);
         this.chosenMakers = ListUtil.requireUniqueMembers(chosenMakers, JsonChosenMaker::makerGroupName);
         this.productionGoals = ListUtil.requireUniqueMembers(productionGoals, JsonItemAmount::itemName);
+        this.productionTable = productionTable;
     }
 }

@@ -2,6 +2,7 @@ package org.joelson.mattias.foundry.resource_calculator.model;
 
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,13 +12,19 @@ import java.util.Set;
 public record CalculatorGoals(
         Map<String, String> recipes,
         Map<String, String> makers,
-        Map<Item, Integer> productionGoals) {
+        Map<Item, Integer> productionGoals,
+        List<String> productionTableColumns,
+        List<String> productionTableRows) {
 
     public CalculatorGoals(
-            Map<String, String> recipes, Map<String, String> makers, Map<Item, Integer> productionGoals) {
+            Map<String, String> recipes, Map<String, String> makers, Map<Item, Integer> productionGoals,
+            List<String> productionTableColumns,
+            List<String> productionTableRows) {
         this.recipes = Objects.requireNonNull(recipes);
         this.makers = Objects.requireNonNull(makers);
         this.productionGoals = Objects.requireNonNull(productionGoals);
+        this.productionTableColumns = Objects.requireNonNull(productionTableColumns);
+        this.productionTableRows = Objects.requireNonNull(productionTableRows);
     }
 
     public static CalculatorGoals fromPath(Path goalsPath, CalculatorConfig calculatorConfig) throws IOException {
@@ -26,7 +33,15 @@ public record CalculatorGoals(
         Map<String, String> chosenMakers = verifyChosenMakers(calculatorConfig, jsonCalculatorGoals.chosenMakers());
         Map<Item, Integer> productionGoals = verifyProductionGoals(calculatorConfig,
                 jsonCalculatorGoals.productionGoals());
-        return new CalculatorGoals(chosenRecipes, chosenMakers, productionGoals);
+        JsonProductionTable productionTable = jsonCalculatorGoals.productionTable();
+        if (productionTable == null) {
+            return new CalculatorGoals(chosenRecipes, chosenMakers, productionGoals, Collections.emptyList(),
+                    Collections.emptyList());
+        }
+        verifyItemNames(calculatorConfig, productionTable.itemNameColumns());
+        verifyItemNames(calculatorConfig, productionTable.itemNameRows());
+        return new CalculatorGoals(chosenRecipes, chosenMakers, productionGoals, productionTable.itemNameColumns(),
+                productionTable.itemNameRows());
     }
 
     private static Map<String, String> verifyChosenRecipes(
@@ -85,5 +100,14 @@ public record CalculatorGoals(
             productionGoals.put(item, jsonProductionGoal.amount());
         }
         return productionGoals;
+    }
+
+    private static void verifyItemNames(CalculatorConfig calculatorConfig, List<String> itemNames) {
+        for (String itemName : itemNames) {
+            Item item = calculatorConfig.getItem(itemName);
+            if (item == null) {
+                throw new IllegalArgumentException("Missing production table item with name " + itemName);
+            }
+        }
     }
 }

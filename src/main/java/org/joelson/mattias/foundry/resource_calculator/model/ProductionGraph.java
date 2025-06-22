@@ -3,6 +3,7 @@ package org.joelson.mattias.foundry.resource_calculator.model;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -12,12 +13,17 @@ public class ProductionGraph {
 
     private final Map<String, ProductionGraphNode> itemNodeMap;
     private final ArrayList<Set<ProductionGraphNode>> productionGraphLevels;
+    private final List<String> productionTableItemNameColumns;
+    private final List<String> productionTableItemNameRows;
 
     private ProductionGraph(
             Map<String, ProductionGraphNode> itemNodeMap,
-            ArrayList<Set<ProductionGraphNode>> productionGraphLevels) {
+            ArrayList<Set<ProductionGraphNode>> productionGraphLevels, List<String> productionTableItemNameColumns,
+            List<String> productionTableItemNameRows) {
         this.itemNodeMap = Objects.requireNonNull(itemNodeMap);
         this.productionGraphLevels = Objects.requireNonNull(productionGraphLevels);
+        this.productionTableItemNameColumns = Objects.requireNonNull(productionTableItemNameColumns);
+        this.productionTableItemNameRows = Objects.requireNonNull(productionTableItemNameRows);
     }
 
     public void addGoals(Map<Item, Integer> productionGoals) {
@@ -38,6 +44,7 @@ public class ProductionGraph {
         }
 
         printProduction();
+        printProductionTable();
     }
 
     private void calculateProduction(ProductionGraphNode productionGraphNode) {
@@ -77,7 +84,7 @@ public class ProductionGraph {
 
     private String logisticsOf(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
         if (productionGraphNode.getItem().stackSize() > 0) {
-            return String.format("%.3f -> %.0f conveyor-4", itemsPerMinute / 1280, Math.ceil(itemsPerMinute / 1280));
+            return String.format("%.3f -> %.0f conveyor-2", itemsPerMinute / 320, Math.ceil(itemsPerMinute / 320));
         } else {
             return String.format("%.3f -> %.0f pipes", itemsPerMinute / 36000, Math.ceil(itemsPerMinute / 36000));
         }
@@ -109,6 +116,48 @@ public class ProductionGraph {
         return String.format("%s %.2f/min", item.gameName(), numberOfItems * productionCyclesPerMinute);
     }
 
+    private void printProductionTable() {
+        if (productionTableItemNameColumns.isEmpty() || productionTableItemNameRows.isEmpty()) {
+            return;
+        }
+        System.out.printf("%n================%nProduction Table%n================%n");
+        System.out.println("item;amount;" + String.join(";", productionTableItemNameColumns) + ";other");
+        for (String rowItemName : productionTableItemNameRows) {
+            StringBuilder otherBuilder = new StringBuilder();
+            float[] productionRow = new float[productionTableItemNameColumns.size()];
+            ProductionGraphNode productionGraphNode = itemNodeMap.get(rowItemName);
+            Recipe recipe = productionGraphNode.getRecipe();
+            float itemsPerMinute = productionGraphNode.getItemsPerMinute();
+            for (Map.Entry<Item, Integer> ingredientAmount : recipe.ingredientAmounts().entrySet()) {
+                int index = productionTableItemNameColumns.indexOf(ingredientAmount.getKey().name());
+                float ingredientItemsPerMinute = ingredientAmount.getValue() * itemsPerMinute / recipe.itemsProduced();
+                if (index >= 0) {
+                    productionRow[index] = ingredientItemsPerMinute;
+                } else {
+                    if (!otherBuilder.isEmpty()) {
+                        otherBuilder.append(", ");
+                    }
+                    otherBuilder.append(ingredientAmount.getKey().name()).append(" ").append(
+                            formatFloat(ingredientItemsPerMinute));
+                }
+            }
+            StringBuilder rowBuilder = new StringBuilder();
+            rowBuilder.append(rowItemName).append(";").append(formatFloat(itemsPerMinute)).append(";");
+            for (float f : productionRow) {
+                if (f != 0) {
+                    rowBuilder.append(formatFloat(f));
+                }
+                rowBuilder.append(";");
+            }
+            rowBuilder.append(otherBuilder);
+            System.out.println(rowBuilder);
+        }
+    }
+
+    private static String formatFloat(float f) {
+        return String.format("%.3f", f);
+    }
+
     public static ProductionGraph from(CalculatorConfig calculatorConfig, CalculatorGoals calculatorGoals) {
         Map<String, ProductionGraphNode> itemNodeMap = new HashMap<>();
         ArrayList<Set<ProductionGraphNode>> productionGraphLevels = new ArrayList<>();
@@ -126,7 +175,8 @@ public class ProductionGraph {
                         productionLevels);
             }
         }
-        return new ProductionGraph(itemNodeMap, productionGraphLevels);
+        return new ProductionGraph(itemNodeMap, productionGraphLevels, calculatorGoals.productionTableColumns(),
+                calculatorGoals.productionTableRows());
     }
 
     private static Map<String, Maker> lookupChosenMakers(
