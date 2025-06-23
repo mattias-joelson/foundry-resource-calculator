@@ -349,6 +349,13 @@
       "weight": 0.0
     },
     {
+      "name": "liquid-fuel",
+      "gameName": "Liquid Fuel",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
       "name": "olumic-acid",
       "gameName": "Olumic Acid",
       "description": "",
@@ -410,6 +417,13 @@
       "description": "",
       "stackSize": 200,
       "weight": 1.0
+    },
+    {
+      "name": "portable-fuel",
+      "gameName": "Portable Fuel",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
     },
     {
       "name": "polymer-board",
@@ -1183,6 +1197,21 @@
       "makerGroupName": "distillation-column"
     },
     {
+      "name": "liquid-fuel-recipe",
+      "gameName": "Olumite Refining: Olumite Gas (Recipe)",
+      "description": "",
+      "itemName": "liquid-fuel",
+      "ingredientAmounts": [
+        {
+          "itemName": "low-density-olumite",
+          "amount": 50
+        }
+      ],
+      "itemsProduced": 150,
+      "time": 8.0,
+      "makerGroupName": "chemical-processor"
+    },
+    {
       "name": "olumic-acid",
       "gameName": "Olumic Acid (Recipe)",
       "description": "",
@@ -1341,6 +1370,25 @@
       "itemsProduced": 1,
       "time": 6.0,
       "makerGroupName": "assemblers"
+    },
+    {
+      "name": "portable-fuel-recipe",
+      "gameName": "Portable Fuel (Recipe)",
+      "description": "",
+      "itemName": "portable-fuel",
+      "ingredientAmounts": [
+        {
+          "itemName": "barrel-empty",
+          "amount": 1
+        },
+        {
+          "itemName": "liquid-fuel",
+          "amount": 30
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 4.0,
+      "makerGroupName": "fluid-assembler"
     },
     {
       "name": "telluxite-wafer",

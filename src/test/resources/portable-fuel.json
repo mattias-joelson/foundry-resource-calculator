@@ -1,0 +1,44 @@
+{
+  "chosenRecipes": [
+    {
+      "itemName": "xenoferrite-plates",
+      "recipeName": "xenoferrite-plates-2-recipe"
+    },
+    {
+      "itemName": "technum-rods",
+      "recipeName": "technum-rods-2-recipe"
+    },
+    {
+      "itemName": "steel-beams",
+      "recipeName": "steel-beams-1-recipe"
+    },
+    {
+      "itemName": "explosives",
+      "recipeName": "explosives-recipe"
+    }
+  ],
+  "chosenMakers": [
+    {
+      "makerGroupName": "smelters",
+      "makerName": "smelter"
+    },
+    {
+      "makerGroupName": "lava-smelters",
+      "makerName": "lava-smelter-1"
+    },
+    {
+      "makerGroupName": "crushers",
+      "makerName": "crusher-1"
+    },
+    {
+      "makerGroupName": "assemblers",
+      "makerName": "assembler-2"
+    }
+  ],
+  "productionGoals": [
+    {
+      "itemName": "portable-fuel",
+      "amount": 320
+    }
+  ]
+}
