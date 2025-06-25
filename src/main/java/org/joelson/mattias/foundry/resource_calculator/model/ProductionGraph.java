@@ -122,6 +122,7 @@ public class ProductionGraph {
         }
         System.out.printf("%n================%nProduction Table%n================%n");
         System.out.println("item;amount;" + String.join(";", productionTableItemNameColumns) + ";other");
+        float[] productionSum = new float[productionTableItemNameColumns.size()];
         for (String rowItemName : productionTableItemNameRows) {
             StringBuilder otherBuilder = new StringBuilder();
             float[] productionRow = new float[productionTableItemNameColumns.size()];
@@ -133,6 +134,7 @@ public class ProductionGraph {
                 float ingredientItemsPerMinute = ingredientAmount.getValue() * itemsPerMinute / recipe.itemsProduced();
                 if (index >= 0) {
                     productionRow[index] = ingredientItemsPerMinute;
+                    productionSum[index] += ingredientItemsPerMinute;
                 } else {
                     if (!otherBuilder.isEmpty()) {
                         otherBuilder.append(", ");
@@ -152,6 +154,87 @@ public class ProductionGraph {
             rowBuilder.append(otherBuilder);
             System.out.println(rowBuilder);
         }
+        StringBuilder componentsSumBuilder = new StringBuilder("sum;;");
+        StringBuilder componentsBeltsBuilder = new StringBuilder("components belts;;");
+        StringBuilder componentsRoundedBelts = new StringBuilder("rounded components belts;;");
+        int componentsUsed = 0;
+        int componentBeltsUsed = 0;
+        for (int i = 0; i < productionTableItemNameColumns.size(); i += 1) {
+            float sum = productionSum[i];
+            String itemName = productionTableItemNameColumns.get(i);
+            ProductionGraphNode productionGraphNode = itemNodeMap.get(itemName);
+            if (productionGraphNode != null && sum != 0) {
+                componentsSumBuilder.append(formatFloat(sum));
+                float itemsPerBelt = productionGraphNode.getItem().stackSize() == 0 ? 36000f : 1280f;
+                componentsBeltsBuilder.append(formatFloat(sum / itemsPerBelt));
+                componentsRoundedBelts.append((int) Math.ceil(sum / itemsPerBelt));
+                componentsUsed += 1;
+                componentBeltsUsed += (int) Math.ceil(sum / itemsPerBelt);
+            }
+            componentsSumBuilder.append(";");
+            componentsBeltsBuilder.append(";");
+            componentsRoundedBelts.append(";");
+        }
+        System.out.println(componentsSumBuilder);
+        System.out.println(componentsBeltsBuilder);
+        System.out.println(componentsRoundedBelts);
+        System.out.println();
+        System.out.println("component input belts;space between;width");
+        System.out.printf("%d;%d;%d%n", componentBeltsUsed, componentsUsed - 1,
+                componentBeltsUsed + componentsUsed - 1);
+        System.out.println();
+
+        String[] inputResources = {
+                "biomass",
+
+                "xenoferrite-ore-rubble",
+                "technum-ore-rubble",
+                "ignium-ore-rubble",
+                "mineral-rocks",
+                "liquid-telluxite",
+
+                "firmarlite-bar",
+                "firmarlite-sheet",
+
+                "water",
+                "crude-olumite"
+        };
+        StringBuilder columnsBuilder = new StringBuilder(";");
+        StringBuilder inputSumBuilder = new StringBuilder("input sum;");
+        StringBuilder inputBeltsBuilder = new StringBuilder("input belts;");
+        StringBuilder roundedSumBuilder = new StringBuilder("rounded belts;");
+        int resourcesUsed = 0;
+        int resourceBeltsUsed = 0;
+        for (String resourceName : inputResources) {
+            ProductionGraphNode resourceNode = itemNodeMap.get(resourceName);
+            if (resourceNode == null || resourceNode.getItemsPerMinute() == 0) {
+                if (resourceNode == null) {
+                    System.err.printf("resourceNode for resourceName %s is null%n", resourceName);
+                }
+                continue;
+            }
+            if (resourceName.equals("firmarlite-bar")) {
+                System.err.println("Should firmarlite-bar be treated special?");
+//                if (resourceName.equals("firmarlite-bar") && !productionTableItemNameColumns.contains(resourceName)) {
+//                    continue;
+//                }
+            }
+            float itemsPerMinute = resourceNode.getItemsPerMinute();
+            columnsBuilder.append(resourceName).append(";");
+            inputSumBuilder.append(formatFloat(itemsPerMinute)).append(";");
+            float itemsPerBelt = resourceNode.getItem().stackSize() == 0 ? 36000f : 1280f;
+            inputBeltsBuilder.append(formatFloat(itemsPerMinute / itemsPerBelt)).append(";");
+            roundedSumBuilder.append((int) Math.ceil(itemsPerMinute / itemsPerBelt)).append(";");
+            resourcesUsed += 1;
+            resourceBeltsUsed += (int) Math.ceil(itemsPerMinute / itemsPerBelt);
+        }
+        System.out.println(columnsBuilder);
+        System.out.println(inputSumBuilder);
+        System.out.println(inputBeltsBuilder);
+        System.out.println(roundedSumBuilder);
+        System.out.println();
+        System.out.println("input belts;space between;width");
+        System.out.printf("%d;%d;%d%n", resourceBeltsUsed, resourcesUsed - 1, resourceBeltsUsed + resourcesUsed - 1);
     }
 
     private static String formatFloat(float f) {
