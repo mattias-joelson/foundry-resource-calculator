@@ -12,16 +12,19 @@ import java.util.Set;
 public record CalculatorGoals(
         Map<String, String> recipes,
         Map<String, String> makers,
+        String conveyorItemName,
+        int conveyorThroughput,
         Map<Item, Integer> productionGoals,
         List<String> productionTableColumns,
         List<String> productionTableRows) {
 
     public CalculatorGoals(
-            Map<String, String> recipes, Map<String, String> makers, Map<Item, Integer> productionGoals,
-            List<String> productionTableColumns,
-            List<String> productionTableRows) {
+            Map<String, String> recipes, Map<String, String> makers, String conveyorItemName, int conveyorThroughput,
+            Map<Item, Integer> productionGoals, List<String> productionTableColumns, List<String> productionTableRows) {
         this.recipes = Objects.requireNonNull(recipes);
         this.makers = Objects.requireNonNull(makers);
+        this.conveyorItemName = Objects.requireNonNull(conveyorItemName);
+        this.conveyorThroughput = conveyorThroughput;
         this.productionGoals = Objects.requireNonNull(productionGoals);
         this.productionTableColumns = Objects.requireNonNull(productionTableColumns);
         this.productionTableRows = Objects.requireNonNull(productionTableRows);
@@ -35,13 +38,16 @@ public record CalculatorGoals(
                 jsonCalculatorGoals.productionGoals());
         JsonProductionTable productionTable = jsonCalculatorGoals.productionTable();
         if (productionTable == null) {
-            return new CalculatorGoals(chosenRecipes, chosenMakers, productionGoals, Collections.emptyList(),
+            return new CalculatorGoals(chosenRecipes, chosenMakers,
+                    jsonCalculatorGoals.chosenConveyor().conveyorItemName(),
+                    jsonCalculatorGoals.chosenConveyor().conveyorThroughput(), productionGoals, Collections.emptyList(),
                     Collections.emptyList());
         }
         verifyItemNames(calculatorConfig, productionTable.itemNameColumns());
         verifyItemNames(calculatorConfig, productionTable.itemNameRows());
-        return new CalculatorGoals(chosenRecipes, chosenMakers, productionGoals, productionTable.itemNameColumns(),
-                productionTable.itemNameRows());
+        return new CalculatorGoals(chosenRecipes, chosenMakers, jsonCalculatorGoals.chosenConveyor().conveyorItemName(),
+                jsonCalculatorGoals.chosenConveyor().conveyorThroughput(), productionGoals,
+                productionTable.itemNameColumns(), productionTable.itemNameRows());
     }
 
     private static Map<String, String> verifyChosenRecipes(

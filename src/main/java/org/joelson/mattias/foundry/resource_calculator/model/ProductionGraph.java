@@ -13,15 +13,19 @@ public class ProductionGraph {
 
     private final Map<String, ProductionGraphNode> itemNodeMap;
     private final ArrayList<Set<ProductionGraphNode>> productionGraphLevels;
+    private final String conveyorItemName;
+    private final int conveyorThroughput;
     private final List<String> productionTableItemNameColumns;
     private final List<String> productionTableItemNameRows;
 
     private ProductionGraph(
-            Map<String, ProductionGraphNode> itemNodeMap,
-            ArrayList<Set<ProductionGraphNode>> productionGraphLevels, List<String> productionTableItemNameColumns,
+            Map<String, ProductionGraphNode> itemNodeMap, ArrayList<Set<ProductionGraphNode>> productionGraphLevels,
+            String conveyorItemName, int conveyorThroughput, List<String> productionTableItemNameColumns,
             List<String> productionTableItemNameRows) {
         this.itemNodeMap = Objects.requireNonNull(itemNodeMap);
         this.productionGraphLevels = Objects.requireNonNull(productionGraphLevels);
+        this.conveyorItemName = conveyorItemName;
+        this.conveyorThroughput = conveyorThroughput;
         this.productionTableItemNameColumns = Objects.requireNonNull(productionTableItemNameColumns);
         this.productionTableItemNameRows = Objects.requireNonNull(productionTableItemNameRows);
     }
@@ -84,7 +88,8 @@ public class ProductionGraph {
 
     private String logisticsOf(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
         if (productionGraphNode.getItem().stackSize() > 0) {
-            return String.format("%.3f -> %.0f conveyor-2", itemsPerMinute / 320, Math.ceil(itemsPerMinute / 320));
+            return String.format("%.3f -> %.0f %s", itemsPerMinute / conveyorThroughput,
+                    Math.ceil(itemsPerMinute / conveyorThroughput), conveyorItemName);
         } else {
             return String.format("%.3f -> %.0f pipes", itemsPerMinute / 36000, Math.ceil(itemsPerMinute / 36000));
         }
@@ -222,7 +227,7 @@ public class ProductionGraph {
             float itemsPerMinute = resourceNode.getItemsPerMinute();
             columnsBuilder.append(resourceName).append(";");
             inputSumBuilder.append(formatFloat(itemsPerMinute)).append(";");
-            float itemsPerBelt = resourceNode.getItem().stackSize() == 0 ? 36000f : 1280f;
+            float itemsPerBelt = resourceNode.getItem().stackSize() == 0 ? 36000f : conveyorThroughput;
             inputBeltsBuilder.append(formatFloat(itemsPerMinute / itemsPerBelt)).append(";");
             roundedSumBuilder.append((int) Math.ceil(itemsPerMinute / itemsPerBelt)).append(";");
             resourcesUsed += 1;
@@ -258,7 +263,8 @@ public class ProductionGraph {
                         productionLevels);
             }
         }
-        return new ProductionGraph(itemNodeMap, productionGraphLevels, calculatorGoals.productionTableColumns(),
+        return new ProductionGraph(itemNodeMap, productionGraphLevels, calculatorGoals.conveyorItemName(),
+                calculatorGoals.conveyorThroughput(), calculatorGoals.productionTableColumns(),
                 calculatorGoals.productionTableRows());
     }
 
