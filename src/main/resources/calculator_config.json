@@ -83,6 +83,12 @@
       "gameName": "Chemical Processor",
       "description": "",
       "speedMultiplier": 1.0
+    },
+    {
+      "name": "character",
+      "gameName": "Character",
+      "description": "Can only be produced by the character",
+      "speedMultiplier": 6.0
     }
   ],
   "makerGroups": [
@@ -447,6 +453,20 @@
       "weight": 0.0
     },
     {
+      "name": "power-line",
+      "gameName": "Power Line",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "explosive-charge",
+      "gameName": "Explosive Charge",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
       "name": "mining-drill",
       "gameName": "Mining Drill",
       "description": "",
@@ -461,10 +481,297 @@
       "weight": 0.0
     },
     {
+      "name": "elevator",
+      "gameName": "Elevator",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "walkway",
+      "gameName": "Walkway",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "emergency-beacon",
+      "gameName": "Emergency Beacon",
+      "description": "",
+      "stackSize": 20,
+      "weight": 0.0
+    },
+    {
+      "name": "shipping-pad-small",
+      "gameName": "Shipping Pad (Small)",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "shipping-pad-medium",
+      "gameName": "Shipping Pad (Medium)",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "shipping-pad-medium-assembly-line",
+      "gameName": "Shipping Pad (Medium, Assembly Line)",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
       "name": "conveyor-1",
       "gameName": "Conveyor I",
       "description": "",
       "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-2",
+      "gameName": "Conveyor II",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-3",
+      "gameName": "Conveyor III",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-4",
+      "gameName": "Conveyor IV",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-slope-1",
+      "gameName": "Conveyor Slope I",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-slope-2",
+      "gameName": "Conveyor Slope II",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-slope-3",
+      "gameName": "Conveyor Slope III",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-slope-4",
+      "gameName": "Conveyor Slope IV",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-balancer-1",
+      "gameName": "Conveyor Balancer I",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-balancer-2",
+      "gameName": "Conveyor Balancer II",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-balancer-3",
+      "gameName": "Conveyor Balancer III",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "conveyor-balancer-4",
+      "gameName": "Conveyor Balancer IV",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "freight-elevator-1",
+      "gameName": "Freight Elevator I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "freight-elevator-2",
+      "gameName": "Freight Elevator II",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "freight-elevator-3",
+      "gameName": "Freight Elevator III",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "freight-elevator-4",
+      "gameName": "Freight Elevator IV",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "pipe",
+      "gameName": "Pipe",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
+    },
+    {
+      "name": "pipeline",
+      "gameName": "Pipeline",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "cargo-shuttle-start-pad",
+      "gameName": "Cargo Shuttle Start Pad",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "cargo-shuttle-target-pad",
+      "gameName": "Cargo Shuttle Target Pad",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "liquids-cargo-shuttle-start-pad",
+      "gameName": "Cargo Shuttle Start Pad (Liquids)",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "liquids-cargo-shuttle-target-pad",
+      "gameName": "Cargo Shuttle Target Pad (Liquids)",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "loader-1",
+      "gameName": "Loader",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "loader-2",
+      "gameName": "Loader (2nd Lane)",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "loader-3",
+      "gameName": "Loader (3rd Lane",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "filter-loader",
+      "gameName": "Filter Loader",
+      "description": "",
+      "stackSize": 50,
+      "weight": 0.0
+    },
+    {
+      "name": "boiler",
+      "gameName": "Boiler",
+      "description": "",
+      "stackSize": 20,
+      "weight": 0.0
+    },
+    {
+      "name": "steam-turbine",
+      "gameName": "steam-turbine",
+      "description": "",
+      "stackSize": 5,
+      "weight": 0.0
+    },
+    {
+      "name": "solar-panel-small",
+      "gameName": "Solar Panel (Small)",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "solar-panel-large",
+      "gameName": "Solar Panel (Large)",
+      "description": "",
+      "stackSize": 5,
+      "weight": 0.0
+    },
+    {
+      "name": "battery-small",
+      "gameName": "Battery (Small)",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "battery-large",
+      "gameName": "Battery (Large)",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "power-pole-1",
+      "gameName": "Power Pole (Small)",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "power-pole-2",
+      "gameName": "Power Pole (Large)",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "transformer-small",
+      "gameName": "Transformer (Small)",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "transformer-large",
+      "gameName": "Transformer (Large)",
+      "description": "",
+      "stackSize": 10,
       "weight": 0.0
     },
     {
@@ -1474,6 +1781,48 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "power-line-recipe",
+      "gameName": "Power Line (Recipe)",
+      "description": "",
+      "itemName": "power-line",
+      "ingredientAmounts": [
+        {
+          "itemName": "wire-coil",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 4.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "explosive-charge-recipe",
+      "gameName": "Explosive Charge (Recipe)",
+      "description": "",
+      "itemName": "explosive-charge",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "explosives",
+          "amount": 1
+        },
+        {
+          "itemName": "wire-coil",
+          "amount": 3
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 3
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "mining-drill-recipe",
       "gameName": "Mining Drill (Recipe)",
       "description": "",
@@ -1516,6 +1865,156 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "elevator-recipe",
+      "gameName": "Elevator (Recipe)",
+      "description": "",
+      "itemName": "elevator",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 50
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 50
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 20
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 15
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "walkway-recipe",
+      "gameName": "Walkway (Recipe)",
+      "description": "",
+      "itemName": "walkway",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 3
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "emergency-beacon-recipe",
+      "gameName": "Emergency Beacon (Recipe)",
+      "description": "",
+      "itemName": "emergency-beacon",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 2
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3,
+      "makerGroupName": "character"
+    },
+    {
+      "name": "shipping-pad-small-recipe",
+      "gameName": "Shipping Pad (Small) (Recipe)",
+      "description": "",
+      "itemName": "shipping-pad-small",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 50
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        },
+        {
+          "itemName": "emergency-beacon",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "shipping-pad-medium-recipe",
+      "gameName": "Shipping Pad (Medium) (Recipe)",
+      "description": "",
+      "itemName": "shipping-pad-medium",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "concrete",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 50
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 50
+        },
+        {
+          "itemName": "emergency-beacon",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "shipping-pad-medium-assembly-line-recipe",
+      "gameName": "Shipping Pad (Medium, Assembly Line) (Recipe)",
+      "description": "",
+      "itemName": "shipping-pad-medium-assembly-line",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "concrete",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 50
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 50
+        },
+        {
+          "itemName": "emergency-beacon",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "conveyor-1-recipe",
       "gameName": "Conveyor I (Recipe)",
       "description": "",
@@ -1532,6 +2031,807 @@
       ],
       "itemsProduced": 2,
       "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-2-recipe",
+      "gameName": "Conveyor II (Recipe)",
+      "description": "",
+      "itemName": "conveyor-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-1",
+          "amount": 2
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 2
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-3-recipe",
+      "gameName": "Conveyor III (Recipe)",
+      "description": "",
+      "itemName": "conveyor-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-2",
+          "amount": 2
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-4-recipe",
+      "gameName": "Conveyor IV (Recipe)",
+      "description": "",
+      "itemName": "conveyor-4",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-3",
+          "amount": 2
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 2
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-slope-1-recipe",
+      "gameName": "Conveyor Slope I (Recipe)",
+      "description": "",
+      "itemName": "conveyor-slope-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-1",
+          "amount": 2
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-slope-2-recipe",
+      "gameName": "Conveyor Slope II (Recipe)",
+      "description": "",
+      "itemName": "conveyor-slope-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-slope-1",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 2
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 2.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-slope-3-recipe",
+      "gameName": "Conveyor Slope III (Recipe)",
+      "description": "",
+      "itemName": "conveyor-slope-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-slope-2",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.75,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-slope-4-recipe",
+      "gameName": "Conveyor Slope IV (Recipe)",
+      "description": "",
+      "itemName": "conveyor-slope-4",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-slope-3",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 2
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.75,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-balancer-1-recipe",
+      "gameName": "Conveyor Balancer I (Recipe)",
+      "description": "",
+      "itemName": "conveyor-balancer-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-1",
+          "amount": 4
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-balancer-2-recipe",
+      "gameName": "Conveyor Balancer II (Recipe)",
+      "description": "",
+      "itemName": "conveyor-balancer-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-balancer-1",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-balancer-3-recipe",
+      "gameName": "Conveyor Balancer III (Recipe)",
+      "description": "",
+      "itemName": "conveyor-balancer-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-balancer-2",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 2
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "conveyor-balancer-4-recipe",
+      "gameName": "Conveyor Balancer IV (Recipe)",
+      "description": "",
+      "itemName": "conveyor-balancer-4",
+      "ingredientAmounts": [
+        {
+          "itemName": "conveyor-balancer-3",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 4
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "freight-elevator-1-recipe",
+      "gameName": "Freight Elevator I (Recipe)",
+      "description": "",
+      "itemName": "freight-elevator-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 15
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 15
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "freight-elevator-2-recipe",
+      "gameName": "Freight Elevator II (Recipe)",
+      "description": "",
+      "itemName": "freight-elevator-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "freight-elevator-1",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "freight-elevator-3-recipe",
+      "gameName": "Freight Elevator III (Recipe)",
+      "description": "",
+      "itemName": "freight-elevator-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "freight-elevator-2",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 15
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "freight-elevator-4-recipe",
+      "gameName": "Freight Elevator IV (Recipe)",
+      "description": "",
+      "itemName": "freight-elevator-4",
+      "ingredientAmounts": [
+        {
+          "itemName": "freight-elevator-3",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pipe-recipe",
+      "gameName": "Pipe (Recipe)",
+      "description": "",
+      "itemName": "pipe",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 4.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pipeline-recipe",
+      "gameName": "Pipeline (Recipe)",
+      "description": "",
+      "itemName": "pipeline",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 8
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 4.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "cargo-shuttle-start-pad-recipe",
+      "gameName": "Cargo Shuttle Start Pad (Recipe)",
+      "description": "",
+      "itemName": "cargo-shuttle-start-pad",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 200
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 100
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 50
+        },
+        {
+          "itemName": "glass",
+          "amount": 20
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "cargo-shuttle-target-pad-recipe",
+      "gameName": "Cargo Shuttle Target Pad (Recipe)",
+      "description": "",
+      "itemName": "cargo-shuttle-target-pad",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "liquids-cargo-shuttle-start-pad-recipe",
+      "gameName": "Cargo Shuttle Start Pad (Liquids) (Recipe)",
+      "description": "",
+      "itemName": "liquids-cargo-shuttle-start-pad",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 200
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 100
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 50
+        },
+        {
+          "itemName": "glass",
+          "amount": 20
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "liquids-cargo-shuttle-target-pad-recipe",
+      "gameName": "Cargo Shuttle Target Pad (Liquids) (Recipe)",
+      "description": "",
+      "itemName": "liquids-cargo-shuttle-target-pad",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "loader-1-recipe",
+      "gameName": "Loader (Recipe)",
+      "description": "",
+      "itemName": "loader-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 3
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 3
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "loader-2-recipe",
+      "gameName": "Loader (2nd Lane) (Recipe)",
+      "description": "",
+      "itemName": "loader-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 8
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "loader-3-recipe",
+      "gameName": "Loader (3rd Lane) (Recipe)",
+      "description": "",
+      "itemName": "loader-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 12
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "filter-loader",
+      "gameName": "Filter Loader (Recipe)",
+      "description": "",
+      "itemName": "filter-loader",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 4
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "boiler-recipe",
+      "gameName": "Boiler (Recipe)",
+      "description": "",
+      "itemName": "boiler",
+      "ingredientAmounts": [
+        {
+          "itemName": "pipe",
+          "amount": 5
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "steam-turbine-recipe",
+      "gameName": "Steam Turbine (Recipe)",
+      "description": "",
+      "itemName": "steam-turbine",
+      "ingredientAmounts": [
+        {
+          "itemName": "pipe",
+          "amount": 10
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 40
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 25
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "solar-panel-small-recipe",
+      "gameName": "Solar Panel (Small) (Recipe)",
+      "description": "",
+      "itemName": "solar-panel-small",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 10
+        },
+        {
+          "itemName": "glass",
+          "amount": 10
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "solar-panel-large-recipe",
+      "gameName": "Solar Panel (Large) (Recipe)",
+      "description": "",
+      "itemName": "solar-panel-large",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 30
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 10
+        },
+        {
+          "itemName": "glass",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "battery-small-recipe",
+      "gameName": "Battery (Small) (Recipe)",
+      "description": "",
+      "itemName": "battery-small",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 4
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 20
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "battery-large-recipe",
+      "gameName": "Battery (Large) (Recipe)",
+      "description": "",
+      "itemName": "battery-large",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 20
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "power-pole-1-recipe",
+      "gameName": "Power Pole (Small) (Recipe)",
+      "description": "",
+      "itemName": "power-pole-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "power-pole-2-recipe",
+      "gameName": "Power Pole (Large) (Recipe)",
+      "description": "",
+      "itemName": "power-pole-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "transformer-small-recipe",
+      "gameName": "Transformer (Small) (Recipe)",
+      "description": "",
+      "itemName": "transformer-small",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 15
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 10
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 15
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "transformer-large-recipe",
+      "gameName": "Transformer (Large) (Recipe)",
+      "description": "",
+      "itemName": "transformer-large",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 25
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
       "makerGroupName": "assemblers"
     },
     {

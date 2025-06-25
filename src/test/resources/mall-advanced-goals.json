@@ -1,0 +1,239 @@
+{
+  "chosenRecipes": [
+    {
+      "itemName": "xenoferrite-plates",
+      "recipeName": "xenoferrite-plates-2-recipe"
+    },
+    {
+      "itemName": "technum-rods",
+      "recipeName": "technum-rods-2-recipe"
+    },
+    {
+      "itemName": "steel-beams",
+      "recipeName": "steel-beams-2-recipe"
+    },
+    {
+      "itemName": "explosives",
+      "recipeName": "explosives-recipe"
+    }
+  ],
+  "chosenMakers": [
+    {
+      "makerGroupName": "smelters",
+      "makerName": "advanced-smelter"
+    },
+    {
+      "makerGroupName": "lava-smelters",
+      "makerName": "lava-smelter-2"
+    },
+    {
+      "makerGroupName": "crushers",
+      "makerName": "crusher-2"
+    },
+    {
+      "makerGroupName": "assemblers",
+      "makerName": "assembler-3"
+    }
+  ],
+  "chosenConveyor": {
+    "conveyorItemName": "conveyor-4",
+    "conveyorThroughput": 1280
+  },
+  "productionGoals": [
+    {
+      "itemName": "power-line",
+      "amount": 30.0
+    },
+    {
+      "itemName": "explosive-charge",
+      "amount": 12.0
+    },
+    {
+      "itemName": "building-block",
+      "amount": 480.0
+    },
+    {
+      "itemName": "elevator",
+      "amount": 0.2
+    },
+    {
+      "itemName": "walkway",
+      "amount": 20.0
+    },
+    {
+      "itemName": "shipping-pad-small",
+      "amount": 0.2
+    },
+    {
+      "itemName": "shipping-pad-medium",
+      "amount": 0.2
+    },
+    {
+      "itemName": "shipping-pad-medium-assembly-line",
+      "amount": 0.2
+    },
+    {
+      "itemName": "conveyor-4",
+      "amount": 64.0
+    },
+    {
+      "itemName": "conveyor-slope-4",
+      "amount": 16.0
+    },
+    {
+      "itemName": "conveyor-balancer-4",
+      "amount": 10.0
+    },
+    {
+      "itemName": "freight-elevator-4",
+      "amount": 0.2
+    },
+    {
+      "itemName": "pipe",
+      "amount": 30.0
+    },
+    {
+      "itemName": "pipeline",
+      "amount": 30.0
+    },
+    {
+      "itemName": "cargo-shuttle-start-pad",
+      "amount": 0.2
+    },
+    {
+      "itemName": "cargo-shuttle-target-pad",
+      "amount": 0.2
+    },
+    {
+      "itemName": "liquids-cargo-shuttle-start-pad",
+      "amount": 0.2
+    },
+    {
+      "itemName": "liquids-cargo-shuttle-target-pad",
+      "amount": 0.2
+    },
+    {
+      "itemName": "loader-1",
+      "amount": 20.0
+    },
+    {
+      "itemName": "loader-2",
+      "amount": 20.0
+    },
+    {
+      "itemName": "loader-3",
+      "amount": 20.0
+    },
+    {
+      "itemName": "filter-loader",
+      "amount": 10.0
+    },
+    {
+      "itemName": "boiler",
+      "amount": 0.2
+    },
+    {
+      "itemName": "steam-turbine",
+      "amount": 0.2
+    },
+    {
+      "itemName": "solar-panel-small",
+      "amount": 5.0
+    },
+    {
+      "itemName": "solar-panel-large",
+      "amount": 4.0
+    },
+    {
+      "itemName": "battery-small",
+      "amount": 6.0
+    },
+    {
+      "itemName": "battery-large",
+      "amount": 4.0
+    },
+    {
+      "itemName": "power-pole-1",
+      "amount": 2.0
+    },
+    {
+      "itemName": "power-pole-2",
+      "amount": 2.0
+    },
+    {
+      "itemName": "transformer-small",
+      "amount": 0.2
+    },
+    {
+      "itemName": "transformer-large",
+      "amount": 0.2
+    }
+  ],
+  "productionTable": {
+    "itemNameColumns": [
+      "firmarlite-bar",
+      "xenoferrite-plates",
+      "technum-rods",
+      "steel-beams",
+      "firmarlite-sheet",
+      "machinery-parts",
+      "advanced-machinery-parts",
+      "hydraulic-piston",
+      "robot-parts",
+      "electronic-components",
+      "circuit-board",
+      "cpu",
+      "energy-cell",
+      "concrete",
+      "glass",
+      "polymer-board"
+    ],
+    "itemNameRows": [
+      "power-line",
+      "explosive-charge",
+      "wire-coil",
+      "building-block",
+      "elevator",
+      "walkway",
+      "shipping-pad-small",
+      "shipping-pad-medium",
+      "shipping-pad-medium-assembly-line",
+      "conveyor-1",
+      "conveyor-2",
+      "conveyor-3",
+      "conveyor-4",
+      "conveyor-slope-1",
+      "conveyor-slope-2",
+      "conveyor-slope-3",
+      "conveyor-slope-4",
+      "conveyor-balancer-1",
+      "conveyor-balancer-2",
+      "conveyor-balancer-3",
+      "conveyor-balancer-4",
+      "freight-elevator-1",
+      "freight-elevator-2",
+      "freight-elevator-3",
+      "freight-elevator-4",
+      "pipe",
+      "pipeline",
+      "cargo-shuttle-start-pad",
+      "cargo-shuttle-target-pad",
+      "liquids-cargo-shuttle-start-pad",
+      "liquids-cargo-shuttle-target-pad",
+      "loader-1",
+      "loader-2",
+      "loader-3",
+      "filter-loader",
+      "boiler",
+      "steam-turbine",
+      "solar-panel-small",
+      "solar-panel-large",
+      "battery-small",
+      "battery-large",
+      "power-pole-1",
+      "power-pole-2",
+      "transformer-small",
+      "transformer-large"
+    ]
+  }
+}
