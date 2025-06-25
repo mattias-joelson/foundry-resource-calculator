@@ -9,7 +9,7 @@ record JsonChosenMaker(
         String makerName) {
 
     @JsonCreator
-    public JsonChosenMaker(
+    JsonChosenMaker(
             @JsonProperty(value = "makerGroupName", required = true) String makerGroupName,
             @JsonProperty(value = "makerName", required = true) String makerName) {
         this.makerGroupName = StringUtil.requireNotNullAndNotEmpty(makerGroupName, "makerGroupName is null or empty");

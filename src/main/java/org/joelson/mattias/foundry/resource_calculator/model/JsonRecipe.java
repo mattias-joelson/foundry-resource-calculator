@@ -18,7 +18,7 @@ record JsonRecipe(
         String makerGroupName) {
 
     @JsonCreator
-    public JsonRecipe(
+    JsonRecipe(
             @JsonProperty(value = "name", required = true) String name,
             @JsonProperty(value = "gameName", required = true) String gameName,
             @JsonProperty(value = "description", required = true) String description,

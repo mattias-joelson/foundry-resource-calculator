@@ -15,7 +15,7 @@ record JsonCalculatorGoals(
         JsonProductionTable productionTable) {
 
     @JsonCreator
-    public JsonCalculatorGoals(
+    JsonCalculatorGoals(
             @JsonProperty(value = "chosenRecipes", required = true) List<JsonChosenRecipe> chosenRecipes,
             @JsonProperty(value = "chosenMakers", required = true) List<JsonChosenMaker> chosenMakers,
             @JsonProperty(value = "chosenConveyor", required = true) JsonChosenConveyor chosenConveyor,

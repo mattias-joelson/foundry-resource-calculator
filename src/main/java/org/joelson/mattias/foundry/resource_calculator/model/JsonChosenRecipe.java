@@ -9,7 +9,7 @@ record JsonChosenRecipe(
         String recipeName) {
 
     @JsonCreator
-    public JsonChosenRecipe(
+    JsonChosenRecipe(
             @JsonProperty(value = "itemName", required = true) String itemName,
             @JsonProperty(value = "recipeName", required = true) String recipeName) {
         this.itemName = StringUtil.requireNotNullAndNotEmpty(itemName, "itemName is null or empty");

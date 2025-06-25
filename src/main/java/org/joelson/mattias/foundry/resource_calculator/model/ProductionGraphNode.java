@@ -9,7 +9,7 @@ class ProductionGraphNode {
     private final Maker maker;
     private float itemsPerMinute = 0;
 
-    public ProductionGraphNode(Item item, Recipe recipe, Maker maker) {
+    ProductionGraphNode(Item item, Recipe recipe, Maker maker) {
         this.item = Objects.requireNonNull(item);
         this.recipe = recipe;
         this.maker = maker;

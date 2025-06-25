@@ -11,7 +11,7 @@ record JsonProductionTable(
         List<String> itemNameRows) {
 
     @JsonCreator
-    public JsonProductionTable(
+    JsonProductionTable(
             @JsonProperty(value = "itemNameColumns", required = true) List<String> itemNameColumns,
             @JsonProperty(value = "itemNameRows", required = true) List<String> itemNameRows) {
         this.itemNameColumns = ListUtil.requireUniqueMembers(itemNameColumns);

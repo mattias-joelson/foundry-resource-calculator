@@ -12,7 +12,7 @@ record JsonItem(
         float weight) {
 
     @JsonCreator
-    public JsonItem(
+    JsonItem(
             @JsonProperty(value = "name", required = true) String name,
             @JsonProperty(value = "gameName", required = true) String gameName,
             @JsonProperty(value = "description", required = true) String description,

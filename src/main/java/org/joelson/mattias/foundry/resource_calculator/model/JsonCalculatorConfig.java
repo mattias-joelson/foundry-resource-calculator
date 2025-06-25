@@ -13,7 +13,7 @@ record JsonCalculatorConfig(
         List<JsonRecipe> recipes) {
 
     @JsonCreator
-    public JsonCalculatorConfig(
+    JsonCalculatorConfig(
             @JsonProperty(value = "makers", required = true) List<JsonMaker> makers,
             @JsonProperty(value = "makerGroups", required = true) List<JsonMakerGroup> makerGroups,
             @JsonProperty(value = "items", required = true) List<JsonItem> items,

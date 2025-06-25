@@ -9,7 +9,7 @@ record JsonItemAmount(
         int amount) {
 
     @JsonCreator
-    public JsonItemAmount(
+    JsonItemAmount(
             @JsonProperty(value = "itemName", required = true) String itemName,
             @JsonProperty(value = "amount", required = true) int amount) {
         this.itemName = StringUtil.requireNotNullAndNotEmpty(itemName, "itemName is null or empty");

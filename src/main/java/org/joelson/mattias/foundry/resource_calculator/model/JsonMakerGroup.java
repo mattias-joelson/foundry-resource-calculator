@@ -12,7 +12,7 @@ record JsonMakerGroup(
         List<String> makerNames) {
 
     @JsonCreator
-    public JsonMakerGroup(
+    JsonMakerGroup(
             @JsonProperty(value = "groupName", required = true) String groupName,
             @JsonProperty(value = "makerNames", required = true) List<String> makerNames) {
         this.groupName = StringUtil.requireNotNullAndNotEmpty(groupName, "groupName is null or empty");

@@ -15,11 +15,11 @@ class JsonReader {
         throw new InstantiationException("Should not be instantiated.");
     }
 
-    public static JsonCalculatorConfig readJsonCalculatorConfig(Path calculatorConfigPath) throws IOException {
+    static JsonCalculatorConfig readJsonCalculatorConfig(Path calculatorConfigPath) throws IOException {
         return readValue(Files.readString(calculatorConfigPath), JsonCalculatorConfig.class);
     }
 
-    public static JsonCalculatorGoals readJsonCalculatorGoals(Path calculatorGoalsPath) throws IOException {
+    static JsonCalculatorGoals readJsonCalculatorGoals(Path calculatorGoalsPath) throws IOException {
         return readValue(Files.readString(calculatorGoalsPath), JsonCalculatorGoals.class);
     }
 
