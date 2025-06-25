@@ -125,7 +125,8 @@ public class CalculatorConfig {
         for (JsonItemAmount jsonIngredient : jsonRecipe.ingredients()) {
             Item item = items.get(jsonIngredient.itemName());
             if (item == null) {
-                throw new IllegalArgumentException("No ingredient found for name " + jsonIngredient.itemName());
+                throw new IllegalArgumentException(String.format("No ingredient found for name %s in recipe %s",
+                        jsonIngredient.itemName(), jsonRecipe.name()));
             }
             ingredientAmounts.put(item, jsonIngredient.amount());
         }
