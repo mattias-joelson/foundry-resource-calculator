@@ -18,14 +18,14 @@ public class CalculatorConfig {
     private final Map<String, Item> items;
     private final Map<String, Set<Recipe>> recipes;
 
-    public CalculatorConfig(
+    private CalculatorConfig(
             Map<String, Set<Maker>> makerGroups, Map<String, Item> items, Map<String, Set<Recipe>> recipes) {
         this.makerGroups = Objects.requireNonNull(makerGroups);
         this.items = Objects.requireNonNull(items);
         this.recipes = Objects.requireNonNull(recipes);
     }
 
-    public Set<Maker> getMakers(String makerGroupName) {
+    Set<Maker> getMakers(String makerGroupName) {
         return makerGroups.get(makerGroupName);
     }
 
@@ -38,7 +38,7 @@ public class CalculatorConfig {
         return items.get(itemName);
     }
 
-    public Set<Recipe> getRecipes(String itemName) {
+    Set<Recipe> getRecipes(String itemName) {
         return recipes.get(itemName);
     }
 
