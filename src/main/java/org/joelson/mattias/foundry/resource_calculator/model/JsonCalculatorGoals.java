@@ -11,7 +11,7 @@ record JsonCalculatorGoals(
         List<JsonChosenRecipe> chosenRecipes,
         List<JsonChosenMaker> chosenMakers,
         JsonChosenConveyor chosenConveyor,
-        List<JsonItemAmount> productionGoals,
+        List<JsonProductionGoal> productionGoals,
         JsonProductionTable productionTable) {
 
     @JsonCreator
@@ -19,12 +19,12 @@ record JsonCalculatorGoals(
             @JsonProperty(value = "chosenRecipes", required = true) List<JsonChosenRecipe> chosenRecipes,
             @JsonProperty(value = "chosenMakers", required = true) List<JsonChosenMaker> chosenMakers,
             @JsonProperty(value = "chosenConveyor", required = true) JsonChosenConveyor chosenConveyor,
-            @JsonProperty(value = "productionGoals", required = true) List<JsonItemAmount> productionGoals,
+            @JsonProperty(value = "productionGoals", required = true) List<JsonProductionGoal> productionGoals,
             @JsonProperty(value = "productionTable") JsonProductionTable productionTable) {
         this.chosenRecipes = ListUtil.requireUniqueMembers(chosenRecipes, JsonChosenRecipe::itemName);
         this.chosenMakers = ListUtil.requireUniqueMembers(chosenMakers, JsonChosenMaker::makerGroupName);
         this.chosenConveyor = Objects.requireNonNull(chosenConveyor);
-        this.productionGoals = ListUtil.requireUniqueMembers(productionGoals, JsonItemAmount::itemName);
+        this.productionGoals = ListUtil.requireUniqueMembers(productionGoals, JsonProductionGoal::itemName);
         this.productionTable = productionTable;
     }
 }

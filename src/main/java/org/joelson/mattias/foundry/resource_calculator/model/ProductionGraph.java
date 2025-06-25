@@ -30,13 +30,13 @@ public class ProductionGraph {
         this.productionTableItemNameRows = Objects.requireNonNull(productionTableItemNameRows);
     }
 
-    public void addGoals(Map<Item, Integer> productionGoals) {
-        for (Map.Entry<Item, Integer> goalEntry : productionGoals.entrySet()) {
+    public void addGoals(Map<Item, Float> productionGoals) {
+        for (Map.Entry<Item, Float> goalEntry : productionGoals.entrySet()) {
             addItemsPerMinute(goalEntry.getKey(), goalEntry.getValue());
         }
     }
 
-    private void addItemsPerMinute(Item item, Integer itemsPerMinute) {
+    private void addItemsPerMinute(Item item, Float itemsPerMinute) {
         itemNodeMap.get(item.name()).addItemsPerMinute(itemsPerMinute);
     }
 

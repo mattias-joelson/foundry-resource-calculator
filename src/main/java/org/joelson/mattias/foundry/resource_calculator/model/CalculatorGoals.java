@@ -14,13 +14,13 @@ public record CalculatorGoals(
         Map<String, String> makers,
         String conveyorItemName,
         int conveyorThroughput,
-        Map<Item, Integer> productionGoals,
+        Map<Item, Float> productionGoals,
         List<String> productionTableColumns,
         List<String> productionTableRows) {
 
     public CalculatorGoals(
             Map<String, String> recipes, Map<String, String> makers, String conveyorItemName, int conveyorThroughput,
-            Map<Item, Integer> productionGoals, List<String> productionTableColumns, List<String> productionTableRows) {
+            Map<Item, Float> productionGoals, List<String> productionTableColumns, List<String> productionTableRows) {
         this.recipes = Objects.requireNonNull(recipes);
         this.makers = Objects.requireNonNull(makers);
         this.conveyorItemName = Objects.requireNonNull(conveyorItemName);
@@ -34,7 +34,7 @@ public record CalculatorGoals(
         JsonCalculatorGoals jsonCalculatorGoals = JsonReader.readJsonCalculatorGoals(goalsPath);
         Map<String, String> chosenRecipes = verifyChosenRecipes(calculatorConfig, jsonCalculatorGoals.chosenRecipes());
         Map<String, String> chosenMakers = verifyChosenMakers(calculatorConfig, jsonCalculatorGoals.chosenMakers());
-        Map<Item, Integer> productionGoals = verifyProductionGoals(calculatorConfig,
+        Map<Item, Float> productionGoals = verifyProductionGoals(calculatorConfig,
                 jsonCalculatorGoals.productionGoals());
         JsonProductionTable productionTable = jsonCalculatorGoals.productionTable();
         if (productionTable == null) {
@@ -95,10 +95,10 @@ public record CalculatorGoals(
         return chosenMakers;
     }
 
-    private static Map<Item, Integer> verifyProductionGoals(
-            CalculatorConfig calculatorConfig, List<JsonItemAmount> jsonProductionGoals) {
-        Map<Item, Integer> productionGoals = new HashMap<>();
-        for (JsonItemAmount jsonProductionGoal : jsonProductionGoals) {
+    private static Map<Item, Float> verifyProductionGoals(
+            CalculatorConfig calculatorConfig, List<JsonProductionGoal> jsonProductionGoals) {
+        Map<Item, Float> productionGoals = new HashMap<>();
+        for (JsonProductionGoal jsonProductionGoal : jsonProductionGoals) {
             Item item = calculatorConfig.getItem(jsonProductionGoal.itemName());
             if (item == null) {
                 throw new IllegalArgumentException("Missing item with name " + jsonProductionGoal.itemName());
