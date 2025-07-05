@@ -1,8 +1,8 @@
 {
   "makers": [
     {
-      "name": "smelter",
-      "gameName": "Smelter (small)",
+      "name": "small-smelter",
+      "gameName": "Smelter (Small)",
       "description": "",
       "speedMultiplier": 1.0
     },
@@ -20,15 +20,15 @@
     },
     {
       "name": "lava-smelter-1",
-      "gameName": "Lava Smelter I",
+      "gameName": "Lava-Smelter I",
       "description": "",
       "speedMultiplier": 1.0
     },
     {
       "name": "lava-smelter-2",
-      "gameName": "Lava Smelter II",
+      "gameName": "Lava-Smelter II",
       "description": "",
-      "speedMultiplier": 1.0
+      "speedMultiplier": 2.0
     },
     {
       "name": "crusher-1",
@@ -110,7 +110,7 @@
     {
       "groupName": "smelters",
       "makerNames": [
-        "smelter",
+        "small-smelter",
         "advanced-smelter"
       ]
     },
@@ -182,6 +182,13 @@
     {
       "name": "crude-olumite",
       "gameName": "Crude Olumite",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
+      "name": "air",
+      "gameName": "Air",
       "description": "",
       "stackSize": 0,
       "weight": 0.0
@@ -369,6 +376,13 @@
       "weight": 0.0
     },
     {
+      "name": "fracking-liquid",
+      "gameName": "Fracking Liquid",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0.0
+    },
+    {
       "name": "ignium-powder",
       "gameName": "Ignium Powder",
       "description": "",
@@ -432,6 +446,13 @@
       "weight": 0.0
     },
     {
+      "name": "jetpack-fuel",
+      "gameName": "Jetpack Fuel",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
       "name": "polymer-board",
       "gameName": "Polymer Board",
       "description": "",
@@ -444,6 +465,13 @@
       "description": "",
       "stackSize": 200,
       "weight": 2.0
+    },
+    {
+      "name": "construction-material",
+      "gameName": "Construction Material",
+      "description": "",
+      "stackSize": 25,
+      "weight": 10.0
     },
     {
       "name": "weapon-components",
@@ -713,7 +741,7 @@
     },
     {
       "name": "steam-turbine",
-      "gameName": "steam-turbine",
+      "gameName": "Steam Turbine",
       "description": "",
       "stackSize": 5,
       "weight": 0.0
@@ -772,6 +800,300 @@
       "gameName": "Transformer (Large)",
       "description": "",
       "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "drone-miner-1",
+      "gameName": "Drone Miner I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "drone-miner-2",
+      "gameName": "Drone Miner II",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "pumpjack-1",
+      "gameName": "Pumpjack I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "ore-vein-miner",
+      "gameName": "Ore Vein Miner",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "assembler-1",
+      "gameName": "Assembler I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "assembler-2",
+      "gameName": "Assembler II",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "assembler-3",
+      "gameName": "Assembler III",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "fluid-assembler-1",
+      "gameName": "Fluid Assembler I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "barrel-filler",
+      "gameName": "Barrel Filler",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "advanced-smelter",
+      "gameName": "Advanced Smelter",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "electric-arc-furnace",
+      "gameName": "Electric Arc Furnace",
+      "description": "",
+      "stackSize": 5,
+      "weight": 0.0
+    },
+    {
+      "name": "small-smelter",
+      "gameName": "Smelter (Small)",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "lava-smelter-1",
+      "gameName": "Lava-Smelter I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "lava-smelter-2",
+      "gameName": "Lava-Smelter II",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "crusher-1",
+      "gameName": "Crusher I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "crusher-2",
+      "gameName": "Crusher II",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "chemical-processor",
+      "gameName": "Chemical Processor",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "distillation-column",
+      "gameName": "Distillation Column",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "casting-machine",
+      "gameName": "Casting Machine",
+      "description": "",
+      "stackSize": 5,
+      "weight": 0.0
+    },
+    {
+      "name": "incinerator",
+      "gameName": "Incinerator",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "flare-stack",
+      "gameName": "Flare Stack",
+      "description": "",
+      "stackSize": 20,
+      "weight": 0.0
+    },
+    {
+      "name": "greenhouse",
+      "gameName": "Greenhouse",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "logistic-container-1",
+      "gameName": "Logistic Container I",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "logistic-container-2",
+      "gameName": "Logistic Container II",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "logistic-container-3",
+      "gameName": "Logistic Container III",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "tank",
+      "gameName": "Tank",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "transport-ship-port",
+      "gameName": "Transport Ship Port",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "construction-ship-port",
+      "gameName": "Construction Ship Port",
+      "description": "",
+      "stackSize": 5,
+      "weight": 0.0
+    },
+    {
+      "name": "construction-warehouse",
+      "gameName": "Construction Warehouse",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "assembly-line-rail",
+      "gameName": "Assembly Line Rail",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "assembly-line-splitter",
+      "gameName": "Assembly Line Splitter",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "assembly-line-merger",
+      "gameName": "Assembly Line Merger",
+      "description": "",
+      "stackSize": 25,
+      "weight": 0.0
+    },
+    {
+      "name": "assembly-line-start",
+      "gameName": "Assembly Line Start",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "assembly-line-producer",
+      "gameName": "Assembly Line Producer",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "assembly-line-painter",
+      "gameName": "Assembly Line Painter",
+      "description": "",
+      "stackSize": 10,
+      "weight": 0.0
+    },
+    {
+      "name": "data-cable",
+      "gameName": "Data Cable",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "data-evaluator",
+      "gameName": "Data Evaluator",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "data-memory-cell",
+      "gameName": "Data Memory Cell",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "data-processor",
+      "gameName": "Data Processor",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "data-source",
+      "gameName": "Data Source",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "data-source-button",
+      "gameName": "Data Source (Button)",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "data-source-lever",
+      "gameName": "Data Source (Lever)",
+      "description": "",
+      "stackSize": 200,
       "weight": 0.0
     },
     {
@@ -1038,6 +1360,55 @@
       "gameName": "Science Pack V",
       "description": "",
       "stackSize": 100,
+      "weight": 0.0
+    },
+    {
+      "name": "long-range-scanner-base",
+      "gameName": "Long Range Scanner Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "radio-tower-base",
+      "gameName": " Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "modular-storage-tank-base",
+      "gameName": "Modular Storage Tank Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "fracking-tower-base",
+      "gameName": "Fracking Tower Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "air-intake-base",
+      "gameName": "Air Intake Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "hot-air-stove-base",
+      "gameName": "Hot Air Stove Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "blast-furnace-base",
+      "gameName": "Blast Furnace Base",
+      "description": "",
+      "stackSize": 1,
       "weight": 0.0
     }
   ],
@@ -1538,7 +1909,30 @@
         }
       ],
       "itemsProduced": 40,
-      "time": 8,
+      "time": 8.0,
+      "makerGroupName": "chemical-processor"
+    },
+    {
+      "name": "fracking-liquid",
+      "gameName": "Fracking Liquid (Recipe)",
+      "description": "",
+      "itemName": "fracking-liquid",
+      "ingredientAmounts": [
+        {
+          "itemName": "air",
+          "amount": 30
+        },
+        {
+          "itemName": "olumite-gas",
+          "amount": 10
+        },
+        {
+          "itemName": "water",
+          "amount": 60
+        }
+      ],
+      "itemsProduced": 100,
+      "time": 5.0,
       "makerGroupName": "chemical-processor"
     },
     {
@@ -1698,6 +2092,25 @@
       "makerGroupName": "fluid-assembler"
     },
     {
+      "name": "jetpack-fuel-recipe",
+      "gameName": "Jetpack Fuel (Recipe)",
+      "description": "",
+      "itemName": "jetpack-fuel",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "liquid-fuel",
+          "amount": 30
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 4.0,
+      "makerGroupName": "fluid-assembler"
+    },
+    {
       "name": "telluxite-wafer",
       "gameName": "Telluxite Wafer (Recipe)",
       "description": "",
@@ -1755,6 +2168,37 @@
       ],
       "itemsProduced": 1,
       "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "construction-material-recipe",
+      "gameName": "Construction Material (Recipe)",
+      "description": "",
+      "itemName": "construction-material",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 90
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 15
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 15
+        },
+        {
+          "itemName": "concrete",
+          "amount": 30
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 15
+        }
+      ],
+      "itemsProduced": 150,
+      "time": 90.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -2772,7 +3216,7 @@
       "itemName": "power-pole-2",
       "ingredientAmounts": [
         {
-          "itemName": "xenoferrite-plates",
+          "itemName": "steel-beams",
           "amount": 10
         },
         {
@@ -2832,6 +3276,1040 @@
       ],
       "itemsProduced": 1,
       "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "drone-miner-1-recipe",
+      "gameName": "Drone Miner I (Recipe)",
+      "description": "",
+      "itemName": "drone-miner-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 8
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 6
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "drone-miner-2-recipe",
+      "gameName": "Drone Miner II (Recipe)",
+      "description": "",
+      "itemName": "drone-miner-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "drone-miner-1",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 4
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pumpjack-1-recipe",
+      "gameName": "Pumpjack I (Recipe)",
+      "description": "",
+      "itemName": "pumpjack-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 12
+        },
+        {
+          "itemName": "pipe",
+          "amount": 8
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "ore-vein-miner-recipe",
+      "gameName": "Ore Vein Miner (Recipe)",
+      "description": "",
+      "itemName": "ore-vein-miner",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembler-1-recipe",
+      "gameName": "Assembler I (Recipe)",
+      "description": "",
+      "itemName": "assembler-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembler-2-recipe",
+      "gameName": "Assembler II (Recipe)",
+      "description": "",
+      "itemName": "assembler-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "assembler-1",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 6
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembler-3-recipe",
+      "gameName": "Assembler III (Recipe)",
+      "description": "",
+      "itemName": "assembler-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "assembler-2",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 20
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "fluid-assembler-1-recipe",
+      "gameName": "Fluid Assembler I (Recipe)",
+      "description": "",
+      "itemName": "fluid-assembler-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 15
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "barrel-filler-recipe",
+      "gameName": "Barrel Filler (Recipe)",
+      "description": "",
+      "itemName": "barrel-filler",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 15
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        },
+        {
+          "itemName": "pipe",
+          "amount": 3
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "advanced-smelter-recipe",
+      "gameName": "Advanced Smelter (Recipe)",
+      "description": "",
+      "itemName": "advanced-smelter",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 15
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "electric-arc-furnace-recipe",
+      "gameName": "Electric Arc Furnace (Recipe)",
+      "description": "",
+      "itemName": "electric-arc-furnace",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 30
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 25
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 50
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "small-smelter-recipe",
+      "gameName": "Smelter (Small) (Recipe)",
+      "description": "",
+      "itemName": "small-smelter",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 4
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "lava-smelter-1-recipe",
+      "gameName": "Lava-Smelter I (Recipe)",
+      "description": "",
+      "itemName": "lava-smelter-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 10
+        },
+        {
+          "itemName": "firmarlite-bar",
+          "amount": 10
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "lava-smelter-2-recipe",
+      "gameName": "Lava-Smelter II (Recipe)",
+      "description": "",
+      "itemName": "lava-smelter-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "lava-smelter-1",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 50
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 15
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "crusher-1-recipe",
+      "gameName": "Crusher I (Recipe)",
+      "description": "",
+      "itemName": "crusher-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "crusher-2-recipe",
+      "gameName": "Crusher II (Recipe)",
+      "description": "",
+      "itemName": "crusher-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "crusher-1",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "chemical-processor-recipe",
+      "gameName": "Chemical Processor (Recipe)",
+      "description": "",
+      "itemName": "chemical-processor",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 20
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 10
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "distillation-column-recipe",
+      "gameName": "Distillation Column (Recipe)",
+      "description": "",
+      "itemName": "distillation-column",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 30
+        },
+        {
+          "itemName": "pipe",
+          "amount": 30
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 15
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 15
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "casting-machine-recipe",
+      "gameName": "Casting Machine (Recipe)",
+      "description": "",
+      "itemName": "casting-machine",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 15
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 20
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "incinerator-recipe",
+      "gameName": "Incinerator (Recipe)",
+      "description": "",
+      "itemName": "incinerator",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 20
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 5
+        },
+        {
+          "itemName": "concrete",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "flare-stack-recipe",
+      "gameName": "Flare Stack (Recipe)",
+      "description": "",
+      "itemName": "flare-stack",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 5
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "greenhouse-recipe",
+      "gameName": "Greenhouse (Recipe)",
+      "description": "",
+      "itemName": "greenhouse",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 20
+        },
+        {
+          "itemName": "glass",
+          "amount": 6
+        },
+        {
+          "itemName": "pipe",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "logistic-container-1-recipe",
+      "gameName": "Logistic Container I (Recipe)",
+      "description": "",
+      "itemName": "logistic-container-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 15
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "logistic-container-2-recipe",
+      "gameName": "Logistic Container II (Recipe)",
+      "description": "",
+      "itemName": "logistic-container-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 15
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 10
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "logistic-container-3-recipe",
+      "gameName": "Logistic Container III (Recipe)",
+      "description": "",
+      "itemName": "logistic-container-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 25
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "tank-recipe",
+      "gameName": "Tank (Recipe)",
+      "description": "",
+      "itemName": "tank",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 10
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 20
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "transport-ship-port-recipe",
+      "gameName": "Transport Ship Port (Recipe)",
+      "description": "",
+      "itemName": "transport-ship-port",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 400
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 200
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 100
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 40
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 200
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "construction-ship-port-recipe",
+      "gameName": "Construction Ship Port (Recipe)",
+      "description": "",
+      "itemName": "construction-ship-port",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 100
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 25
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 10
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 50
+        },
+        {
+          "itemName": "maintenance-drone",
+          "amount": 8
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "construction-warehouse-recipe",
+      "gameName": "Construction Warehouse (Recipe)",
+      "description": "",
+      "itemName": "construction-warehouse",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 200
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 50
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 50
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 100
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembly-line-rail-recipe",
+      "gameName": "Assembly Line Rail (Recipe)",
+      "description": "",
+      "itemName": "assembly-line-rail",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembly-line-splitter-recipe",
+      "gameName": "Assembly Line Splitter (Recipe)",
+      "description": "",
+      "itemName": "assembly-line-splitter",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 25
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 6
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembly-line-merger-recipe",
+      "gameName": "Assembly Line Merger (Recipe)",
+      "description": "",
+      "itemName": "assembly-line-merger",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 25
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 6
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembly-line-start-recipe",
+      "gameName": "Assembly Line Start (Recipe)",
+      "description": "",
+      "itemName": "assembly-line-start",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 30
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 8
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 4
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 8
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembly-line-producer-recipe",
+      "gameName": "Assembly Line Producer (Recipe)",
+      "description": "",
+      "itemName": "assembly-line-producer",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 40
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "assembly-line-painter-recipe",
+      "gameName": "Assembly Line Painter (Recipe)",
+      "description": "",
+      "itemName": "assembly-line-painter",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 40
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 10
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "data-cable-recipe",
+      "gameName": "Data Cable (Recipe)",
+      "description": "",
+      "itemName": "data-cable",
+      "ingredientAmounts": [
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "wire-coil",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 5,
+      "time": 2.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "data-evaluator-recipe",
+      "gameName": "Data Evaluator (Recipe)",
+      "description": "",
+      "itemName": "data-evaluator",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "data-memory-cell-recipe",
+      "gameName": "Data Memory Cell (Recipe)",
+      "description": "",
+      "itemName": "data-memory-cell",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "data-processor-recipe",
+      "gameName": "Data Processor (Recipe)",
+      "description": "",
+      "itemName": "data-processor",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "data-source-recipe",
+      "gameName": "Data Source (Recipe)",
+      "description": "",
+      "itemName": "data-source",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "data-source-button-recipe",
+      "gameName": "Data Source (Button) (Recipe)",
+      "description": "",
+      "itemName": "data-source-button",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "data-source-lever-recipe",
+      "gameName": "Data Source Lever (Recipe)",
+      "description": "",
+      "itemName": "data-source-lever",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -3794,6 +5272,195 @@
       ],
       "itemsProduced": 4,
       "time": 240.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "long-range-scanner-base-recipe",
+      "gameName": "Long Range Scanner Base (Recipe)",
+      "description": "",
+      "itemName": "long-range-scanner-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "concrete",
+          "amount": 25
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 50
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 25
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 50
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "radio-tower-base-recipe",
+      "gameName": "Radio Tower Base (Recipe)",
+      "description": "",
+      "itemName": "radio-tower-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 200
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 25
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "modular-storage-tank-base-recipe",
+      "gameName": "Modular Storage Tank Base (Recipe)",
+      "description": "",
+      "itemName": "modular-storage-tank-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 200
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 25
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "fracking-tower-base-recipe",
+      "gameName": "Fracking Tower Base (Recipe)",
+      "description": "",
+      "itemName": "fracking-tower-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 200
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 25
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "air-intake-base-recipe",
+      "gameName": "Air Intake Base (Recipe)",
+      "description": "",
+      "itemName": "air-intake-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 200
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 100
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "hot-air-stove-base-recipe",
+      "gameName": "Hot Air Stove Base (Recipe)",
+      "description": "",
+      "itemName": "hot-air-stove-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 200
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 100
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 25
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 25
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "blast-furnace-base-recipe",
+      "gameName": "Blast Furnace Base (Recipe)",
+      "description": "",
+      "itemName": "blast-furnace-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "concrete",
+          "amount": 600
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 600
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 300
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 200
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
       "makerGroupName": "assemblers"
     }
   ]

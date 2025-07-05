@@ -51,7 +51,7 @@ public class CalculatorConfig {
         Set<String> itemNamesWithoutRecipes = new HashSet<>(items.keySet());
         itemNamesWithoutRecipes.removeAll(
                 Set.of("biomass", "xenoferrite-ore-rubble", "technum-ore-rubble", "ignium-ore-rubble", "mineral-rocks",
-                        "telluxite-ore-rubble", "firmarlite-bar", "water", "crude-olumite"));
+                        "telluxite-ore-rubble", "firmarlite-bar", "water", "crude-olumite", "air"));
         itemNamesWithoutRecipes.removeAll(recipes.keySet());
         if (!itemNamesWithoutRecipes.isEmpty()) {
             throw new IllegalStateException("Lacking recipes for " + itemNamesWithoutRecipes);
