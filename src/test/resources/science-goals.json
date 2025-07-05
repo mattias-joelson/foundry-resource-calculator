@@ -35,6 +35,10 @@
       "makerName": "assembler-3"
     }
   ],
+  "chosenConveyor": {
+    "conveyorItemName": "conveyor-2",
+    "conveyorThroughput": 320
+  },
   "productionGoals": [
     {
       "itemName": "science-pack-1",
@@ -56,5 +60,31 @@
       "itemName": "science-pack-5",
       "amount": 384
     }
-  ]
+  ],
+  "productionTable":
+  {
+    "showResourcesProductionTable": "true",
+    "itemNameColumns": [
+      "technum-rods",
+      "machinery-parts",
+      "conveyor-1",
+      "building-block",
+      "firmarlite-bar",
+      "advanced-machinery-parts",
+      "concrete",
+      "firmarlite-sheet",
+      "circuit-board",
+      "energy-cell",
+      "hydraulic-piston",
+      "robot-parts",
+      "cpu"
+    ],
+    "itemNameRows": [
+      "science-pack-1",
+      "science-pack-2",
+      "science-pack-3",
+      "science-pack-4",
+      "science-pack-5"
+    ]
+  }
 }
