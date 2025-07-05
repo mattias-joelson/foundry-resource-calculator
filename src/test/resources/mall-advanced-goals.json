@@ -20,7 +20,7 @@
   "chosenMakers": [
     {
       "makerGroupName": "smelters",
-      "makerName": "advanced-smelter"
+      "makerName": "small-smelter"
     },
     {
       "makerGroupName": "lava-smelters",
@@ -36,10 +36,18 @@
     }
   ],
   "chosenConveyor": {
-    "conveyorItemName": "conveyor-4",
-    "conveyorThroughput": 1280
+    "conveyorItemName": "conveyor-3",
+    "conveyorThroughput": 640
   },
   "productionGoals": [
+    {
+      "itemName": "jetpack-fuel",
+      "amount": 15.0
+    },
+    {
+      "itemName": "construction-material",
+      "amount": 400.0
+    },
     {
       "itemName": "power-line",
       "amount": 30.0
@@ -74,15 +82,15 @@
     },
     {
       "itemName": "conveyor-4",
-      "amount": 64.0
+      "amount": 128.0
     },
     {
       "itemName": "conveyor-slope-4",
-      "amount": 16.0
+      "amount": 32.0
     },
     {
       "itemName": "conveyor-balancer-4",
-      "amount": 10.0
+      "amount": 20.0
     },
     {
       "itemName": "freight-elevator-4",
@@ -167,9 +175,186 @@
     {
       "itemName": "transformer-large",
       "amount": 0.2
+    },
+    {
+      "itemName": "drone-miner-2",
+      "amount": 2.0
+    },
+    {
+      "itemName": "pumpjack-1",
+      "amount": 2.0
+    },
+    {
+      "itemName": "ore-vein-miner",
+      "amount": 2.0
+    },
+    {
+      "itemName": "assembler-3",
+      "amount": 5.0
+    },
+    {
+      "itemName": "fluid-assembler-1",
+      "amount": 2.0
+    },
+    {
+      "itemName": "barrel-filler",
+      "amount": 0.2
+    },
+    {
+      "itemName": "advanced-smelter",
+      "amount": 2.0
+    },
+    {
+      "itemName": "electric-arc-furnace",
+      "amount": 1.0
+    },
+    {
+      "itemName": "small-smelter",
+      "amount": 5.0
+    },
+    {
+      "itemName": "lava-smelter-2",
+      "amount": 1.0
+    },
+    {
+      "itemName": "crusher-2",
+      "amount": 5.0
+    },
+    {
+      "itemName": "chemical-processor",
+      "amount": 2.0
+    },
+    {
+      "itemName": "distillation-column",
+      "amount": 1.0
+    },
+    {
+      "itemName": "casting-machine",
+      "amount": 2.0
+    },
+    {
+      "itemName": "incinerator",
+      "amount": 0.2
+    },
+    {
+      "itemName": "flare-stack",
+      "amount": 0.5
+    },
+    {
+      "itemName": "greenhouse",
+      "amount": 0.2
+    },
+    {
+      "itemName": "logistic-container-1",
+      "amount": 0.5
+    },
+    {
+      "itemName": "logistic-container-2",
+      "amount": 0.5
+    },
+    {
+      "itemName": "logistic-container-3",
+      "amount": 0.5
+    },
+    {
+      "itemName": "tank",
+      "amount": 0.5
+    },
+    {
+      "itemName": "transport-ship-port",
+      "amount": 0.1
+    },
+    {
+      "itemName": "construction-ship-port",
+      "amount": 0.1
+    },
+    {
+      "itemName": "construction-warehouse",
+      "amount": 0.1
+    },
+    {
+      "itemName": "assembly-line-rail",
+      "amount": 0.2
+    },
+    {
+      "itemName": "assembly-line-splitter",
+      "amount": 0.1
+    },
+    {
+      "itemName": "assembly-line-merger",
+      "amount": 0.1
+    },
+    {
+      "itemName": "assembly-line-start",
+      "amount": 0.5
+    },
+    {
+      "itemName": "assembly-line-producer",
+      "amount": 5.0
+    },
+    {
+      "itemName": "assembly-line-painter",
+      "amount": 0.5
+    },
+    {
+      "itemName": "data-cable",
+      "amount": 0.2
+    },
+    {
+      "itemName": "data-evaluator",
+      "amount": 0.1
+    },
+    {
+      "itemName": "data-memory-cell",
+      "amount": 0.1
+    },
+    {
+      "itemName": "data-processor",
+      "amount": 0.1
+    },
+    {
+      "itemName": "data-source",
+      "amount": 0.1
+    },
+    {
+      "itemName": "data-source-button",
+      "amount": 0.1
+    },
+    {
+      "itemName": "data-source-lever",
+      "amount": 0.1
+    },
+    {
+      "itemName": "long-range-scanner-base",
+      "amount": 0.1
+    },
+    {
+      "itemName": "radio-tower-base",
+      "amount": 0.1
+    },
+    {
+      "itemName": "modular-storage-tank-base",
+      "amount": 0.1
+    },
+    {
+      "itemName": "fracking-tower-base",
+      "amount": 0.1
+    },
+    {
+      "itemName": "air-intake-base",
+      "amount": 0.1
+    },
+    {
+      "itemName": "hot-air-stove-base",
+      "amount": 0.1
+    },
+    {
+      "itemName": "blast-furnace-base",
+      "amount": 0.1
     }
   ],
   "productionTable": {
+    "showResourcesProductionTable": "true",
     "itemNameColumns": [
       "firmarlite-bar",
       "xenoferrite-plates",
@@ -179,7 +364,6 @@
       "machinery-parts",
       "advanced-machinery-parts",
       "hydraulic-piston",
-      "robot-parts",
       "electronic-components",
       "circuit-board",
       "cpu",
@@ -189,9 +373,10 @@
       "polymer-board"
     ],
     "itemNameRows": [
+      "jetpack-fuel",
+      "construction-material",
       "power-line",
       "explosive-charge",
-      "wire-coil",
       "building-block",
       "elevator",
       "walkway",
@@ -233,7 +418,58 @@
       "power-pole-1",
       "power-pole-2",
       "transformer-small",
-      "transformer-large"
+      "transformer-large",
+      "drone-miner-1",
+      "drone-miner-2",
+      "pumpjack-1",
+      "ore-vein-miner",
+      "assembler-1",
+      "assembler-2",
+      "assembler-3",
+      "fluid-assembler-1",
+      "barrel-filler",
+      "advanced-smelter",
+      "electric-arc-furnace",
+      "small-smelter",
+      "lava-smelter-1",
+      "lava-smelter-2",
+      "crusher-1",
+      "crusher-2",
+      "chemical-processor",
+      "distillation-column",
+      "casting-machine",
+      "incinerator",
+      "flare-stack",
+      "greenhouse",
+      "logistic-container-1",
+      "logistic-container-2",
+      "logistic-container-3",
+      "tank",
+      "transport-ship-port",
+      "construction-ship-port",
+      "maintenance-drone",
+      "hover-engine",
+      "construction-warehouse",
+      "assembly-line-rail",
+      "assembly-line-splitter",
+      "assembly-line-merger",
+      "assembly-line-start",
+      "assembly-line-producer",
+      "assembly-line-painter",
+      "data-cable",
+      "data-evaluator",
+      "data-memory-cell",
+      "data-processor",
+      "data-source",
+      "data-source-button",
+      "data-source-lever",
+      "long-range-scanner-base",
+      "radio-tower-base",
+      "modular-storage-tank-base",
+      "fracking-tower-base",
+      "air-intake-base",
+      "hot-air-stove-base",
+      "blast-furnace-base"
     ]
   }
 }
