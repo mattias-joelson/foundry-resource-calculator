@@ -15,17 +15,19 @@ public class ProductionGraph {
     private final ArrayList<Set<ProductionGraphNode>> productionGraphLevels;
     private final String conveyorItemName;
     private final int conveyorThroughput;
+    private final boolean showResourcesProductionTable;
     private final List<String> productionTableItemNameColumns;
     private final List<String> productionTableItemNameRows;
 
     private ProductionGraph(
             Map<String, ProductionGraphNode> itemNodeMap, ArrayList<Set<ProductionGraphNode>> productionGraphLevels,
-            String conveyorItemName, int conveyorThroughput, List<String> productionTableItemNameColumns,
-            List<String> productionTableItemNameRows) {
+            String conveyorItemName, int conveyorThroughput, boolean showResourcesProductionTable,
+            List<String> productionTableItemNameColumns, List<String> productionTableItemNameRows) {
         this.itemNodeMap = Objects.requireNonNull(itemNodeMap);
         this.productionGraphLevels = Objects.requireNonNull(productionGraphLevels);
         this.conveyorItemName = conveyorItemName;
         this.conveyorThroughput = conveyorThroughput;
+        this.showResourcesProductionTable = showResourcesProductionTable;
         this.productionTableItemNameColumns = Objects.requireNonNull(productionTableItemNameColumns);
         this.productionTableItemNameRows = Objects.requireNonNull(productionTableItemNameRows);
     }
@@ -123,6 +125,11 @@ public class ProductionGraph {
 
     private void printProductionTable() {
         if (productionTableItemNameColumns.isEmpty() || productionTableItemNameRows.isEmpty()) {
+            if (showResourcesProductionTable) {
+                System.out.printf(
+                        "%n==========================%nResources Production Table%n==========================%n");
+                printResourcesProductionTable();
+            }
             return;
         }
         System.out.printf("%n================%nProduction Table%n================%n");
@@ -134,18 +141,21 @@ public class ProductionGraph {
             ProductionGraphNode productionGraphNode = itemNodeMap.get(rowItemName);
             Recipe recipe = productionGraphNode.getRecipe();
             float itemsPerMinute = productionGraphNode.getItemsPerMinute();
-            for (Map.Entry<Item, Integer> ingredientAmount : recipe.ingredientAmounts().entrySet()) {
-                int index = productionTableItemNameColumns.indexOf(ingredientAmount.getKey().name());
-                float ingredientItemsPerMinute = ingredientAmount.getValue() * itemsPerMinute / recipe.itemsProduced();
-                if (index >= 0) {
-                    productionRow[index] = ingredientItemsPerMinute;
-                    productionSum[index] += ingredientItemsPerMinute;
-                } else {
-                    if (!otherBuilder.isEmpty()) {
-                        otherBuilder.append(", ");
+            if (recipe != null) {
+                for (Map.Entry<Item, Integer> ingredientAmount : recipe.ingredientAmounts().entrySet()) {
+                    int index = productionTableItemNameColumns.indexOf(ingredientAmount.getKey().name());
+                    float ingredientItemsPerMinute =
+                            ingredientAmount.getValue() * itemsPerMinute / recipe.itemsProduced();
+                    if (index >= 0) {
+                        productionRow[index] = ingredientItemsPerMinute;
+                        productionSum[index] += ingredientItemsPerMinute;
+                    } else {
+                        if (!otherBuilder.isEmpty()) {
+                            otherBuilder.append(", ");
+                        }
+                        otherBuilder.append(ingredientAmount.getKey().name()).append(" ").append(
+                                formatFloat(ingredientItemsPerMinute));
                     }
-                    otherBuilder.append(ingredientAmount.getKey().name()).append(" ").append(
-                            formatFloat(ingredientItemsPerMinute));
                 }
             }
             StringBuilder rowBuilder = new StringBuilder();
@@ -170,7 +180,7 @@ public class ProductionGraph {
             ProductionGraphNode productionGraphNode = itemNodeMap.get(itemName);
             if (productionGraphNode != null && sum != 0) {
                 componentsSumBuilder.append(formatFloat(sum));
-                float itemsPerBelt = productionGraphNode.getItem().stackSize() == 0 ? 36000f : 1280f;
+                float itemsPerBelt = productionGraphNode.getItem().stackSize() == 0 ? 36000f : conveyorThroughput;
                 componentsBeltsBuilder.append(formatFloat(sum / itemsPerBelt));
                 componentsRoundedBelts.append((int) Math.ceil(sum / itemsPerBelt));
                 componentsUsed += 1;
@@ -189,6 +199,10 @@ public class ProductionGraph {
                 componentBeltsUsed + componentsUsed - 1);
         System.out.println();
 
+        printResourcesProductionTable();
+    }
+
+    private void printResourcesProductionTable() {
         String[] inputResources = {
                 "biomass",
 
@@ -264,7 +278,8 @@ public class ProductionGraph {
             }
         }
         return new ProductionGraph(itemNodeMap, productionGraphLevels, calculatorGoals.conveyorItemName(),
-                calculatorGoals.conveyorThroughput(), calculatorGoals.productionTableColumns(),
+                calculatorGoals.conveyorThroughput(), calculatorGoals.showResourcesProductionTable(),
+                calculatorGoals.productionTableColumns(),
                 calculatorGoals.productionTableRows());
     }
 
