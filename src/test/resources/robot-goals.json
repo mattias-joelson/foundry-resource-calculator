@@ -35,137 +35,129 @@
       "makerName": "assembler-3"
     }
   ],
+  "chosenConveyor": {
+    "conveyorItemName": "conveyor-4",
+    "conveyorThroughput": 1280
+  },
   "productionGoals": [
     {
-      "itemName": "maintenance-drone",
-    },
-    {
-      "itemName": "planter-drone",
-      "amount": 320
-    },
-    {
-      "itemName": "vacuum-bot",
-      "amount": 320
-    },
-    {
-      "itemName": "heavy-duty-transport-bot",
-      "amount": 320
-    },
-    {
-      "itemName": "light-bot",
-      "amount": 320
-    },
-    {
-      "itemName": "combat-drone",
-      "amount": 320
-    },
-    {
-      "itemName": "mining-drone",
-      "amount": 320
-    },
-    {
-      "itemName": "science-assistant-drone",
-      "amount": 320
-    },
-    {
-      "itemName": "screen-bot",
-      "amount": 320
-    },
-    {
-      "itemName": "snack-bot",
-      "amount": 320
-    },
-    {
-      "itemName": "transport-bot",
-      "amount": 320
-    },
-    {
-      "itemName": "transport-drone",
-      "amount": 320
-    },
-    {
-      "itemName": "cleaning-bot",
-      "amount": 320
-    },
-    {
       "itemName": "personal-assistant-robot-torso",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "personal-assistant-robot-head",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "personal-assistant-robot-arm",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "personal-assistant-robot-leg",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "farmer-robot-torso",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "farmer-robot-head",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "farmer-robot-arm",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "farmer-robot-leg",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "combat-robot-torso",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "combat-robot-head",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "combat-robot-arm",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "combat-robot-leg",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "miner-robot-torso",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "miner-robot-head",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "miner-robot-arm",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "miner-robot-leg",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "science-robot-torso",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "science-robot-head",
-      "amount": 320
+      "amount": 256
     },
     {
       "itemName": "science-robot-arm",
-      "amount": 640
+      "amount": 512
     },
     {
       "itemName": "science-robot-leg",
-      "amount": 640
+      "amount": 512
     }
-  ]
+  ],
+  "productionTable": {
+    "itemNameColumns": [
+      "xenoferrite-plates",
+      "steel-beams",
+      "firmarlite-sheet",
+      "hydraulic-piston",
+      "robot-parts",
+      "circuit-board",
+      "cpu",
+      "energy-cell",
+      "glass",
+      "polymer-board",
+      "weapon-components",
+      "mining-drill"
+    ],
+    "itemNameRows": [
+      "personal-assistant-robot-torso",
+      "personal-assistant-robot-head",
+      "personal-assistant-robot-arm",
+      "personal-assistant-robot-leg",
+      "farmer-robot-torso",
+      "barrel-empty",
+      "farmer-robot-head",
+      "farmer-robot-arm",
+      "farmer-robot-leg",
+      "combat-robot-torso",
+      "combat-robot-head",
+      "combat-robot-arm",
+      "combat-robot-leg",
+      "miner-robot-torso",
+      "miner-robot-head",
+      "miner-robot-arm",
+      "miner-robot-leg",
+      "science-robot-torso",
+      "science-robot-head",
+      "science-robot-arm",
+      "science-robot-leg"
+    ]
+  }
 }
