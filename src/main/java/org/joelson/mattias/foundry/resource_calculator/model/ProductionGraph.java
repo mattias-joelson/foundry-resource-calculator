@@ -39,7 +39,11 @@ public class ProductionGraph {
     }
 
     private void addItemsPerMinute(Item item, Float itemsPerMinute) {
-        itemNodeMap.get(item.name()).addItemsPerMinute(itemsPerMinute);
+        getProductionGraphNode(item).addItemsPerMinute(itemsPerMinute);
+    }
+
+    ProductionGraphNode getProductionGraphNode(Item item) {
+        return itemNodeMap.get(item.name());
     }
 
     public void calculateProduction() {
@@ -58,7 +62,7 @@ public class ProductionGraph {
         float itemsPerMinute = productionGraphNode.getItemsPerMinute();
         float productionCycles = itemsPerMinute / recipe.itemsProduced();
         for (Map.Entry<Item, Integer> ingredientAmount : recipe.ingredientAmounts().entrySet()) {
-            itemNodeMap.get(ingredientAmount.getKey().name()).addItemsPerMinute(
+            getProductionGraphNode(ingredientAmount.getKey()).addItemsPerMinute(
                     productionCycles * ingredientAmount.getValue());
         }
     }
