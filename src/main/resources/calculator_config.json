@@ -124,13 +124,6 @@
   ],
   "items": [
     {
-      "name": "biomass",
-      "gameName": "Biomass",
-      "description": "",
-      "stackSize": 100,
-      "fuelValue": 5.0
-    },
-    {
       "name": "xenoferrite-ore-rubble",
       "gameName": "Xenoferrite Ore Rubble",
       "description": "",
@@ -143,14 +136,6 @@
       "description": "",
       "stackSize": 200,
       "weight": 1.0
-    },
-    {
-      "name": "ignium-ore-rubble",
-      "gameName": "Ignium Ore Rubble",
-      "description": "",
-      "stackSize": 200,
-      "weight": 1.0,
-      "fuelValue": 10.0
     },
     {
       "name": "mineral-rocks",
@@ -217,14 +202,6 @@
       "weight": 1.0
     },
     {
-      "name": "ignium-ore",
-      "gameName": "Ignium Ore",
-      "description": "",
-      "stackSize": 200,
-      "weight": 1.0,
-      "fuelValue": 12.5
-    },
-    {
       "name": "xenoferrite-ignium-ore-blend",
       "gameName": "Xenoferrite Ignium Ore Blend",
       "description": "",
@@ -244,14 +221,6 @@
       "description": "",
       "stackSize": 200,
       "weight": 3.0
-    },
-    {
-      "name": "telluxite-ore",
-      "gameName": "Telluxite Ore",
-      "description": "",
-      "stackSize": 200,
-      "weight": 1.0,
-      "fuelValue": 10.0
     },
     {
       "name": "telluxite-ingot",
@@ -417,13 +386,6 @@
       "weight": 0
     },
     {
-      "name": "ignium-fuel-rod",
-      "gameName": "Ignium Fuel Rod",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0
-    },
-    {
       "name": "gravel",
       "gameName": "Gravel",
       "description": "",
@@ -472,20 +434,6 @@
       "weight": 0.5
     },
     {
-      "name": "portable-fuel",
-      "gameName": "Portable Fuel",
-      "description": "",
-      "stackSize": 200,
-      "fuelValue": 16
-    },
-    {
-      "name": "jetpack-fuel",
-      "gameName": "Jetpack Fuel",
-      "description": "",
-      "stackSize": 200,
-      "fuelValue": 25
-    },
-    {
       "name": "glass",
       "gameName": "Glass",
       "description": "",
@@ -498,13 +446,6 @@
       "description": "",
       "stackSize": 200,
       "weight": 1.0
-    },
-    {
-      "name": "cooked-ignium",
-      "gameName": "Cooked Ignium",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0
     },
     {
       "name": "construction-material",
@@ -1664,6 +1605,70 @@
       "description": "",
       "stackSize": 1,
       "weight": 0.0
+    }
+  ],
+  "fuelItems": [
+    {
+      "name": "biomass",
+      "gameName": "Biomass",
+      "description": "",
+      "stackSize": 100,
+      "fuelValue": 5.0
+    },
+    {
+      "name": "ignium-ore-rubble",
+      "gameName": "Ignium Ore Rubble",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0,
+      "fuelValue": 10.0
+    },
+    {
+      "name": "ignium-ore",
+      "gameName": "Ignium Ore",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0,
+      "fuelValue": 12.5
+    },
+    {
+      "name": "telluxite-ore",
+      "gameName": "Telluxite Ore",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0,
+      "fuelValue": 10.0
+    },
+    {
+      "name": "ignium-fuel-rod",
+      "gameName": "Ignium Fuel Rod",
+      "description": "",
+      "stackSize": 200,
+      "fuelValue": 400.0,
+      "residualItem": "fuel-rod-casing"
+    },
+    {
+      "name": "portable-fuel",
+      "gameName": "Portable Fuel",
+      "description": "",
+      "stackSize": 200,
+      "fuelValue": 16.0,
+      "residualItem": "barrel-empty"
+    },
+    {
+      "name": "jetpack-fuel",
+      "gameName": "Jetpack Fuel",
+      "description": "Only usable for jetpack.",
+      "stackSize": 200,
+      "fuelValue": 25.0
+    },
+    {
+      "name": "cooked-ignium",
+      "gameName": "Cooked Ignium",
+      "description": "",
+      "stackSize": 100,
+      "weight": 1.0,
+      "fuelValue": 5.5
     }
   ],
   "recipes": [

@@ -47,6 +47,7 @@ public class CalculatorConfig {
         Set<Maker> makers = makersFrom(jsonCalculatorConfig.makers());
         Map<String, Set<Maker>> makerGroups = makerGroupsFrom(makers, jsonCalculatorConfig.makerGroups());
         Map<String, Item> items = itemsFrom(jsonCalculatorConfig.items());
+        fuelItemsFrom(items, jsonCalculatorConfig.fuelItems());
         Map<String, Set<Recipe>> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makerGroups);
         Set<String> itemNamesWithoutRecipes = new HashSet<>(items.keySet());
         itemNamesWithoutRecipes.removeAll(
@@ -97,14 +98,26 @@ public class CalculatorConfig {
         Map<String, Item> items = new HashMap<>();
         for (JsonItem jsonItem : jsonItems) {
             Item item = itemFrom(jsonItem);
-            items.put(item.name(), item);
+            items.put(item.getName(), item);
         }
         return items;
     }
 
     private static Item itemFrom(JsonItem jsonItem) {
-        return new Item(jsonItem.name(), jsonItem.gameName(), jsonItem.stackSize(), jsonItem.weight(),
-                jsonItem.fuelValue());
+        return new Item(jsonItem.getName(), jsonItem.getGameName(), jsonItem.getStackSize(), jsonItem.getWeight());
+    }
+
+    private static void fuelItemsFrom(Map<String, Item> items, List<JsonFuelItem> jsonFuelItems) {
+        for (JsonFuelItem jsonFuelItem : jsonFuelItems) {
+            FuelItem fuelItem = fuelItemFrom(items, jsonFuelItem);
+            items.put(fuelItem.getName(), fuelItem);
+        }
+    }
+
+    private static FuelItem fuelItemFrom(Map<String, Item> items, JsonFuelItem jsonFuelItem) {
+        Item residualItem = (jsonFuelItem.getResidualItem() != null) ? items.get(jsonFuelItem.getResidualItem()) : null;
+        return new FuelItem(jsonFuelItem.getName(), jsonFuelItem.getGameName(), jsonFuelItem.getStackSize(),
+                jsonFuelItem.getWeight(), jsonFuelItem.getFuelValue(), residualItem);
     }
 
     private static Map<String, Set<Recipe>> recipesFrom(
@@ -112,7 +125,7 @@ public class CalculatorConfig {
         Map<String, Set<Recipe>> recipes = new HashMap<>();
         for (JsonRecipe jsonRecipe : jsonRecipes) {
             Recipe recipe = recipeFrom(jsonRecipe, items, makerGroups);
-            recipes.computeIfAbsent(recipe.item().name(), s -> new HashSet<>()).add(recipe);
+            recipes.computeIfAbsent(recipe.item().getName(), s -> new HashSet<>()).add(recipe);
         }
         return recipes;
     }

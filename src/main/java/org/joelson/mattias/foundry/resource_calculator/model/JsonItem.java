@@ -4,14 +4,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joelson.mattias.foundry.resource_calculator.util.StringUtil;
 
-record JsonItem(
-        String name,
-        String gameName,
-        String description,
-        int stackSize,
-        float weight,
-        float fuelValue,
-        String residual) {
+class JsonItem {
+
+    private final String name;
+    private final String gameName;
+    private final String description;
+    private final int stackSize;
+    private final float weight;
 
     @JsonCreator
     JsonItem(
@@ -19,9 +18,7 @@ record JsonItem(
             @JsonProperty(value = "gameName", required = true) String gameName,
             @JsonProperty(value = "description", required = true) String description,
             @JsonProperty(value = "stackSize") int stackSize,
-            @JsonProperty(value = "weight") float weight,
-            @JsonProperty(value = "fuelValue") float fuelValue,
-            @JsonProperty(value = "residual") String residual) {
+            @JsonProperty(value = "weight") float weight) {
         this.name = StringUtil.requireNotNullAndNotEmpty(name, "name is null or empty");
         this.gameName = StringUtil.requireNotNullAndNotEmpty(gameName, "gameName is null or empty");
         this.description = StringUtil.requireNotNull(description, "description is null");
@@ -33,10 +30,25 @@ record JsonItem(
             throw new IllegalArgumentException("weight must be greater or equal to 0: " + weight);
         }
         this.weight = weight;
-        if (fuelValue < 0) {
-            throw new IllegalArgumentException("fuelValue must be greater or equal to 0:" + fuelValue);
-        }
-        this.fuelValue = fuelValue;
-        this.residual = StringUtil.requireNullOrNotEmpty(residual, "residual is empty");
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGameName() {
+        return gameName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getStackSize() {
+        return stackSize;
+    }
+
+    public float getWeight() {
+        return weight;
     }
 }
