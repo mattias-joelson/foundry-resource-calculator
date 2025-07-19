@@ -493,72 +493,6 @@
       "stackSize": 200
     },
     {
-      "name": "power-line",
-      "gameName": "Power Line",
-      "description": "",
-      "stackSize": 50
-    },
-    {
-      "name": "explosive-charge-1",
-      "gameName": "Explosive Charge",
-      "description": "",
-      "stackSize": 50
-    },
-    {
-      "name": "explosive-charge-2",
-      "gameName": "Heavy Explosive Charge",
-      "description": "",
-      "stackSize": 50
-    },
-    {
-      "name": "explosives-detonator",
-      "gameName": "Explosives Detonator",
-      "description": "",
-      "stackSize": 1
-    },
-    {
-      "name": "mining-drill",
-      "gameName": "Mining Drill",
-      "description": "",
-      "stackSize": 1
-    },
-    {
-      "name": "mining-laser",
-      "gameName": "Mining Laser",
-      "description": "",
-      "stackSize": 1
-    },
-    {
-      "name": "orbital-uplink",
-      "gameName": "Orbital Uplink",
-      "description": "",
-      "stackSize": 1
-    },
-    {
-      "name": "modular-building-planner",
-      "gameName": "Modular Building Planner",
-      "description": "",
-      "stackSize": 1
-    },
-    {
-      "name": "paint-roller",
-      "gameName": "Paint Roller",
-      "description": "",
-      "stackSize": 1
-    },
-    {
-      "name": "plumber-tool",
-      "gameName": "Plumber Tool",
-      "description": "",
-      "stackSize": 1
-    },
-    {
-      "name": "ore-scanner",
-      "gameName": "Ore Scanner",
-      "description": "",
-      "stackSize": 1
-    },
-    {
       "name": "building-block",
       "gameName": "Building Block",
       "description": "",
@@ -1675,6 +1609,74 @@
       "stackSize": 100,
       "weight": 1.0,
       "fuelValue": 5.5
+    }
+  ],
+  "handhelds": [
+    {
+      "name": "power-line",
+      "gameName": "Power Line",
+      "description": "",
+      "stackSize": 50
+    },
+    {
+      "name": "explosive-charge-1",
+      "gameName": "Explosive Charge",
+      "description": "",
+      "stackSize": 50
+    },
+    {
+      "name": "explosive-charge-2",
+      "gameName": "Heavy Explosive Charge",
+      "description": "",
+      "stackSize": 50
+    },
+    {
+      "name": "explosives-detonator",
+      "gameName": "Explosives Detonator",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "mining-drill",
+      "gameName": "Mining Drill",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "mining-laser",
+      "gameName": "Mining Laser",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "orbital-uplink",
+      "gameName": "Orbital Uplink",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "modular-building-planner",
+      "gameName": "Modular Building Planner",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "paint-roller",
+      "gameName": "Paint Roller",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "plumber-tool",
+      "gameName": "Plumber Tool",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "ore-scanner",
+      "gameName": "Ore Scanner",
+      "description": "",
+      "stackSize": 1
     }
   ],
   "recipes": [

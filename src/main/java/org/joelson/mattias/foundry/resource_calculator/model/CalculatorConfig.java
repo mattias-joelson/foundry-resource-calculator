@@ -48,6 +48,7 @@ public class CalculatorConfig {
         Map<String, Set<Maker>> makerGroups = makerGroupsFrom(makers, jsonCalculatorConfig.makerGroups());
         Map<String, Item> items = itemsFrom(jsonCalculatorConfig.items());
         fuelItemsFrom(items, jsonCalculatorConfig.fuelItems());
+        handheldsFrom(items, jsonCalculatorConfig.handhelds());
         Map<String, Set<Recipe>> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makerGroups);
         Set<String> itemNamesWithoutRecipes = new HashSet<>(items.keySet());
         itemNamesWithoutRecipes.removeAll(
@@ -110,6 +111,9 @@ public class CalculatorConfig {
     private static void fuelItemsFrom(Map<String, Item> items, List<JsonFuelItem> jsonFuelItems) {
         for (JsonFuelItem jsonFuelItem : jsonFuelItems) {
             FuelItem fuelItem = fuelItemFrom(items, jsonFuelItem);
+            if (items.containsKey(fuelItem.getName())) {
+                throw new IllegalArgumentException("Items already contains item with name " + fuelItem.getName());
+            }
             items.put(fuelItem.getName(), fuelItem);
         }
     }
@@ -118,6 +122,20 @@ public class CalculatorConfig {
         Item residualItem = (jsonFuelItem.getResidualItem() != null) ? items.get(jsonFuelItem.getResidualItem()) : null;
         return new FuelItem(jsonFuelItem.getName(), jsonFuelItem.getGameName(), jsonFuelItem.getStackSize(),
                 jsonFuelItem.getWeight(), jsonFuelItem.getFuelValue(), residualItem);
+    }
+
+    private static void handheldsFrom(Map<String, Item> items, List<JsonHandheld> jsonHandhelds) {
+        for (JsonHandheld jsonHandheld : jsonHandhelds) {
+            Handheld handheld = handheldFrom(jsonHandheld);
+            if (items.containsKey(handheld.getName())) {
+                throw new IllegalArgumentException("Items already contains item with name " + handheld.getName());
+            }
+            items.put(handheld.getName(), handheld);
+        }
+    }
+
+    private static Handheld handheldFrom(JsonHandheld jsonHandheld) {
+        return new Handheld(jsonHandheld.getName(), jsonHandheld.getGameName(), jsonHandheld.getStackSize());
     }
 
     private static Map<String, Set<Recipe>> recipesFrom(
