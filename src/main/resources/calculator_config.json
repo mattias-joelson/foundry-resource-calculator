@@ -250,7 +250,12 @@
       "gameName": "Superalloy",
       "description": "",
       "stackSize": 200,
-      "weight": 3
+      "weight": 3.0
+    },
+    {
+      "name": "hot-air",
+      "gameName": "Hot Air",
+      "description": ""
     },
     {
       "name": "machinery-parts",
@@ -270,8 +275,8 @@
       "name": "high-tech-machinery-parts",
       "gameName": "High-Tech Machinery Parts",
       "description": "",
-      "stackSize": 0,
-      "weight": 0
+      "stackSize": 200,
+      "weight": 3.0
     },
     {
       "name": "hydraulic-piston",
@@ -382,8 +387,8 @@
       "name": "fuel-rod-casing",
       "gameName": "Fuel Rod Casing",
       "description": "",
-      "stackSize": 0,
-      "weight": 0
+      "stackSize": 200,
+      "weight": 1.0
     },
     {
       "name": "gravel",
@@ -402,7 +407,7 @@
     {
       "name": "concrete",
       "gameName": "Concrete",
-      "description": "",
+      "description": "Walk speed: 120%",
       "stackSize": 200,
       "weight": 10.0
     },
@@ -430,8 +435,8 @@
       "name": "space-ship-fuel-canister",
       "gameName": "Space Ship Fuel Canister",
       "description": "",
-      "stackSize": 100,
-      "weight": 0.5
+      "stackSize": 20,
+      "weight": 100.0
     },
     {
       "name": "glass",
@@ -465,8 +470,8 @@
       "name": "barrel-olumite",
       "gameName": "Barrel (Olumite)",
       "description": "",
-      "stackSize": 0,
-      "weight": 0
+      "stackSize": 200,
+      "weight": 200.0
     },
     {
       "name": "weapon-components",
@@ -478,13 +483,14 @@
       "name": "rubber",
       "gameName": "Rubber",
       "description": "",
-      "stackSize": 0
+      "stackSize": 200,
+      "weight": 1.0
     },
     {
       "name": "nautical-chassis",
       "gameName": "Nautical Chassis",
       "description": "",
-      "stackSize": 0
+      "stackSize": 200
     },
     {
       "name": "power-line",
