@@ -9,15 +9,19 @@ record JsonItem(
         String gameName,
         String description,
         int stackSize,
-        float weight) {
+        float weight,
+        float fuelValue,
+        String residual) {
 
     @JsonCreator
     JsonItem(
             @JsonProperty(value = "name", required = true) String name,
             @JsonProperty(value = "gameName", required = true) String gameName,
             @JsonProperty(value = "description", required = true) String description,
-            @JsonProperty(value = "stackSize", required = true) int stackSize,
-            @JsonProperty(value = "weight", required = true) float weight) {
+            @JsonProperty(value = "stackSize") int stackSize,
+            @JsonProperty(value = "weight") float weight,
+            @JsonProperty(value = "fuelValue") float fuelValue,
+            @JsonProperty(value = "residual") String residual) {
         this.name = StringUtil.requireNotNullAndNotEmpty(name, "name is null or empty");
         this.gameName = StringUtil.requireNotNullAndNotEmpty(gameName, "gameName is null or empty");
         this.description = StringUtil.requireNotNull(description, "description is null");
@@ -29,5 +33,10 @@ record JsonItem(
             throw new IllegalArgumentException("weight must be greater or equal to 0: " + weight);
         }
         this.weight = weight;
+        if (fuelValue < 0) {
+            throw new IllegalArgumentException("fuelValue must be greater or equal to 0:" + fuelValue);
+        }
+        this.fuelValue = fuelValue;
+        this.residual = StringUtil.requireNullOrNotEmpty(residual, "residual is empty");
     }
 }

@@ -103,7 +103,8 @@ public class CalculatorConfig {
     }
 
     private static Item itemFrom(JsonItem jsonItem) {
-        return new Item(jsonItem.name(), jsonItem.gameName(), jsonItem.stackSize(), jsonItem.weight());
+        return new Item(jsonItem.name(), jsonItem.gameName(), jsonItem.stackSize(), jsonItem.weight(),
+                jsonItem.fuelValue());
     }
 
     private static Map<String, Set<Recipe>> recipesFrom(

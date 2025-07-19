@@ -128,7 +128,7 @@
       "gameName": "Biomass",
       "description": "",
       "stackSize": 100,
-      "weight": 0.0
+      "fuelValue": 5.0
     },
     {
       "name": "xenoferrite-ore-rubble",
@@ -149,7 +149,8 @@
       "gameName": "Ignium Ore Rubble",
       "description": "",
       "stackSize": 200,
-      "weight": 1.0
+      "weight": 1.0,
+      "fuelValue": 10.0
     },
     {
       "name": "mineral-rocks",
@@ -175,23 +176,17 @@
     {
       "name": "water",
       "gameName": "Water",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "crude-olumite",
       "gameName": "Crude Olumite",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "air",
       "gameName": "Air",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "xenoferrite-ore",
@@ -226,7 +221,8 @@
       "gameName": "Ignium Ore",
       "description": "",
       "stackSize": 200,
-      "weight": 1.0
+      "weight": 1.0,
+      "fuelValue": 12.5
     },
     {
       "name": "xenoferrite-ignium-ore-blend",
@@ -254,7 +250,8 @@
       "gameName": "Telluxite Ore",
       "description": "",
       "stackSize": 200,
-      "weight": 1.0
+      "weight": 1.0,
+      "fuelValue": 10.0
     },
     {
       "name": "telluxite-ingot",
@@ -266,16 +263,25 @@
     {
       "name": "liquid-telluxite",
       "gameName": "Liquid Telluxite",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "firmarlite-sheet",
       "gameName": "Firmarlite Sheet",
       "description": "",
+      "stackSize": 200
+    },
+    {
+      "name": "molten-superalloy",
+      "gameName": "Molten Superalloy",
+      "description": ""
+    },
+    {
+      "name": "superalloy",
+      "gameName": "Superalloy",
+      "description": "",
       "stackSize": 200,
-      "weight": 0.0
+      "weight": 3
     },
     {
       "name": "machinery-parts",
@@ -292,6 +298,13 @@
       "weight": 3.0
     },
     {
+      "name": "high-tech-machinery-parts",
+      "gameName": "High-Tech Machinery Parts",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0
+    },
+    {
       "name": "hydraulic-piston",
       "gameName": "Hydraulic Piston",
       "description": "",
@@ -302,8 +315,7 @@
       "name": "robot-parts",
       "gameName": "Robot Parts",
       "description": "",
-      "stackSize": 200,
-      "weight": 0.0
+      "stackSize": 200
     },
     {
       "name": "wire-coil",
@@ -343,44 +355,52 @@
     {
       "name": "low-density-olumite",
       "gameName": "Low Density Olumite",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "liquid-polymer",
       "gameName": "Liquid Polymer",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "olumite-gas",
       "gameName": "Olumite Gas",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "liquid-fuel",
       "gameName": "Liquid Fuel",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "olumic-acid",
       "gameName": "Olumic Acid",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
+    },
+    {
+      "name": "paint",
+      "gameName": "Paint",
+      "description": ""
     },
     {
       "name": "fracking-liquid",
       "gameName": "Fracking Liquid",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
+    },
+    {
+      "name": "ignium-enriched-water",
+      "gameName": "Ignium Enriched Water",
+      "description": ""
+    },
+    {
+      "name": "impure-high-density-olumite",
+      "gameName": "Impure High Density Olumite",
+      "description": ""
+    },
+    {
+      "name": "high-density-olumite",
+      "gameName": "High Density Olumite",
+      "description": ""
     },
     {
       "name": "ignium-powder",
@@ -388,6 +408,20 @@
       "description": "",
       "stackSize": 100,
       "weight": 0.5
+    },
+    {
+      "name": "fuel-rod-casing",
+      "gameName": "Fuel Rod Casing",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0
+    },
+    {
+      "name": "ignium-fuel-rod",
+      "gameName": "Ignium Fuel Rod",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0
     },
     {
       "name": "gravel",
@@ -421,8 +455,7 @@
       "name": "hover-engine",
       "gameName": "Hover Engine",
       "description": "",
-      "stackSize": 25,
-      "weight": 0.0
+      "stackSize": 25
     },
     {
       "name": "telluxite-wafer",
@@ -432,25 +465,32 @@
       "weight": 50.0
     },
     {
-      "name": "glass",
-      "gameName": "Glass",
+      "name": "space-ship-fuel-canister",
+      "gameName": "Space Ship Fuel Canister",
       "description": "",
-      "stackSize": 200,
-      "weight": 1.0
+      "stackSize": 100,
+      "weight": 0.5
     },
     {
       "name": "portable-fuel",
       "gameName": "Portable Fuel",
       "description": "",
       "stackSize": 200,
-      "weight": 0.0
+      "fuelValue": 16
     },
     {
       "name": "jetpack-fuel",
       "gameName": "Jetpack Fuel",
       "description": "",
       "stackSize": 200,
-      "weight": 0.0
+      "fuelValue": 25
+    },
+    {
+      "name": "glass",
+      "gameName": "Glass",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
     },
     {
       "name": "polymer-board",
@@ -460,11 +500,11 @@
       "weight": 1.0
     },
     {
-      "name": "barrel-empty",
-      "gameName": "Barrel (Empty)",
+      "name": "cooked-ignium",
+      "gameName": "Cooked Ignium",
       "description": "",
-      "stackSize": 200,
-      "weight": 2.0
+      "stackSize": 0,
+      "weight": 0
     },
     {
       "name": "construction-material",
@@ -474,32 +514,102 @@
       "weight": 10.0
     },
     {
+      "name": "barrel-empty",
+      "gameName": "Barrel (Empty)",
+      "description": "",
+      "stackSize": 200,
+      "weight": 2.0
+    },
+    {
+      "name": "barrel-olumite",
+      "gameName": "Barrel (Olumite)",
+      "description": "",
+      "stackSize": 0,
+      "weight": 0
+    },
+    {
       "name": "weapon-components",
       "gameName": "Weapon Components",
       "description": "",
-      "stackSize": 50,
-      "weight": 0.0
+      "stackSize": 50
+    },
+    {
+      "name": "rubber",
+      "gameName": "Rubber",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "nautical-chassis",
+      "gameName": "Nautical Chassis",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "power-line",
       "gameName": "Power Line",
       "description": "",
-      "stackSize": 50,
-      "weight": 0.0
+      "stackSize": 50
     },
     {
-      "name": "explosive-charge",
+      "name": "explosive-charge-1",
       "gameName": "Explosive Charge",
       "description": "",
-      "stackSize": 50,
-      "weight": 0.0
+      "stackSize": 50
+    },
+    {
+      "name": "explosive-charge-2",
+      "gameName": "Heavy Explosive Charge",
+      "description": "",
+      "stackSize": 50
+    },
+    {
+      "name": "explosives-detonator",
+      "gameName": "Explosives Detonator",
+      "description": "",
+      "stackSize": 1
     },
     {
       "name": "mining-drill",
       "gameName": "Mining Drill",
       "description": "",
-      "stackSize": 1,
-      "weight": 0.0
+      "stackSize": 1
+    },
+    {
+      "name": "mining-laser",
+      "gameName": "Mining Laser",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "orbital-uplink",
+      "gameName": "Orbital Uplink",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "modular-building-planner",
+      "gameName": "Modular Building Planner",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "paint-roller",
+      "gameName": "Paint Roller",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "plumber-tool",
+      "gameName": "Plumber Tool",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "ore-scanner",
+      "gameName": "Ore Scanner",
+      "description": "",
+      "stackSize": 1
     },
     {
       "name": "building-block",
@@ -523,11 +633,51 @@
       "weight": 0.0
     },
     {
+      "name": "escalator-1",
+      "gameName": "Escalator I",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "escalator-2",
+      "gameName": "Escalator II",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "escalator-3",
+      "gameName": "Escalator III",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "ladder",
+      "gameName": "Ladder",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "stairs",
+      "gameName": "Stairs",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "emergency-beacon",
       "gameName": "Emergency Beacon",
       "description": "",
       "stackSize": 20,
       "weight": 0.0
+    },
+    {
+      "name": "space-station-terminal",
+      "gameName": "Space Station Terminal",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "shipping-pad-small",
@@ -663,6 +813,12 @@
       "weight": 0.0
     },
     {
+      "name": "pipe-intake",
+      "gameName": "Pipe (Intake)",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "pipe",
       "gameName": "Pipe",
       "description": "",
@@ -675,6 +831,30 @@
       "description": "",
       "stackSize": 50,
       "weight": 0.0
+    },
+    {
+      "name": "pump-pipes",
+      "gameName": "Pump (Pipes)",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "pump-pipelines",
+      "gameName": "Pump (Pipelines)",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "pump-pipe-to-pipeline",
+      "gameName": "Pipe-to-Pipeline Pump",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "pump-pipeline-to-pipe",
+      "gameName": "Pipeline-to-Pipe Pump",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "cargo-shuttle-start-pad",
@@ -733,11 +913,29 @@
       "weight": 0.0
     },
     {
+      "name": "biomass-burner",
+      "gameName": "Biomass Burner",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "burner-generator",
+      "gameName": "Burner Generator",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "boiler",
       "gameName": "Boiler",
       "description": "",
       "stackSize": 20,
       "weight": 0.0
+    },
+    {
+      "name": "geothermal-boiler",
+      "gameName": "Geothermal Boiler",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "steam-turbine",
@@ -787,6 +985,12 @@
       "description": "",
       "stackSize": 10,
       "weight": 0.0
+    },
+    {
+      "name": "wall-mounted-power-pole",
+      "gameName": "Power Pole (Wall Mounted)",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "transformer-small",
@@ -957,6 +1161,18 @@
       "weight": 0.0
     },
     {
+      "name": "crate",
+      "gameName": "Crate",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "container",
+      "gameName": "Container",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "logistic-container-1",
       "gameName": "Logistic Container I",
       "description": "",
@@ -1111,50 +1327,8 @@
       "weight": 50.0
     },
     {
-      "name": "vacuum-bot",
-      "gameName": "Vacuum Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 30.0
-    },
-    {
-      "name": "heavy-duty-transport-bot",
-      "gameName": "Heavy Duty Transport Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 60.0
-    },
-    {
-      "name": "light-bot",
-      "gameName": "Light Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 50.0
-    },
-    {
-      "name": "combat-drone",
-      "gameName": "Combat Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 90.0
-    },
-    {
-      "name": "mining-drone",
-      "gameName": "Mining Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 85.0
-    },
-    {
-      "name": "science-assistant-drone",
-      "gameName": "Science Assistant Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 60.0
-    },
-    {
-      "name": "screen-bot",
-      "gameName": "Screen Bot",
+      "name": "transport-bot",
+      "gameName": "Transport Bot",
       "description": "",
       "stackSize": 10,
       "weight": 40.0
@@ -1167,11 +1341,77 @@
       "weight": 45.0
     },
     {
-      "name": "transport-bot",
-      "gameName": "Transport Bot",
+      "name": "screen-bot",
+      "gameName": "Screen Bot",
       "description": "",
       "stackSize": 10,
       "weight": 40.0
+    },
+    {
+      "name": "marine-exploration-bot",
+      "gameName": "Marine Exploration Bot",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "science-assistant-drone",
+      "gameName": "Science Assistant Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0
+    },
+    {
+      "name": "hydro-mining-drone",
+      "gameName": "Hydro Mining Drone",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "mining-drone",
+      "gameName": "Mining Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 85.0
+    },
+    {
+      "name": "combat-drone",
+      "gameName": "Combat Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 90.0
+    },
+    {
+      "name": "light-bot",
+      "gameName": "Light Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 50.0
+    },
+    {
+      "name": "heavy-duty-transport-bot",
+      "gameName": "Heavy Duty Transport Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0
+    },
+    {
+      "name": "vacuum-bot",
+      "gameName": "Vacuum Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 30.0
+    },
+    {
+      "name": "hydro-farming-bot",
+      "gameName": "Hydro Farming Bot",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "aquatic-hauling-bot",
+      "gameName": "Aquatic Hauling Bot",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "transport-drone",
@@ -1328,6 +1568,13 @@
       "weight": 0.0
     },
     {
+      "name": "research-server",
+      "gameName": "Research Server",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
+    },
+    {
       "name": "science-pack-1",
       "gameName": "Science Pack I",
       "description": "",
@@ -1407,6 +1654,13 @@
     {
       "name": "blast-furnace-base",
       "gameName": "Blast Furnace Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    },
+    {
+      "name": "monument-base",
+      "gameName": "Monument Base",
       "description": "",
       "stackSize": 1,
       "weight": 0.0
@@ -2240,10 +2494,10 @@
       "makerGroupName": "assemblers"
     },
     {
-      "name": "explosive-charge-recipe",
+      "name": "explosive-charge-1-recipe",
       "gameName": "Explosive Charge (Recipe)",
       "description": "",
-      "itemName": "explosive-charge",
+      "itemName": "explosive-charge-1",
       "ingredientAmounts": [
         {
           "itemName": "xenoferrite-plates",

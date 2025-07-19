@@ -4,5 +4,6 @@ public record Item(
         String name,
         String gameName,
         int stackSize,
-        float weight) {
+        float weight,
+        float fuelValue) {
 }
