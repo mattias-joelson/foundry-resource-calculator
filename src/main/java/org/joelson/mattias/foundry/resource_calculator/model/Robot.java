@@ -10,4 +10,12 @@ public class Robot extends Item {
         this.salesPrice = salesPrice;
         this.category = category;
     }
+
+    public int getSalesPrice() {
+        return salesPrice;
+    }
+
+    public String getCategory() {
+        return category;
+    }
 }
