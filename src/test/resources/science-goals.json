@@ -13,26 +13,34 @@
       "recipeName": "steel-beams-2-recipe"
     },
     {
+      "itemName": "cement",
+      "recipeName": "cement-recipe"
+    },
+    {
       "itemName": "explosives",
       "recipeName": "explosives-recipe"
+    },
+    {
+      "itemName": "barrel-empty",
+      "recipeName": "barrel-empty-recipe"
     }
   ],
   "chosenMakers": [
     {
       "makerGroupName": "smelters",
-      "makerName": "advanced-smelter"
+      "makerName": "small-smelter"
     },
     {
       "makerGroupName": "lava-smelters",
-      "makerName": "lava-smelter-2"
+      "makerName": "lava-smelter-1"
     },
     {
       "makerGroupName": "crushers",
-      "makerName": "crusher-2"
+      "makerName": "crusher-1"
     },
     {
       "makerGroupName": "assemblers",
-      "makerName": "assembler-3"
+      "makerName": "assembler-2"
     }
   ],
   "chosenConveyor": {
@@ -42,23 +50,23 @@
   "productionGoals": [
     {
       "itemName": "science-pack-1",
-      "amount": 384
+      "amount": 30
     },
     {
       "itemName": "science-pack-2",
-      "amount": 384
+      "amount": 30
     },
     {
       "itemName": "science-pack-3",
-      "amount": 384
+      "amount": 30
     },
     {
       "itemName": "science-pack-4",
-      "amount": 384
+      "amount": 30
     },
     {
       "itemName": "science-pack-5",
-      "amount": 384
+      "amount": 30
     }
   ],
   "productionTable":

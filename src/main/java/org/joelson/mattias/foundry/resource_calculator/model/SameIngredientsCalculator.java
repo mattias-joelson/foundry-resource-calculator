@@ -87,7 +87,7 @@ public class SameIngredientsCalculator {
 
         next_item:
         for (Item item : calculatorConfig.getItems()) {
-            if (!itemsToCheck.contains(item.name())) {
+            if (!itemsToCheck.contains(item.getName())) {
                 continue;
             }
             Set<String> itemIngredients = ingredientsFor(productionGraph, item);
@@ -97,12 +97,12 @@ public class SameIngredientsCalculator {
 //            }
             for (Map.Entry<Set<String>, Set<String>> ingredientsItemsEntry : itemsWithSameIngredients.entrySet()) {
                 if (ingredientsItemsEntry.getKey().equals(itemIngredients)) {
-                    ingredientsItemsEntry.getValue().add(item.name());
+                    ingredientsItemsEntry.getValue().add(item.getName());
                     continue next_item;
                 }
             }
             Set<String> itemNames = new HashSet<>();
-            itemNames.add(item.name());
+            itemNames.add(item.getName());
             itemsWithSameIngredients.put(itemIngredients, itemNames);
         }
 
@@ -162,7 +162,7 @@ public class SameIngredientsCalculator {
         }
         Set<String> ingredientNames = new HashSet<>();
         for (Item ingredient : recipe.ingredientAmounts().keySet()) {
-            ingredientNames.add(ingredient.name());
+            ingredientNames.add(ingredient.getName());
         }
         return ingredientNames;
     }

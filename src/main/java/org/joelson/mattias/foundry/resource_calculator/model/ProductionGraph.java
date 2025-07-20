@@ -46,7 +46,7 @@ public class ProductionGraph {
     }
 
     ProductionGraphNode getProductionGraphNode(Item item) {
-        return itemNodeMap.get(item.name());
+        return itemNodeMap.get(item.getName());
     }
 
     public void calculateProduction() {
@@ -85,7 +85,7 @@ public class ProductionGraph {
 
     private void printItemProduction(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
         System.out.printf("%s%s: %.3f (%s)%s%n",
-                productionGraphNode.getItem().gameName(), recipeGameNameOf(productionGraphNode), itemsPerMinute,
+                productionGraphNode.getItem().getGameName(), recipeGameNameOf(productionGraphNode), itemsPerMinute,
                 logisticsOf(productionGraphNode, itemsPerMinute), makersOf(productionGraphNode, itemsPerMinute, null));
     }
 
@@ -97,7 +97,7 @@ public class ProductionGraph {
     }
 
     private String logisticsOf(ProductionGraphNode productionGraphNode, float itemsPerMinute) {
-        if (productionGraphNode.getItem().stackSize() > 0) {
+        if (productionGraphNode.getItem().getStackSize() > 0) {
             return String.format("%.3f -> %.0f %s", itemsPerMinute / conveyorThroughput,
                     Math.ceil(itemsPerMinute / conveyorThroughput), conveyorItemName);
         } else {
@@ -135,7 +135,7 @@ public class ProductionGraph {
     }
 
     private static String itemsPerMinute(Item item, float numberOfItems, float productionCyclesPerMinute) {
-        return String.format("%s %.2f/min", item.gameName(), numberOfItems * productionCyclesPerMinute);
+        return String.format("%s %.2f/min", item.getGameName(), numberOfItems * productionCyclesPerMinute);
     }
 
     private void printProductionTable() {
@@ -158,7 +158,7 @@ public class ProductionGraph {
             float itemsPerMinute = productionGraphNode.getItemsPerMinute();
             if (recipe != null) {
                 for (Map.Entry<Item, Integer> ingredientAmount : recipe.ingredientAmounts().entrySet()) {
-                    int index = productionTableItemNameColumns.indexOf(ingredientAmount.getKey().name());
+                    int index = productionTableItemNameColumns.indexOf(ingredientAmount.getKey().getName());
                     float ingredientItemsPerMinute =
                             ingredientAmount.getValue() * itemsPerMinute / recipe.itemsProduced();
                     if (index >= 0) {
@@ -168,7 +168,7 @@ public class ProductionGraph {
                         if (!otherBuilder.isEmpty()) {
                             otherBuilder.append(", ");
                         }
-                        otherBuilder.append(ingredientAmount.getKey().name()).append(" ").append(
+                        otherBuilder.append(ingredientAmount.getKey().getName()).append(" ").append(
                                 formatFloat(ingredientItemsPerMinute));
                     }
                 }
@@ -195,7 +195,7 @@ public class ProductionGraph {
             ProductionGraphNode productionGraphNode = itemNodeMap.get(itemName);
             if (productionGraphNode != null && sum != 0) {
                 componentsSumBuilder.append(formatFloat(sum));
-                float itemsPerBelt = productionGraphNode.getItem().stackSize() == 0 ? 36000f : conveyorThroughput;
+                float itemsPerBelt = productionGraphNode.getItem().getStackSize() == 0 ? 36000f : conveyorThroughput;
                 componentsBeltsBuilder.append(formatFloat(sum / itemsPerBelt));
                 componentsRoundedBelts.append((int) Math.ceil(sum / itemsPerBelt));
                 componentsUsed += 1;
@@ -256,7 +256,7 @@ public class ProductionGraph {
             float itemsPerMinute = resourceNode.getItemsPerMinute();
             columnsBuilder.append(resourceName).append(";");
             inputSumBuilder.append(formatFloat(itemsPerMinute)).append(";");
-            float itemsPerBelt = resourceNode.getItem().stackSize() == 0 ? 36000f : conveyorThroughput;
+            float itemsPerBelt = resourceNode.getItem().getStackSize() == 0 ? 36000f : conveyorThroughput;
             inputBeltsBuilder.append(formatFloat(itemsPerMinute / itemsPerBelt)).append(";");
             roundedSumBuilder.append((int) Math.ceil(itemsPerMinute / itemsPerBelt)).append(";");
             resourcesUsed += 1;
@@ -290,7 +290,7 @@ public class ProductionGraph {
     private void printProductionItemHierarchy(
             Item item, float itemsPerMinute, String indent, Map<String, Integer> makersNeeded) {
         ProductionGraphNode node = getProductionGraphNode(item);
-        System.out.printf("%s%s%s: %.3f (%s)%s%n", indent, item.gameName(), recipeGameNameOf(node), itemsPerMinute,
+        System.out.printf("%s%s%s: %.3f (%s)%s%n", indent, item.getGameName(), recipeGameNameOf(node), itemsPerMinute,
                 logisticsOf(node, itemsPerMinute), makersOf(node, itemsPerMinute, makersNeeded));
         Recipe recipe = node.getRecipe();
         if (recipe == null) {
@@ -313,7 +313,7 @@ public class ProductionGraph {
         Map<String, Recipe> chosenRecipes = lookupChosenRecipes(calculatorConfig, calculatorGoals.recipes());
 
         for (Item item : calculatorConfig.getItems()) {
-            Recipe recipe = chooseRecipe(calculatorConfig, chosenRecipes, item.name());
+            Recipe recipe = chooseRecipe(calculatorConfig, chosenRecipes, item.getName());
             if (recipe != null) {
                 Maker maker = chooseMaker(chosenMakers, recipe.makers());
                 addRecipe(calculatorConfig, chosenRecipes, chosenMakers, recipe, maker, itemNodeMap,
@@ -379,7 +379,7 @@ public class ProductionGraph {
             }
         }
         throw new IllegalArgumentException(
-                "No recipe found with name " + recipeName + " for item " + recipes.iterator().next().item().name());
+                "No recipe found with name " + recipeName + " for item " + recipes.iterator().next().item().getName());
     }
 
     private static Recipe chooseRecipe(
@@ -404,14 +404,14 @@ public class ProductionGraph {
             Recipe recipe, Maker maker, Map<String, ProductionGraphNode> itemNodeMap,
             ArrayList<Set<ProductionGraphNode>> productionGraphLevels, Map<String, Integer> productionLevels) {
         Item item = recipe.item();
-        if (itemNodeMap.containsKey(item.name())) {
-            return productionLevels.get(item.name());
+        if (itemNodeMap.containsKey(item.getName())) {
+            return productionLevels.get(item.getName());
         }
 
         Set<Item> ingredients = recipe.ingredientAmounts().keySet();
         int ingredientsMaxProductionLevel = -1;
         for (Item ingredient : ingredients) {
-            Recipe ingredientRecipe = chooseRecipe(calculatorConfig, chosenRecipes, ingredient.name());
+            Recipe ingredientRecipe = chooseRecipe(calculatorConfig, chosenRecipes, ingredient.getName());
             if (ingredientRecipe == null) {
                 ingredientsMaxProductionLevel = Math.max(ingredientsMaxProductionLevel,
                         addResource(itemNodeMap, productionGraphLevels, productionLevels, ingredient));
@@ -432,8 +432,8 @@ public class ProductionGraph {
     private static int addResource(
             Map<String, ProductionGraphNode> itemNodeMap, ArrayList<Set<ProductionGraphNode>> productionGraphLevels,
             Map<String, Integer> productionLevels, Item resource) {
-        if (productionLevels.containsKey(resource.name())) {
-            return productionLevels.get(resource.name());
+        if (productionLevels.containsKey(resource.getName())) {
+            return productionLevels.get(resource.getName());
         }
         addProductionGraphNode(null, null, itemNodeMap, productionGraphLevels, productionLevels, 0, resource);
         return 0;
@@ -445,20 +445,20 @@ public class ProductionGraph {
             int recipeProductionLevel, Item item) {
         Set<ProductionGraphNode> productionGraphLevel =
                 getProductionGraphLevel(productionGraphLevels, recipeProductionLevel);
-        if (productionLevels.containsKey(item.name())) {
-            throw new IllegalStateException("ProductionGraphNode already exists in map for item " + item.name());
+        if (productionLevels.containsKey(item.getName())) {
+            throw new IllegalStateException("ProductionGraphNode already exists in map for item " + item.getName());
         }
         for (ProductionGraphNode productionGraphNode : productionGraphLevel) {
-            if (productionGraphNode.getItem().name().equals(item.name())) {
+            if (productionGraphNode.getItem().getName().equals(item.getName())) {
                 throw new IllegalStateException(
                         "ProductionGraphNode already exists on level " + recipeProductionLevel + " for item "
-                                + item.name());
+                                + item.getName());
             }
         }
         ProductionGraphNode productionGraphNode = new ProductionGraphNode(item, recipe, maker);
-        itemNodeMap.put(item.name(), productionGraphNode);
+        itemNodeMap.put(item.getName(), productionGraphNode);
         productionGraphLevel.add(productionGraphNode);
-        productionLevels.put(item.name(), recipeProductionLevel);
+        productionLevels.put(item.getName(), recipeProductionLevel);
     }
 
     private static Set<ProductionGraphNode> getProductionGraphLevel(

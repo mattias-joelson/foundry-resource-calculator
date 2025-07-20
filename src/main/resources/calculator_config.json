@@ -67,6 +67,12 @@
       "speedMultiplier": 1.0
     },
     {
+      "name": "barrel-filler",
+      "gameName": "Barrel Filler",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
       "name": "distillation-column",
       "gameName": "Distillation Column",
       "description": "",
@@ -81,6 +87,12 @@
     {
       "name": "chemical-processor",
       "gameName": "Chemical Processor",
+      "description": "",
+      "speedMultiplier": 1.0
+    },
+    {
+      "name": "assembly-line-producer",
+      "gameName": "Assembly Line Producer",
       "description": "",
       "speedMultiplier": 1.0
     },
@@ -124,13 +136,6 @@
   ],
   "items": [
     {
-      "name": "biomass",
-      "gameName": "Biomass",
-      "description": "",
-      "stackSize": 100,
-      "weight": 0.0
-    },
-    {
       "name": "xenoferrite-ore-rubble",
       "gameName": "Xenoferrite Ore Rubble",
       "description": "",
@@ -140,13 +145,6 @@
     {
       "name": "technum-ore-rubble",
       "gameName": "Technum Ore Rubble",
-      "description": "",
-      "stackSize": 200,
-      "weight": 1.0
-    },
-    {
-      "name": "ignium-ore-rubble",
-      "gameName": "Ignium Ore Rubble",
       "description": "",
       "stackSize": 200,
       "weight": 1.0
@@ -175,23 +173,17 @@
     {
       "name": "water",
       "gameName": "Water",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "crude-olumite",
       "gameName": "Crude Olumite",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "air",
       "gameName": "Air",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "xenoferrite-ore",
@@ -222,11 +214,9 @@
       "weight": 1.0
     },
     {
-      "name": "ignium-ore",
-      "gameName": "Ignium Ore",
-      "description": "",
-      "stackSize": 200,
-      "weight": 1.0
+      "name": "blast-furnace-slag",
+      "gameName": "Blast Furnace Slag",
+      "description": ""
     },
     {
       "name": "xenoferrite-ignium-ore-blend",
@@ -250,13 +240,6 @@
       "weight": 3.0
     },
     {
-      "name": "telluxite-ore",
-      "gameName": "Telluxite Ore",
-      "description": "",
-      "stackSize": 200,
-      "weight": 1.0
-    },
-    {
       "name": "telluxite-ingot",
       "gameName": "Telluxite Ingot",
       "description": "",
@@ -266,16 +249,35 @@
     {
       "name": "liquid-telluxite",
       "gameName": "Liquid Telluxite",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "firmarlite-sheet",
       "gameName": "Firmarlite Sheet",
       "description": "",
+      "stackSize": 200
+    },
+    {
+      "name": "molten-superalloy",
+      "gameName": "Molten Superalloy",
+      "description": ""
+    },
+    {
+      "name": "superalloy",
+      "gameName": "Superalloy",
+      "description": "",
       "stackSize": 200,
-      "weight": 0.0
+      "weight": 3.0
+    },
+    {
+      "name": "hot-air",
+      "gameName": "Hot Air",
+      "description": ""
+    },
+    {
+      "name": "steam",
+      "gameName": "Steam",
+      "description": ""
     },
     {
       "name": "machinery-parts",
@@ -292,6 +294,13 @@
       "weight": 3.0
     },
     {
+      "name": "high-tech-machinery-parts",
+      "gameName": "High-Tech Machinery Parts",
+      "description": "",
+      "stackSize": 200,
+      "weight": 3.0
+    },
+    {
       "name": "hydraulic-piston",
       "gameName": "Hydraulic Piston",
       "description": "",
@@ -302,8 +311,7 @@
       "name": "robot-parts",
       "gameName": "Robot Parts",
       "description": "",
-      "stackSize": 200,
-      "weight": 0.0
+      "stackSize": 200
     },
     {
       "name": "wire-coil",
@@ -343,44 +351,52 @@
     {
       "name": "low-density-olumite",
       "gameName": "Low Density Olumite",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "liquid-polymer",
       "gameName": "Liquid Polymer",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "olumite-gas",
       "gameName": "Olumite Gas",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "liquid-fuel",
       "gameName": "Liquid Fuel",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
     },
     {
       "name": "olumic-acid",
       "gameName": "Olumic Acid",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
+    },
+    {
+      "name": "paint",
+      "gameName": "Paint",
+      "description": ""
     },
     {
       "name": "fracking-liquid",
       "gameName": "Fracking Liquid",
-      "description": "",
-      "stackSize": 0,
-      "weight": 0.0
+      "description": ""
+    },
+    {
+      "name": "ignium-enriched-water",
+      "gameName": "Ignium Enriched Water",
+      "description": ""
+    },
+    {
+      "name": "impure-high-density-olumite",
+      "gameName": "Impure High Density Olumite",
+      "description": ""
+    },
+    {
+      "name": "high-density-olumite",
+      "gameName": "High Density Olumite",
+      "description": ""
     },
     {
       "name": "ignium-powder",
@@ -388,6 +404,13 @@
       "description": "",
       "stackSize": 100,
       "weight": 0.5
+    },
+    {
+      "name": "fuel-rod-casing",
+      "gameName": "Fuel Rod Casing",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0
     },
     {
       "name": "gravel",
@@ -406,7 +429,7 @@
     {
       "name": "concrete",
       "gameName": "Concrete",
-      "description": "",
+      "description": "Walk speed: 120%",
       "stackSize": 200,
       "weight": 10.0
     },
@@ -421,8 +444,7 @@
       "name": "hover-engine",
       "gameName": "Hover Engine",
       "description": "",
-      "stackSize": 25,
-      "weight": 0.0
+      "stackSize": 25
     },
     {
       "name": "telluxite-wafer",
@@ -432,25 +454,18 @@
       "weight": 50.0
     },
     {
+      "name": "space-ship-fuel-canister",
+      "gameName": "Space Ship Fuel Canister",
+      "description": "",
+      "stackSize": 20,
+      "weight": 100.0
+    },
+    {
       "name": "glass",
       "gameName": "Glass",
       "description": "",
       "stackSize": 200,
       "weight": 1.0
-    },
-    {
-      "name": "portable-fuel",
-      "gameName": "Portable Fuel",
-      "description": "",
-      "stackSize": 200,
-      "weight": 0.0
-    },
-    {
-      "name": "jetpack-fuel",
-      "gameName": "Jetpack Fuel",
-      "description": "",
-      "stackSize": 200,
-      "weight": 0.0
     },
     {
       "name": "polymer-board",
@@ -460,13 +475,6 @@
       "weight": 1.0
     },
     {
-      "name": "barrel-empty",
-      "gameName": "Barrel (Empty)",
-      "description": "",
-      "stackSize": 200,
-      "weight": 2.0
-    },
-    {
       "name": "construction-material",
       "gameName": "Construction Material",
       "description": "",
@@ -474,32 +482,37 @@
       "weight": 10.0
     },
     {
+      "name": "barrel-empty",
+      "gameName": "Barrel (Empty)",
+      "description": "",
+      "stackSize": 200,
+      "weight": 2.0
+    },
+    {
+      "name": "barrel-olumite",
+      "gameName": "Barrel (Olumite)",
+      "description": "",
+      "stackSize": 200,
+      "weight": 200.0
+    },
+    {
       "name": "weapon-components",
       "gameName": "Weapon Components",
       "description": "",
-      "stackSize": 50,
-      "weight": 0.0
+      "stackSize": 50
     },
     {
-      "name": "power-line",
-      "gameName": "Power Line",
+      "name": "rubber",
+      "gameName": "Rubber",
       "description": "",
-      "stackSize": 50,
-      "weight": 0.0
+      "stackSize": 200,
+      "weight": 1.0
     },
     {
-      "name": "explosive-charge",
-      "gameName": "Explosive Charge",
+      "name": "nautical-chassis",
+      "gameName": "Nautical Chassis",
       "description": "",
-      "stackSize": 50,
-      "weight": 0.0
-    },
-    {
-      "name": "mining-drill",
-      "gameName": "Mining Drill",
-      "description": "",
-      "stackSize": 1,
-      "weight": 0.0
+      "stackSize": 200
     },
     {
       "name": "building-block",
@@ -523,11 +536,51 @@
       "weight": 0.0
     },
     {
+      "name": "escalator-1",
+      "gameName": "Escalator I",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "escalator-2",
+      "gameName": "Escalator II",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "escalator-3",
+      "gameName": "Escalator III",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "ladder",
+      "gameName": "Ladder",
+      "description": "",
+      "stackSize": 200,
+      "weight": 0.0
+    },
+    {
+      "name": "stairs",
+      "gameName": "Stairs",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "emergency-beacon",
       "gameName": "Emergency Beacon",
       "description": "",
       "stackSize": 20,
       "weight": 0.0
+    },
+    {
+      "name": "space-station-terminal",
+      "gameName": "Space Station Terminal",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "shipping-pad-small",
@@ -663,6 +716,12 @@
       "weight": 0.0
     },
     {
+      "name": "pipe-intake",
+      "gameName": "Pipe (Intake)",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "pipe",
       "gameName": "Pipe",
       "description": "",
@@ -675,6 +734,30 @@
       "description": "",
       "stackSize": 50,
       "weight": 0.0
+    },
+    {
+      "name": "pump-pipes",
+      "gameName": "Pump (Pipes)",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "pump-pipelines",
+      "gameName": "Pump (Pipelines)",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "pump-pipe-to-pipeline",
+      "gameName": "Pipe-to-Pipeline Pump",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "pump-pipeline-to-pipe",
+      "gameName": "Pipeline-to-Pipe Pump",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "cargo-shuttle-start-pad",
@@ -733,11 +816,29 @@
       "weight": 0.0
     },
     {
+      "name": "biomass-burner",
+      "gameName": "Biomass Burner",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "burner-generator",
+      "gameName": "Burner Generator",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "boiler",
       "gameName": "Boiler",
       "description": "",
       "stackSize": 20,
       "weight": 0.0
+    },
+    {
+      "name": "geothermal-boiler",
+      "gameName": "Geothermal Boiler",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "steam-turbine",
@@ -787,6 +888,12 @@
       "description": "",
       "stackSize": 10,
       "weight": 0.0
+    },
+    {
+      "name": "wall-mounted-power-pole",
+      "gameName": "Power Pole (Wall Mounted)",
+      "description": "",
+      "stackSize": 0
     },
     {
       "name": "transformer-small",
@@ -957,6 +1064,18 @@
       "weight": 0.0
     },
     {
+      "name": "crate",
+      "gameName": "Crate",
+      "description": "",
+      "stackSize": 0
+    },
+    {
+      "name": "container",
+      "gameName": "Container",
+      "description": "",
+      "stackSize": 0
+    },
+    {
       "name": "logistic-container-1",
       "gameName": "Logistic Container I",
       "description": "",
@@ -1097,95 +1216,10 @@
       "weight": 0.0
     },
     {
-      "name": "maintenance-drone",
-      "gameName": "Maintenance Drone",
+      "name": "portable-light",
+      "gameName": "Portable Light",
       "description": "",
-      "stackSize": 10,
-      "weight": 70.0
-    },
-    {
-      "name": "planter-drone",
-      "gameName": "Planter Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 50.0
-    },
-    {
-      "name": "vacuum-bot",
-      "gameName": "Vacuum Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 30.0
-    },
-    {
-      "name": "heavy-duty-transport-bot",
-      "gameName": "Heavy Duty Transport Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 60.0
-    },
-    {
-      "name": "light-bot",
-      "gameName": "Light Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 50.0
-    },
-    {
-      "name": "combat-drone",
-      "gameName": "Combat Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 90.0
-    },
-    {
-      "name": "mining-drone",
-      "gameName": "Mining Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 85.0
-    },
-    {
-      "name": "science-assistant-drone",
-      "gameName": "Science Assistant Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 60.0
-    },
-    {
-      "name": "screen-bot",
-      "gameName": "Screen Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 40.0
-    },
-    {
-      "name": "snack-bot",
-      "gameName": "Snack Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 45.0
-    },
-    {
-      "name": "transport-bot",
-      "gameName": "Transport Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 40.0
-    },
-    {
-      "name": "transport-drone",
-      "gameName": "Transport Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 75.0
-    },
-    {
-      "name": "cleaning-bot",
-      "gameName": "Cleaning Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 55.0
+      "stackSize": 50
     },
     {
       "name": "personal-assistant-robot-torso",
@@ -1328,6 +1362,13 @@
       "weight": 0.0
     },
     {
+      "name": "research-server",
+      "gameName": "Research Server",
+      "description": "",
+      "stackSize": 100,
+      "weight": 0.0
+    },
+    {
       "name": "science-pack-1",
       "gameName": "Science Pack I",
       "description": "",
@@ -1410,6 +1451,345 @@
       "description": "",
       "stackSize": 1,
       "weight": 0.0
+    },
+    {
+      "name": "monument-base",
+      "gameName": "Monument Base",
+      "description": "",
+      "stackSize": 1,
+      "weight": 0.0
+    }
+  ],
+  "fuelItems": [
+    {
+      "name": "biomass",
+      "gameName": "Biomass",
+      "description": "",
+      "stackSize": 100,
+      "fuelValue": 5.0
+    },
+    {
+      "name": "ignium-ore-rubble",
+      "gameName": "Ignium Ore Rubble",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0,
+      "fuelValue": 10.0
+    },
+    {
+      "name": "ignium-ore",
+      "gameName": "Ignium Ore",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0,
+      "fuelValue": 12.5
+    },
+    {
+      "name": "telluxite-ore",
+      "gameName": "Telluxite Ore",
+      "description": "",
+      "stackSize": 200,
+      "weight": 1.0,
+      "fuelValue": 10.0
+    },
+    {
+      "name": "ignium-fuel-rod",
+      "gameName": "Ignium Fuel Rod",
+      "description": "",
+      "stackSize": 200,
+      "fuelValue": 400.0,
+      "residualItem": "fuel-rod-casing"
+    },
+    {
+      "name": "portable-fuel",
+      "gameName": "Portable Fuel",
+      "description": "",
+      "stackSize": 200,
+      "fuelValue": 16.0,
+      "residualItem": "barrel-empty"
+    },
+    {
+      "name": "jetpack-fuel",
+      "gameName": "Jetpack Fuel",
+      "description": "Only usable for jetpack.",
+      "stackSize": 200,
+      "fuelValue": 25.0
+    },
+    {
+      "name": "coked-ignium",
+      "gameName": "Coked Ignium",
+      "description": "",
+      "stackSize": 100,
+      "weight": 1.0,
+      "fuelValue": 5.5
+    }
+  ],
+  "handhelds": [
+    {
+      "name": "power-line",
+      "gameName": "Power Line",
+      "description": "",
+      "stackSize": 50
+    },
+    {
+      "name": "explosive-charge-1",
+      "gameName": "Explosive Charge",
+      "description": "",
+      "stackSize": 50
+    },
+    {
+      "name": "explosive-charge-2",
+      "gameName": "Heavy Explosive Charge",
+      "description": "",
+      "stackSize": 50
+    },
+    {
+      "name": "explosives-detonator",
+      "gameName": "Explosives Detonator",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "mining-drill",
+      "gameName": "Mining Drill",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "mining-laser",
+      "gameName": "Mining Laser",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "orbital-uplink",
+      "gameName": "Orbital Uplink",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "modular-building-planner",
+      "gameName": "Modular Building Planner",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "paint-roller",
+      "gameName": "Paint Roller",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "plumber-tool",
+      "gameName": "Plumber Tool",
+      "description": "",
+      "stackSize": 1
+    },
+    {
+      "name": "ore-scanner",
+      "gameName": "Ore Scanner",
+      "description": "",
+      "stackSize": 1
+    }
+  ],
+  "robots": [
+    {
+      "name": "maintenance-drone",
+      "gameName": "Maintenance Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 70.0,
+      "salesPrice": 114,
+      "category": "appliances"
+    },
+    {
+      "name": "planter-drone",
+      "gameName": "Planter Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 50.0,
+      "salesPrice": 63,
+      "category": "agricultural"
+    },
+    {
+      "name": "transport-bot",
+      "gameName": "Transport Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 40.0,
+      "salesPrice": 114,
+      "category": "logistics"
+    },
+    {
+      "name": "snack-bot",
+      "gameName": "Snack Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 45.0,
+      "salesPrice": 30,
+      "category": "appliances"
+    },
+    {
+      "name": "screen-bot",
+      "gameName": "Screen Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 40.0,
+      "salesPrice": 41,
+      "category": "appliances"
+    },
+    {
+      "name": "marine-exploration-bot",
+      "gameName": "Marine Exploration Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 105.0,
+      "salesPrice": 240,
+      "category": "scientific"
+    },
+    {
+      "name": "science-assistant-drone",
+      "gameName": "Science Assistant Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0,
+      "salesPrice": 108,
+      "category": "scientific"
+    },
+    {
+      "name": "hydro-mining-bot",
+      "gameName": "Hydro Mining Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 110.0,
+      "salesPrice": 220,
+      "category": "mining"
+    },
+    {
+      "name": "mining-drone",
+      "gameName": "Mining Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 85.0,
+      "salesPrice": 95,
+      "category": "mining"
+    },
+    {
+      "name": "combat-drone",
+      "gameName": "Combat Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 90.0,
+      "salesPrice": 108,
+      "category": "military"
+    },
+    {
+      "name": "light-bot",
+      "gameName": "Light Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 50.0,
+      "salesPrice": 41,
+      "category": "appliances"
+    },
+    {
+      "name": "heavy-duty-transport-bot",
+      "gameName": "Heavy Duty Transport Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0,
+      "salesPrice": 47,
+      "category": "logistics"
+    },
+    {
+      "name": "vacuum-bot",
+      "gameName": "Vacuum Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 30.0,
+      "salesPrice": 23,
+      "category": "appliances"
+    },
+    {
+      "name": "hydro-farming-bot",
+      "gameName": "Hydro Farming Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 95,
+      "salesPrice": 210,
+      "category": "agricultural"
+    },
+    {
+      "name": "aquatic-hauling-bot",
+      "gameName": "Aquatic Hauling Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 100,
+      "salesPrice": 222,
+      "category": "logistics"
+    },
+    {
+      "name": "transport-drone",
+      "gameName": "Transport Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 75.0,
+      "salesPrice": 107,
+      "category": "logistics"
+    },
+    {
+      "name": "cleaning-bot",
+      "gameName": "Cleaning Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 55.0,
+      "salesPrice": 79,
+      "category": "appliances"
+    },
+    {
+      "name": "personal-assistant-robot",
+      "gameName": "Personal Assistant Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 180.0,
+      "salesPrice": 700,
+      "category": "appliances"
+    },
+    {
+      "name": "miner-robot",
+      "gameName": "Miner Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 225.0,
+      "salesPrice": 900,
+      "category": "mining"
+    },
+    {
+      "name": "farmer-robot",
+      "gameName": "Farmer Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 170.0,
+      "salesPrice": 680,
+      "category": "agricultural"
+    },
+    {
+      "name": "science-robot",
+      "gameName": "Science Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 210.0,
+      "salesPrice": 890,
+      "category": "scientific"
+    },
+    {
+      "name": "combat-robot",
+      "gameName": "Military Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 240.0,
+      "salesPrice": 930,
+      "category": "military"
     }
   ],
   "recipes": [
@@ -1633,7 +2013,7 @@
     },
     {
       "name": "firmarlite-sheet-recipe",
-      "gameName": "Firmarlite Sheet (recipe)",
+      "gameName": "Firmarlite Sheet (Recipe)",
       "description": "",
       "itemName": "firmarlite-sheet",
       "ingredientAmounts": [
@@ -1645,6 +2025,44 @@
       "itemsProduced": 1,
       "time": 6.0,
       "makerGroupName": "lava-smelters"
+    },
+    {
+      "name": "molten-superalloy-recipe",
+      "gameName": "Molten Superalloy (Recipe)",
+      "description": "",
+      "itemName": "molten-superalloy",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 160
+        },
+        {
+          "itemName": "telluxite-ingot",
+          "amount": 40
+        },
+        {
+          "itemName": "coked-ignium",
+          "amount": 40
+        }
+      ],
+      "itemsProduced": 4000,
+      "time": 60.0,
+      "makerGroupName": "electric-arc-furnace"
+    },
+    {
+      "name": "superalloy-recipe",
+      "gameName": "Superalloy (Recipe)",
+      "description": "",
+      "itemName": "superalloy",
+      "ingredientAmounts": [
+        {
+          "itemName": "molten-superalloy",
+          "amount": 50
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "casting-machine"
     },
     {
       "name": "machinery-parts-recipe",
@@ -1679,6 +2097,29 @@
       "itemsProduced": 2,
       "time": 4.0,
       "makerGroupName": "assemblers"
+    },
+    {
+      "name": "high-tech-machinery-parts-recipe",
+      "gameName": "High-Tech Machinery Parts (Recipe)",
+      "description": "",
+      "itemName": "high-tech-machinery-parts",
+      "ingredientAmounts": [
+        {
+          "itemName": "superalloy",
+          "amount": 1
+        },
+        {
+          "itemName": "rubber",
+          "amount": 2
+        },
+        {
+          "itemName": "low-density-olumite",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 6.0,
+      "makerGroupName": "fluid-assembler"
     },
     {
       "name": "hydraulic-piston-recipe",
@@ -1804,7 +2245,7 @@
     },
     {
       "name": "energy-cell-recipe",
-      "gameName": "Energy Cell (recipe)",
+      "gameName": "Energy Cell (Recipe)",
       "description": "",
       "itemName": "energy-cell",
       "ingredientAmounts": [
@@ -1832,7 +2273,7 @@
     {
       "name": "low-density-olumite-recipe",
       "gameName": "Olumite Refining: Low Density Olumite (Recipe)",
-      "description": "",
+      "description": "waste-gas: 25",
       "itemName": "low-density-olumite",
       "ingredientAmounts": [
         {
@@ -1847,7 +2288,7 @@
     {
       "name": "liquid-polymer-recipe",
       "gameName": "Olumite Refining: Liquid Polymer (Recipe)",
-      "description": "",
+      "description": "waste-gas: 50",
       "itemName": "liquid-polymer",
       "ingredientAmounts": [
         {
@@ -1862,7 +2303,7 @@
     {
       "name": "olumite-gas-recipe",
       "gameName": "Olumite Refining: Olumite Gas (Recipe)",
-      "description": "",
+      "description": "waste-gas: 10",
       "itemName": "olumite-gas",
       "ingredientAmounts": [
         {
@@ -1913,6 +2354,29 @@
       "makerGroupName": "chemical-processor"
     },
     {
+      "name": "paint-recipe",
+      "gameName": "Paint (Recipe)",
+      "description": "",
+      "itemName": "paint",
+      "ingredientAmounts": [
+        {
+          "itemName": "low-density-olumite",
+          "amount": 50
+        },
+        {
+          "itemName": "olumite-gas",
+          "amount": 50
+        },
+        {
+          "itemName": "water",
+          "amount": 50
+        }
+      ],
+      "itemsProduced": 100,
+      "time": 7.5,
+      "makerGroupName": "chemical-processor"
+    },
+    {
       "name": "fracking-liquid",
       "gameName": "Fracking Liquid (Recipe)",
       "description": "",
@@ -1936,6 +2400,59 @@
       "makerGroupName": "chemical-processor"
     },
     {
+      "name": "ignium-enriched-water-recipe",
+      "gameName": "Ignium-Enriched Water (Recipe)",
+      "description": "",
+      "itemName": "ignium-enriched-water",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-powder",
+          "amount": 2
+        },
+        {
+          "itemName": "water",
+          "amount": 270
+        }
+      ],
+      "itemsProduced": 270,
+      "time": 2.5,
+      "makerGroupName": "chemical-processor"
+    },
+    {
+      "name": "impure-high-density-olumite-recipe",
+      "gameName": "Impure High Density Olumite (Recipe)",
+      "description": "waste-gas: 50",
+      "itemName": "impure-high-density-olumite",
+      "ingredientAmounts": [
+        {
+          "itemName": "crude-olumite",
+          "amount": 100
+        },
+        {
+          "itemName": "steam",
+          "amount": 60
+        }
+      ],
+      "itemsProduced": 50,
+      "time": 6.0,
+      "makerGroupName": "distillation-column"
+    },
+    {
+      "name": "high-density-olumite-recipe",
+      "gameName": "High Density Olumite (Recipe)",
+      "description": "waste-gas: 10",
+      "itemName": "high-density-olumite",
+      "ingredientAmounts": [
+        {
+          "itemName": "impure-high-density-olumite",
+          "amount": 50
+        }
+      ],
+      "itemsProduced": 40,
+      "time": 6.0,
+      "makerGroupName": "distillation-column"
+    },
+    {
       "name": "ignium-powder-recipe",
       "gameName": "Ignium Powder (Recipe)",
       "description": "",
@@ -1949,6 +2466,52 @@
       "itemsProduced": 5,
       "time": 5.0,
       "makerGroupName": "crushers"
+    },
+    {
+      "name": "fuel-rod-casing-recipe",
+      "gameName": "Fuel Rod Casing (Recipe)",
+      "description": "",
+      "itemName": "fuel-rod-casing",
+      "ingredientAmounts": [
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 2
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 2,
+      "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "ignium-fuel-rod-recipe",
+      "gameName": "ignium-fuel-rod (Recipe)",
+      "description": "",
+      "itemName": "ignium-fuel-rod",
+      "ingredientAmounts": [
+        {
+          "itemName": "fuel-rod-casing",
+          "amount": 1
+        },
+        {
+          "itemName": "wire-coil",
+          "amount": 10
+        },
+        {
+          "itemName": "ignium-powder",
+          "amount": 20
+        },
+        {
+          "itemName": "liquid-fuel",
+          "amount": 400
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
+      "makerGroupName": "fluid-assembler"
     },
     {
       "name": "gravel-recipe",
@@ -1985,6 +2548,21 @@
       "makerGroupName": "crushers"
     },
     {
+      "name": "cement-slag-reprocessing-recipe",
+      "gameName": "Cement (Slag Reprocessing) (Recipe)",
+      "description": "",
+      "itemName": "cement",
+      "ingredientAmounts": [
+        {
+          "itemName": "blast-furnace-slag",
+          "amount": 36
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 12.0,
+      "makerGroupName": "chemical-processor"
+    },
+    {
       "name": "concrete-recipe",
       "gameName": "Concrete (Recipe)",
       "description": "",
@@ -2006,6 +2584,25 @@
       "itemsProduced": 4,
       "time": 15.0,
       "makerGroupName": "casting-machine"
+    },
+    {
+      "name": "explosives-recipe",
+      "gameName": "Explosives (Recipe)",
+      "description": "",
+      "itemName": "explosives",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-powder",
+          "amount": 4
+        },
+        {
+          "itemName": "low-density-olumite",
+          "amount": 50
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "fluid-assembler"
     },
     {
       "name": "explosives-primitive-recipe",
@@ -2031,25 +2628,6 @@
       "makerGroupName": "assemblers"
     },
     {
-      "name": "explosives-recipe",
-      "gameName": "Explosives (Recipe)",
-      "description": "",
-      "itemName": "explosives",
-      "ingredientAmounts": [
-        {
-          "itemName": "ignium-powder",
-          "amount": 4
-        },
-        {
-          "itemName": "low-density-olumite",
-          "amount": 50
-        }
-      ],
-      "itemsProduced": 1,
-      "time": 5.0,
-      "makerGroupName": "fluid-assembler"
-    },
-    {
       "name": "hover-engine-recipe",
       "gameName": "Hover Engine (Recipe)",
       "description": "",
@@ -2071,6 +2649,52 @@
       "itemsProduced": 1,
       "time": 6.0,
       "makerGroupName": "assemblers"
+    },
+    {
+      "name": "telluxite-wafer",
+      "gameName": "Telluxite Wafer (Recipe)",
+      "description": "",
+      "itemName": "telluxite-wafer",
+      "ingredientAmounts": [
+        {
+          "itemName": "liquid-telluxite",
+          "amount": 400
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 24.0,
+      "makerGroupName": "casting-machine"
+    },
+    {
+      "name": "space-ship-fuel-canister-recipe",
+      "gameName": "Space Ship Fuel Canister (Recipe)",
+      "description": "",
+      "itemName": "space-ship-fuel-canister",
+      "ingredientAmounts": [
+        {
+          "itemName": "barrel-empty",
+          "amount": 1
+        },
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 5
+        },
+        {
+          "itemName": "ignium-powder",
+          "amount": 5
+        },
+        {
+          "itemName": "liquid-fuel",
+          "amount": 100
+        },
+        {
+          "itemName": "water",
+          "amount": 20
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "chemical-processor"
     },
     {
       "name": "portable-fuel-recipe",
@@ -2111,21 +2735,6 @@
       "makerGroupName": "fluid-assembler"
     },
     {
-      "name": "telluxite-wafer",
-      "gameName": "Telluxite Wafer (Recipe)",
-      "description": "",
-      "itemName": "telluxite-wafer",
-      "ingredientAmounts": [
-        {
-          "itemName": "liquid-telluxite",
-          "amount": 400
-        }
-      ],
-      "itemsProduced": 1,
-      "time": 24.0,
-      "makerGroupName": "casting-machine"
-    },
-    {
       "name": "glass-recipe",
       "gameName": "Glass (Recipe)",
       "description": "",
@@ -2156,19 +2765,34 @@
       "makerGroupName": "casting-machine"
     },
     {
-      "name": "barrel-empty",
-      "gameName": "Barrel (Empty) (Recipe)",
+      "name": "coked-ignium-recipe",
+      "gameName": "Coked Ignium (Recipe)",
       "description": "",
+      "itemName": "coked-ignium",
+      "ingredientAmounts": [
+        {
+          "itemName": "ignium-ore",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 5,
+      "time": 11.25,
+      "makerGroupName": "advanced-smelter"
+    },
+    {
+      "name": "empty-barreled-olumite-recipe",
+      "gameName": "Empty Barreled Olumite (Recipe)",
+      "description": "crude-olumite: 250",
       "itemName": "barrel-empty",
       "ingredientAmounts": [
         {
-          "itemName": "xenoferrite-plates",
+          "itemName": "barrel-olumite",
           "amount": 1
         }
       ],
       "itemsProduced": 1,
-      "time": 3.0,
-      "makerGroupName": "assemblers"
+      "time": 2.0,
+      "makerGroupName": "barrel-filler"
     },
     {
       "name": "construction-material-recipe",
@@ -2202,6 +2826,55 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "xenoferrite-plates-barrel-recycle-recipe",
+      "gameName": "Xenoferrite Plates (Barrel Recycle) (Recipe)",
+      "description": "",
+      "itemName": "xenoferrite-plates",
+      "ingredientAmounts": [
+        {
+          "itemName": "barrel-empty",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "barrel-olumite-recipe",
+      "gameName": "Barrel Olumite (Recipe)",
+      "description": "",
+      "itemName": "barrel-olumite",
+      "ingredientAmounts": [
+        {
+          "itemName": "barrel-empty",
+          "amount": 1
+        },
+        {
+          "itemName": "crude-olumite",
+          "amount": 250
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 2.0,
+      "makerGroupName": "barrel-filler"
+    },
+    {
+      "name": "barrel-empty-recipe",
+      "gameName": "Barrel (Empty) (Recipe)",
+      "description": "",
+      "itemName": "barrel-empty",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "weapon-components-recipe",
       "gameName": "Weapon Components (Recipe)",
       "description": "",
@@ -2225,6 +2898,52 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "rubber-recipe",
+      "gameName": "Rubber (Recipe)",
+      "description": "",
+      "itemName": "rubber",
+      "ingredientAmounts": [
+        {
+          "itemName": "liquid-polymer",
+          "amount": 5
+        },
+        {
+          "itemName": "high-density-olumite",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 2.0,
+      "makerGroupName": "casting-machine"
+    },
+    {
+      "name": "nautical-chassis-recipe",
+      "gameName": "Nautical Chassis (Recipe)",
+      "description": "",
+      "itemName": "nautical-chassis",
+      "ingredientAmounts": [
+        {
+          "itemName": "superalloy",
+          "amount": 1
+        },
+        {
+          "itemName": "rubber",
+          "amount": 1
+        },
+        {
+          "itemName": "glass",
+          "amount": 1
+        },
+        {
+          "itemName": "high-tech-machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "power-line-recipe",
       "gameName": "Power Line (Recipe)",
       "description": "",
@@ -2240,10 +2959,10 @@
       "makerGroupName": "assemblers"
     },
     {
-      "name": "explosive-charge-recipe",
+      "name": "explosive-charge-1-recipe",
       "gameName": "Explosive Charge (Recipe)",
       "description": "",
-      "itemName": "explosive-charge",
+      "itemName": "explosive-charge-1",
       "ingredientAmounts": [
         {
           "itemName": "xenoferrite-plates",
@@ -2267,6 +2986,48 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "heavy-explosive-charge-recipe",
+      "gameName": "Heavy Explosive Charge (Recipe)",
+      "description": "",
+      "itemName": "explosive-charge-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "explosive-charge-1",
+          "amount": 1
+        },
+        {
+          "itemName": "explosives",
+          "amount": 1
+        },
+        {
+          "itemName": "liquid-fuel",
+          "amount": 150
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "chemical-processor"
+    },
+    {
+      "name": "explosives-detonator-recipe",
+      "gameName": "Explosives Detonator (Recipe)",
+      "description": "",
+      "itemName": "explosives-detonator",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 2
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 40
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "mining-drill-recipe",
       "gameName": "Mining Drill (Recipe)",
       "description": "",
@@ -2287,6 +3048,136 @@
       ],
       "itemsProduced": 1,
       "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "mining-laser-recipe",
+      "gameName": "Mining Laser (Recipe)",
+      "description": "",
+      "itemName": "mining-laser",
+      "ingredientAmounts": [
+        {
+          "itemName": "steel-beams",
+          "amount": 2
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 15
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 15
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 15
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "character"
+    },
+    {
+      "name": "orbital-uplink-recipe",
+      "gameName": "Orbital Uplink (Recipe)",
+      "description": "",
+      "itemName": "orbital-uplink",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 20
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 10
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "modular-building-planner-recipe",
+      "gameName": "Modular Building Planner (Recipe)",
+      "description": "",
+      "itemName": "modular-building-planner",
+      "ingredientAmounts": [
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 4.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "paint-roller-recipe",
+      "gameName": "Paint Roller (Recipe)",
+      "description": "",
+      "itemName": "paint-roller",
+      "ingredientAmounts": [
+        {
+          "itemName": "biomass",
+          "amount": 10
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "character"
+    },
+    {
+      "name": "plumber-tool-recipe",
+      "gameName": "Plumber Tool (Recipe)",
+      "description": "",
+      "itemName": "plumber-tool",
+      "ingredientAmounts": [
+        {
+          "itemName": "biomass",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 6.0,
+      "makerGroupName": "character"
+    },
+    {
+      "name": "ore-scanner-handheld-recipe",
+      "gameName": "Ore Scanner (Handheld) (Recipe)",
+      "description": "",
+      "itemName": "ore-scanner",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 20
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -2351,6 +3242,89 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "escalator-1-recipe",
+      "gameName": "Escalator I (Recipe)",
+      "description": "",
+      "itemName": "escalator-1",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 3
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "escalator-2-recipe",
+      "gameName": "Escalator II (Recipe)",
+      "description": "",
+      "itemName": "escalator-2",
+      "ingredientAmounts": [
+        {
+          "itemName": "escalator-1",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "escalator-3-recipe",
+      "gameName": "Escalator III (Recipe)",
+      "description": "",
+      "itemName": "escalator-3",
+      "ingredientAmounts": [
+        {
+          "itemName": "escalator-2",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "ladder-recipe",
+      "gameName": "Ladder (Recipe)",
+      "description": "",
+      "itemName": "ladder",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "stairs-recipe",
+      "gameName": "Stairs (Recipe)",
+      "description": "",
+      "itemName": "stairs",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.5,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "emergency-beacon-recipe",
       "gameName": "Emergency Beacon (Recipe)",
       "description": "",
@@ -2367,6 +3341,29 @@
       ],
       "itemsProduced": 1,
       "time": 3,
+      "makerGroupName": "character"
+    },
+    {
+      "name": "space-station-terminal-recipe",
+      "gameName": "Space Station Terminal (Recipe)",
+      "description": "",
+      "itemName": "space-station-terminal",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        },
+        {
+          "itemName": "emergency-beacon",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 2.0,
       "makerGroupName": "character"
     },
     {
@@ -2540,6 +3537,10 @@
         {
           "itemName": "hydraulic-piston",
           "amount": 1
+        },
+        {
+          "itemName": "rubber",
+          "amount": 2
         }
       ],
       "itemsProduced": 2,
@@ -2628,6 +3629,10 @@
         {
           "itemName": "hydraulic-piston",
           "amount": 1
+        },
+        {
+          "itemName": "rubber",
+          "amount": 2
         }
       ],
       "itemsProduced": 1,
@@ -2720,6 +3725,10 @@
         {
           "itemName": "hydraulic-piston",
           "amount": 2
+        },
+        {
+          "itemName": "rubber",
+          "amount": 4
         }
       ],
       "itemsProduced": 1,
@@ -2804,10 +3813,33 @@
         {
           "itemName": "cpu",
           "amount": 2
+        },
+        {
+          "itemName": "rubber",
+          "amount": 10
         }
       ],
       "itemsProduced": 1,
       "time": 7.5,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pipe-intake-recipe",
+      "gameName": "Pipe Intake (Recipe)",
+      "description": "",
+      "itemName": "pipe-intake",
+      "ingredientAmounts": [
+        {
+          "itemName": "pipe",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -2838,6 +3870,98 @@
       ],
       "itemsProduced": 2,
       "time": 4.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pump-pipes-recipe",
+      "gameName": "Pump (Pipes) (Recipe)",
+      "description": "",
+      "itemName": "pump-pipes",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pump-pipelines-recipe",
+      "gameName": "Pump (Pipelines) (Recipe)",
+      "description": "",
+      "itemName": "pump-pipelines",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pump-pipe-to-pipeline-recipe",
+      "gameName": "Pipe-to-Pipeline Pump (Recipe)",
+      "description": "",
+      "itemName": "pump-pipe-to-pipeline",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "pump-pipeline-to-pipe-recipe",
+      "gameName": "Pipeline-to-Pipe Pump (Recipe)",
+      "description": "",
+      "itemName": "pump-pipeline-to-pipe",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 5
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -2964,6 +4088,29 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "filter-loader",
+      "gameName": "Filter Loader (Recipe)",
+      "description": "",
+      "itemName": "filter-loader",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 4
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "loader-2-recipe",
       "gameName": "Loader (2nd Lane) (Recipe)",
       "description": "",
@@ -3010,26 +4157,49 @@
       "makerGroupName": "assemblers"
     },
     {
-      "name": "filter-loader",
-      "gameName": "Filter Loader (Recipe)",
+      "name": "biomass-burner-recipe",
+      "gameName": "Biomass Burner (Recipe)",
       "description": "",
-      "itemName": "filter-loader",
+      "itemName": "biomass-burner",
       "ingredientAmounts": [
         {
           "itemName": "xenoferrite-plates",
-          "amount": 4
-        },
-        {
-          "itemName": "advanced-machinery-parts",
-          "amount": 4
+          "amount": 5
         },
         {
           "itemName": "electronic-components",
-          "amount": 2
+          "amount": 5
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 5
         }
       ],
       "itemsProduced": 1,
-      "time": 3.0,
+      "time": 4.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "burner-generator-recipe",
+      "gameName": "Burner Generator (Recipe)",
+      "description": "",
+      "itemName": "burner-generator",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 25
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 10
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 4.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -3053,6 +4223,33 @@
       ],
       "itemsProduced": 1,
       "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "geothermal-boiler-recipe",
+      "gameName": "Geothermal Boiler (Recipe)",
+      "description": "",
+      "itemName": "geothermal-boiler",
+      "ingredientAmounts": [
+        {
+          "itemName": "firmarlite-sheet",
+          "amount": 50
+        },
+        {
+          "itemName": "steel-beams",
+          "amount": 25
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 25
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 5
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 15.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -3230,6 +4427,25 @@
       ],
       "itemsProduced": 1,
       "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "wall-mounted-power-pole-recipe",
+      "gameName": "Power Pole (Wall Mounted) (Recipe)",
+      "description": "",
+      "itemName": "wall-mounted-power-pole",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 4
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -3821,6 +5037,36 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "crate-recipe",
+      "gameName": "Crate (Recipe)",
+      "description": "",
+      "itemName": "crate",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 6
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 2.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "container-recipe",
+      "gameName": "Container (Recipe)",
+      "description": "",
+      "itemName": "container",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 30
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 5.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "logistic-container-1-recipe",
       "gameName": "Logistic Container I (Recipe)",
       "description": "",
@@ -4313,6 +5559,29 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "portable-light-recipe",
+      "gameName": "Portable Light (Recipe)",
+      "description": "",
+      "itemName": "portable-light",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 3.0,
+      "makerGroupName": "assemblers"
+    },
+    {
       "name": "maintenance-drone-recipe",
       "gameName": "Maintenance Drone (Recipe)",
       "description": "",
@@ -4371,10 +5640,10 @@
       "makerGroupName": "assemblers"
     },
     {
-      "name": "vacuum-bot-recipe",
-      "gameName": "Vacuum Bot (Recipe)",
+      "name": "transport-bot-recipe",
+      "gameName": "Transport Bot (Recipe)",
       "description": "",
-      "itemName": "vacuum-bot",
+      "itemName": "transport-bot",
       "ingredientAmounts": [
         {
           "itemName": "xenoferrite-plates",
@@ -4390,14 +5659,153 @@
         }
       ],
       "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "snack-bot-recipe",
+      "gameName": "Snack Bot (Recipe)",
+      "description": "",
+      "itemName": "snack-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 1
+        },
+        {
+          "itemName": "glass",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
       "time": 12.0,
       "makerGroupName": "assemblers"
     },
     {
-      "name": "heavy-duty-transport-bot-recipe",
-      "gameName": "Heavy Duty Transport Bot (Recipe)",
+      "name": "screen-bot-recipe",
+      "gameName": "Screen Bot (Recipe)",
       "description": "",
-      "itemName": "heavy-duty-transport-bot",
+      "itemName": "screen-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 1
+        },
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "glass",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 8.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "marine-exploration-bot-recipe",
+      "gameName": "Marine Exploration Bot (Recipe)",
+      "description": "",
+      "itemName": "marine-exploration-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "nautical-chassis",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        },
+        {
+          "itemName": "portable-light",
+          "amount": 1
+        },
+        {
+          "itemName": "ignium-fuel-rod",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-assistant-drone-recipe",
+      "gameName": "Science Assistant Drone (Recipe)",
+      "description": "",
+      "itemName": "science-assistant-drone",
+      "ingredientAmounts": [
+        {
+          "itemName": "polymer-board",
+          "amount": 1
+        },
+        {
+          "itemName": "machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 1
+        },
+        {
+          "itemName": "energy-cell",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 10.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "hydro-mining-bot-recipe",
+      "gameName": "Hydro Mining Bot (Recipe)",
+      "description": "",
+      "itemName": "hydro-mining-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "nautical-chassis",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        },
+        {
+          "itemName": "mining-drill",
+          "amount": 1
+        },
+        {
+          "itemName": "ignium-fuel-rod",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "mining-drone-recipe",
+      "gameName": "Mining Drone (Recipe)",
+      "description": "",
+      "itemName": "mining-drone",
       "ingredientAmounts": [
         {
           "itemName": "steel-beams",
@@ -4408,11 +5816,42 @@
           "amount": 1
         },
         {
-          "itemName": "electronic-components",
+          "itemName": "circuit-board",
           "amount": 1
         },
         {
+          "itemName": "hover-engine",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "combat-drone-recipe",
+      "gameName": "Combat Drone (Recipe)",
+      "description": "",
+      "itemName": "combat-drone",
+      "ingredientAmounts": [
+        {
           "itemName": "firmarlite-sheet",
+          "amount": 1
+        },
+        {
+          "itemName": "advanced-machinery-parts",
+          "amount": 1
+        },
+        {
+          "itemName": "circuit-board",
+          "amount": 1
+        },
+        {
+          "itemName": "hover-engine",
+          "amount": 1
+        },
+        {
+          "itemName": "weapon-components",
           "amount": 1
         }
       ],
@@ -4448,41 +5887,10 @@
       "makerGroupName": "assemblers"
     },
     {
-      "name": "combat-drone-recipe",
-      "gameName": "Combat Drone (Recipe)",
+      "name": "heavy-duty-transport-bot-recipe",
+      "gameName": "Heavy Duty Transport Bot (Recipe)",
       "description": "",
-      "itemName": "combat-drone",
-      "ingredientAmounts": [
-        {
-          "itemName": "firmarlite-sheet",
-          "amount": 1
-        },
-        {
-          "itemName": "advanced-machinery-parts",
-          "amount": 1
-        },
-        {
-          "itemName": "circuit-board",
-          "amount": 1
-        },
-        {
-          "itemName": "hover-engine",
-          "amount": 1
-        },
-        {
-          "itemName": "weapon-components",
-          "amount": 1
-        }
-      ],
-      "itemsProduced": 1,
-      "time": 15.0,
-      "makerGroupName": "assemblers"
-    },
-    {
-      "name": "mining-drone-recipe",
-      "gameName": "Mining Drone (Recipe)",
-      "description": "",
-      "itemName": "mining-drone",
+      "itemName": "heavy-duty-transport-bot",
       "ingredientAmounts": [
         {
           "itemName": "steel-beams",
@@ -4493,81 +5901,23 @@
           "amount": 1
         },
         {
-          "itemName": "circuit-board",
+          "itemName": "electronic-components",
           "amount": 1
         },
         {
-          "itemName": "hover-engine",
+          "itemName": "firmarlite-sheet",
           "amount": 1
         }
       ],
       "itemsProduced": 1,
-      "time": 20.0,
+      "time": 15.0,
       "makerGroupName": "assemblers"
     },
     {
-      "name": "science-assistant-drone-recipe",
-      "gameName": "Science Assistant Drone (Recipe)",
+      "name": "vacuum-bot-recipe",
+      "gameName": "Vacuum Bot (Recipe)",
       "description": "",
-      "itemName": "science-assistant-drone",
-      "ingredientAmounts": [
-        {
-          "itemName": "polymer-board",
-          "amount": 1
-        },
-        {
-          "itemName": "machinery-parts",
-          "amount": 1
-        },
-        {
-          "itemName": "circuit-board",
-          "amount": 1
-        },
-        {
-          "itemName": "hover-engine",
-          "amount": 1
-        },
-        {
-          "itemName": "energy-cell",
-          "amount": 1
-        }
-      ],
-      "itemsProduced": 1,
-      "time": 10.0,
-      "makerGroupName": "assemblers"
-    },
-    {
-      "name": "screen-bot-recipe",
-      "gameName": "Screen Bot (Recipe)",
-      "description": "",
-      "itemName": "screen-bot",
-      "ingredientAmounts": [
-        {
-          "itemName": "xenoferrite-plates",
-          "amount": 1
-        },
-        {
-          "itemName": "polymer-board",
-          "amount": 1
-        },
-        {
-          "itemName": "circuit-board",
-          "amount": 1
-        },
-        {
-          "itemName": "glass",
-          "amount": 1
-        }
-      ],
-      "itemsProduced": 1,
-      "time": 8.0,
-      "makerGroupName": "assemblers"
-    },
-    {
-      "name": "snack-bot-recipe",
-      "gameName": "Snack Bot (Recipe)",
-      "description": "",
-      "itemName": "snack-bot",
+      "itemName": "vacuum-bot",
       "ingredientAmounts": [
         {
           "itemName": "xenoferrite-plates",
@@ -4579,10 +5929,6 @@
         },
         {
           "itemName": "electronic-components",
-          "amount": 1
-        },
-        {
-          "itemName": "glass",
           "amount": 1
         }
       ],
@@ -4591,26 +5937,57 @@
       "makerGroupName": "assemblers"
     },
     {
-      "name": "transport-bot-recipe",
-      "gameName": "Transport Bot (Recipe)",
+      "name": "hydro-farming-bot-recipe",
+      "gameName": "Hydro Farming Bot (Recipe)",
       "description": "",
-      "itemName": "transport-bot",
+      "itemName": "hydro-farming-bot",
       "ingredientAmounts": [
         {
-          "itemName": "xenoferrite-plates",
+          "itemName": "nautical-chassis",
           "amount": 1
         },
         {
-          "itemName": "machinery-parts",
+          "itemName": "cpu",
           "amount": 1
         },
         {
-          "itemName": "electronic-components",
+          "itemName": "barrel-empty",
+          "amount": 2
+        },
+        {
+          "itemName": "ignium-fuel-rod",
           "amount": 1
         }
       ],
       "itemsProduced": 1,
-      "time": 10.0,
+      "time": 30.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "aquatic-hauling-bot-recipe",
+      "gameName": "Aquatic Hauling Bot (Recipe)",
+      "description": "",
+      "itemName": "aquatic-hauling-bot",
+      "ingredientAmounts": [
+        {
+          "itemName": "nautical-chassis",
+          "amount": 1
+        },
+        {
+          "itemName": "cpu",
+          "amount": 1
+        },
+        {
+          "itemName": "hydraulic-piston",
+          "amount": 1
+        },
+        {
+          "itemName": "ignium-fuel-rod",
+          "amount": 1
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 30.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -4768,6 +6145,33 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "personal-assistant-robot-recipe",
+      "gameName": "Personal Assistant Robot (Recipe)",
+      "description": "",
+      "itemName": "personal-assistant-robot",
+      "ingredientAmounts": [
+        {
+          "itemName": "personal-assistant-robot-torso",
+          "amount": 1
+        },
+        {
+          "itemName": "personal-assistant-robot-head",
+          "amount": 1
+        },
+        {
+          "itemName": "personal-assistant-robot-arm",
+          "amount": 2
+        },
+        {
+          "itemName": "personal-assistant-robot-leg",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.0,
+      "makerGroupName": "assembly-line-producer"
+    },
+    {
       "name": "farmer-robot-torso-recipe",
       "gameName": "Farmer Robot Torso (Recipe)",
       "description": "",
@@ -4862,6 +6266,33 @@
       "itemsProduced": 1,
       "time": 15.0,
       "makerGroupName": "assemblers"
+    },
+    {
+      "name": "farmer-robot-recipe",
+      "gameName": "Farmer Robot (Recipe)",
+      "description": "",
+      "itemName": "farmer-robot",
+      "ingredientAmounts": [
+        {
+          "itemName": "farmer-robot-torso",
+          "amount": 1
+        },
+        {
+          "itemName": "farmer-robot-head",
+          "amount": 1
+        },
+        {
+          "itemName": "farmer-robot-arm",
+          "amount": 2
+        },
+        {
+          "itemName": "farmer-robot-leg",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.0,
+      "makerGroupName": "assembly-line-producer"
     },
     {
       "name": "combat-robot-torso-recipe",
@@ -4964,6 +6395,33 @@
       "makerGroupName": "assemblers"
     },
     {
+      "name": "combat-robot-recipe",
+      "gameName": "Combat Robot (Recipe)",
+      "description": "",
+      "itemName": "combat-robot",
+      "ingredientAmounts": [
+        {
+          "itemName": "combat-robot-torso",
+          "amount": 1
+        },
+        {
+          "itemName": "combat-robot-head",
+          "amount": 1
+        },
+        {
+          "itemName": "combat-robot-arm",
+          "amount": 2
+        },
+        {
+          "itemName": "combat-robot-leg",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.0,
+      "makerGroupName": "assembly-line-producer"
+    },
+    {
       "name": "miner-robot-torso-recipe",
       "gameName": "Miner Robot Torso (Recipe)",
       "description": "",
@@ -5062,6 +6520,33 @@
       "itemsProduced": 1,
       "time": 15.0,
       "makerGroupName": "assemblers"
+    },
+    {
+      "name": "miner-robot-recipe",
+      "gameName": "Miner Robot (Recipe)",
+      "description": "",
+      "itemName": "miner-robot",
+      "ingredientAmounts": [
+        {
+          "itemName": "miner-robot-torso",
+          "amount": 1
+        },
+        {
+          "itemName": "miner-robot-head",
+          "amount": 1
+        },
+        {
+          "itemName": "miner-robot-arm",
+          "amount": 2
+        },
+        {
+          "itemName": "miner-robot-leg",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.0,
+      "makerGroupName": "assembly-line-producer"
     },
     {
       "name": "science-robot-torso-recipe",
@@ -5165,6 +6650,56 @@
       ],
       "itemsProduced": 1,
       "time": 15.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "science-robot-recipe",
+      "gameName": "Science Robot (Recipe)",
+      "description": "",
+      "itemName": "science-robot",
+      "ingredientAmounts": [
+        {
+          "itemName": "science-robot-torso",
+          "amount": 1
+        },
+        {
+          "itemName": "science-robot-head",
+          "amount": 1
+        },
+        {
+          "itemName": "science-robot-arm",
+          "amount": 2
+        },
+        {
+          "itemName": "science-robot-leg",
+          "amount": 2
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 1.0,
+      "makerGroupName": "assembly-line-producer"
+    },
+    {
+      "name": "research-server-recipe",
+      "gameName": "Research Server (Recipe)",
+      "description": "",
+      "itemName": "research-server",
+      "ingredientAmounts": [
+        {
+          "itemName": "xenoferrite-plates",
+          "amount": 20
+        },
+        {
+          "itemName": "electronic-components",
+          "amount": 10
+        },
+        {
+          "itemName": "technum-rods",
+          "amount": 20
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 4.0,
       "makerGroupName": "assemblers"
     },
     {
@@ -5457,6 +6992,21 @@
         {
           "itemName": "circuit-board",
           "amount": 200
+        }
+      ],
+      "itemsProduced": 1,
+      "time": 20.0,
+      "makerGroupName": "assemblers"
+    },
+    {
+      "name": "monument-base-recipe",
+      "gameName": "Monument Base (Recipe)",
+      "description": "",
+      "itemName": "monument-base",
+      "ingredientAmounts": [
+        {
+          "itemName": "concrete",
+          "amount": 50
         }
       ],
       "itemsProduced": 1,

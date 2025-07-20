@@ -47,14 +47,18 @@ public class CalculatorConfig {
         Set<Maker> makers = makersFrom(jsonCalculatorConfig.makers());
         Map<String, Set<Maker>> makerGroups = makerGroupsFrom(makers, jsonCalculatorConfig.makerGroups());
         Map<String, Item> items = itemsFrom(jsonCalculatorConfig.items());
+        fuelItemsFrom(items, jsonCalculatorConfig.fuelItems());
+        handheldsFrom(items, jsonCalculatorConfig.handhelds());
+        robotsFrom(items, jsonCalculatorConfig.robots());
         Map<String, Set<Recipe>> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makerGroups);
         Set<String> itemNamesWithoutRecipes = new HashSet<>(items.keySet());
         itemNamesWithoutRecipes.removeAll(
                 Set.of("biomass", "xenoferrite-ore-rubble", "technum-ore-rubble", "ignium-ore-rubble", "mineral-rocks",
-                        "telluxite-ore-rubble", "firmarlite-bar", "water", "crude-olumite", "air"));
+                        "telluxite-ore-rubble", "firmarlite-bar", "water", "crude-olumite", "air",
+                        "hot-air", "steam", "blast-furnace-slag")); // FIXME not really resources
         itemNamesWithoutRecipes.removeAll(recipes.keySet());
         if (!itemNamesWithoutRecipes.isEmpty()) {
-            throw new IllegalStateException("Lacking recipes for " + itemNamesWithoutRecipes);
+            throw new IllegalStateException("Lacking " + itemNamesWithoutRecipes.size() + " recipes for " + itemNamesWithoutRecipes);
         }
         return new CalculatorConfig(makerGroups, items, recipes);
     }
@@ -97,13 +101,53 @@ public class CalculatorConfig {
         Map<String, Item> items = new HashMap<>();
         for (JsonItem jsonItem : jsonItems) {
             Item item = itemFrom(jsonItem);
-            items.put(item.name(), item);
+            addItem(items, item);
         }
         return items;
     }
 
     private static Item itemFrom(JsonItem jsonItem) {
-        return new Item(jsonItem.name(), jsonItem.gameName(), jsonItem.stackSize(), jsonItem.weight());
+        return new Item(jsonItem.getName(), jsonItem.getGameName(), jsonItem.getStackSize(), jsonItem.getWeight());
+    }
+
+    private static void addItem(Map<String, Item> items, Item item) {
+        if (items.containsKey(item.getName())) {
+            throw new IllegalArgumentException("Items already contains item with name " + item.getName());
+        }
+        items.put(item.getName(), item);
+    }
+
+    private static void fuelItemsFrom(Map<String, Item> items, List<JsonFuelItem> jsonFuelItems) {
+        for (JsonFuelItem jsonFuelItem : jsonFuelItems) {
+            addItem(items, fuelItemFrom(items, jsonFuelItem));
+        }
+    }
+
+    private static FuelItem fuelItemFrom(Map<String, Item> items, JsonFuelItem jsonFuelItem) {
+        Item residualItem = (jsonFuelItem.getResidualItem() != null) ? items.get(jsonFuelItem.getResidualItem()) : null;
+        return new FuelItem(jsonFuelItem.getName(), jsonFuelItem.getGameName(), jsonFuelItem.getStackSize(),
+                jsonFuelItem.getWeight(), jsonFuelItem.getFuelValue(), residualItem);
+    }
+
+    private static void handheldsFrom(Map<String, Item> items, List<JsonHandheld> jsonHandhelds) {
+        for (JsonHandheld jsonHandheld : jsonHandhelds) {
+            addItem(items, handheldFrom(jsonHandheld));
+        }
+    }
+
+    private static Handheld handheldFrom(JsonHandheld jsonHandheld) {
+        return new Handheld(jsonHandheld.getName(), jsonHandheld.getGameName(), jsonHandheld.getStackSize());
+    }
+
+    private static void robotsFrom(Map<String, Item> items, List<JsonRobot> jsonRobots) {
+        for (JsonRobot jsonRobot : jsonRobots) {
+            addItem(items, robotFrom(jsonRobot));
+        }
+    }
+
+    private static Robot robotFrom(JsonRobot jsonRobot) {
+        return new Robot(jsonRobot.getName(), jsonRobot.getGameName(), jsonRobot.getStackSize(), jsonRobot.getWeight(),
+                jsonRobot.getSalesPrice(), jsonRobot.getCategory());
     }
 
     private static Map<String, Set<Recipe>> recipesFrom(
@@ -111,7 +155,7 @@ public class CalculatorConfig {
         Map<String, Set<Recipe>> recipes = new HashMap<>();
         for (JsonRecipe jsonRecipe : jsonRecipes) {
             Recipe recipe = recipeFrom(jsonRecipe, items, makerGroups);
-            recipes.computeIfAbsent(recipe.item().name(), s -> new HashSet<>()).add(recipe);
+            recipes.computeIfAbsent(recipe.item().getName(), s -> new HashSet<>()).add(recipe);
         }
         return recipes;
     }
