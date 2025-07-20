@@ -1194,121 +1194,6 @@
       "weight": 0.0
     },
     {
-      "name": "maintenance-drone",
-      "gameName": "Maintenance Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 70.0
-    },
-    {
-      "name": "planter-drone",
-      "gameName": "Planter Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 50.0
-    },
-    {
-      "name": "transport-bot",
-      "gameName": "Transport Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 40.0
-    },
-    {
-      "name": "snack-bot",
-      "gameName": "Snack Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 45.0
-    },
-    {
-      "name": "screen-bot",
-      "gameName": "Screen Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 40.0
-    },
-    {
-      "name": "marine-exploration-bot",
-      "gameName": "Marine Exploration Bot",
-      "description": "",
-      "stackSize": 0
-    },
-    {
-      "name": "science-assistant-drone",
-      "gameName": "Science Assistant Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 60.0
-    },
-    {
-      "name": "hydro-mining-drone",
-      "gameName": "Hydro Mining Drone",
-      "description": "",
-      "stackSize": 0
-    },
-    {
-      "name": "mining-drone",
-      "gameName": "Mining Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 85.0
-    },
-    {
-      "name": "combat-drone",
-      "gameName": "Combat Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 90.0
-    },
-    {
-      "name": "light-bot",
-      "gameName": "Light Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 50.0
-    },
-    {
-      "name": "heavy-duty-transport-bot",
-      "gameName": "Heavy Duty Transport Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 60.0
-    },
-    {
-      "name": "vacuum-bot",
-      "gameName": "Vacuum Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 30.0
-    },
-    {
-      "name": "hydro-farming-bot",
-      "gameName": "Hydro Farming Bot",
-      "description": "",
-      "stackSize": 0
-    },
-    {
-      "name": "aquatic-hauling-bot",
-      "gameName": "Aquatic Hauling Bot",
-      "description": "",
-      "stackSize": 0
-    },
-    {
-      "name": "transport-drone",
-      "gameName": "Transport Drone",
-      "description": "",
-      "stackSize": 10,
-      "weight": 75.0
-    },
-    {
-      "name": "cleaning-bot",
-      "gameName": "Cleaning Bot",
-      "description": "",
-      "stackSize": 10,
-      "weight": 55.0
-    },
-    {
       "name": "personal-assistant-robot-torso",
       "gameName": "Personal Assistant Robot Torso",
       "description": "",
@@ -1677,6 +1562,206 @@
       "gameName": "Ore Scanner",
       "description": "",
       "stackSize": 1
+    }
+  ],
+  "robots": [
+    {
+      "name": "maintenance-drone",
+      "gameName": "Maintenance Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 70.0,
+      "salesPrice": 114,
+      "category": "appliances"
+    },
+    {
+      "name": "planter-drone",
+      "gameName": "Planter Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 50.0,
+      "salesPrice": 63,
+      "category": "agricultural"
+    },
+    {
+      "name": "transport-bot",
+      "gameName": "Transport Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 40.0,
+      "salesPrice": 114,
+      "category": "logistics"
+    },
+    {
+      "name": "snack-bot",
+      "gameName": "Snack Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 45.0,
+      "salesPrice": 30,
+      "category": "appliances"
+    },
+    {
+      "name": "screen-bot",
+      "gameName": "Screen Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 40.0,
+      "salesPrice": 41,
+      "category": "appliances"
+    },
+    {
+      "name": "marine-exploration-bot",
+      "gameName": "Marine Exploration Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 105.0,
+      "salesPrice": 240,
+      "category": "scientific"
+    },
+    {
+      "name": "science-assistant-drone",
+      "gameName": "Science Assistant Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0,
+      "salesPrice": 108,
+      "category": "scientific"
+    },
+    {
+      "name": "hydro-mining-drone",
+      "gameName": "Hydro Mining Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 110.0,
+      "salesPrice": 220,
+      "category": "mining"
+    },
+    {
+      "name": "mining-drone",
+      "gameName": "Mining Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 85.0,
+      "salesPrice": 95,
+      "category": "mining"
+    },
+    {
+      "name": "combat-drone",
+      "gameName": "Combat Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 90.0,
+      "salesPrice": 108,
+      "category": "military"
+    },
+    {
+      "name": "light-bot",
+      "gameName": "Light Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 50.0,
+      "salesPrice": 41,
+      "category": "appliances"
+    },
+    {
+      "name": "heavy-duty-transport-bot",
+      "gameName": "Heavy Duty Transport Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 60.0,
+      "salesPrice": 47,
+      "category": "logistics"
+    },
+    {
+      "name": "vacuum-bot",
+      "gameName": "Vacuum Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 30.0,
+      "salesPrice": 23,
+      "category": "appliances"
+    },
+    {
+      "name": "hydro-farming-bot",
+      "gameName": "Hydro Farming Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 95,
+      "salesPrice": 210,
+      "category": "agricultural"
+    },
+    {
+      "name": "aquatic-hauling-bot",
+      "gameName": "Aquatic Hauling Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 100,
+      "salesPrice": 222,
+      "category": "logistics"
+    },
+    {
+      "name": "transport-drone",
+      "gameName": "Transport Drone",
+      "description": "",
+      "stackSize": 10,
+      "weight": 75.0,
+      "salesPrice": 107,
+      "category": "logistics"
+    },
+    {
+      "name": "cleaning-bot",
+      "gameName": "Cleaning Bot",
+      "description": "",
+      "stackSize": 10,
+      "weight": 55.0,
+      "salesPrice": 79,
+      "category": "appliances"
+    },
+    {
+      "name": "personal-assistant-robot",
+      "gameName": "Personal Assistant Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 180.0,
+      "salesPrice": 700,
+      "category": "appliances"
+    },
+    {
+      "name": "miner-robot",
+      "gameName": "Miner Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 225.0,
+      "salesPrice": 900,
+      "category": "mining"
+    },
+    {
+      "name": "farmer-robot",
+      "gameName": "Farmer Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 170.0,
+      "salesPrice": 680,
+      "category": "agricultural"
+    },
+    {
+      "name": "science-robot",
+      "gameName": "Science Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 210.0,
+      "salesPrice": 890,
+      "category": "scientific"
+    },
+    {
+      "name": "combat-robot",
+      "gameName": "Military Robot",
+      "description": "",
+      "stackSize": 5,
+      "weight": 240.0,
+      "salesPrice": 930,
+      "category": "military"
     }
   ],
   "recipes": [

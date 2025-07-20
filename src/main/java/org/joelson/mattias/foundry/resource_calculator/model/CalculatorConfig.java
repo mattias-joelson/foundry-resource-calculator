@@ -49,6 +49,7 @@ public class CalculatorConfig {
         Map<String, Item> items = itemsFrom(jsonCalculatorConfig.items());
         fuelItemsFrom(items, jsonCalculatorConfig.fuelItems());
         handheldsFrom(items, jsonCalculatorConfig.handhelds());
+        robotsFrom(items, jsonCalculatorConfig.robots());
         Map<String, Set<Recipe>> recipes = recipesFrom(jsonCalculatorConfig.recipes(), items, makerGroups);
         Set<String> itemNamesWithoutRecipes = new HashSet<>(items.keySet());
         itemNamesWithoutRecipes.removeAll(
@@ -99,7 +100,7 @@ public class CalculatorConfig {
         Map<String, Item> items = new HashMap<>();
         for (JsonItem jsonItem : jsonItems) {
             Item item = itemFrom(jsonItem);
-            items.put(item.getName(), item);
+            addItem(items, item);
         }
         return items;
     }
@@ -108,13 +109,16 @@ public class CalculatorConfig {
         return new Item(jsonItem.getName(), jsonItem.getGameName(), jsonItem.getStackSize(), jsonItem.getWeight());
     }
 
+    private static void addItem(Map<String, Item> items, Item item) {
+        if (items.containsKey(item.getName())) {
+            throw new IllegalArgumentException("Items already contains item with name " + item.getName());
+        }
+        items.put(item.getName(), item);
+    }
+
     private static void fuelItemsFrom(Map<String, Item> items, List<JsonFuelItem> jsonFuelItems) {
         for (JsonFuelItem jsonFuelItem : jsonFuelItems) {
-            FuelItem fuelItem = fuelItemFrom(items, jsonFuelItem);
-            if (items.containsKey(fuelItem.getName())) {
-                throw new IllegalArgumentException("Items already contains item with name " + fuelItem.getName());
-            }
-            items.put(fuelItem.getName(), fuelItem);
+            addItem(items, fuelItemFrom(items, jsonFuelItem));
         }
     }
 
@@ -126,16 +130,23 @@ public class CalculatorConfig {
 
     private static void handheldsFrom(Map<String, Item> items, List<JsonHandheld> jsonHandhelds) {
         for (JsonHandheld jsonHandheld : jsonHandhelds) {
-            Handheld handheld = handheldFrom(jsonHandheld);
-            if (items.containsKey(handheld.getName())) {
-                throw new IllegalArgumentException("Items already contains item with name " + handheld.getName());
-            }
-            items.put(handheld.getName(), handheld);
+            addItem(items, handheldFrom(jsonHandheld));
         }
     }
 
     private static Handheld handheldFrom(JsonHandheld jsonHandheld) {
         return new Handheld(jsonHandheld.getName(), jsonHandheld.getGameName(), jsonHandheld.getStackSize());
+    }
+
+    private static void robotsFrom(Map<String, Item> items, List<JsonRobot> jsonRobots) {
+        for (JsonRobot jsonRobot : jsonRobots) {
+            addItem(items, robotFrom(jsonRobot));
+        }
+    }
+
+    private static Robot robotFrom(JsonRobot jsonRobot) {
+        return new Robot(jsonRobot.getName(), jsonRobot.getGameName(), jsonRobot.getStackSize(), jsonRobot.getWeight(),
+                jsonRobot.getSalesPrice(), jsonRobot.getCategory());
     }
 
     private static Map<String, Set<Recipe>> recipesFrom(

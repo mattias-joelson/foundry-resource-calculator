@@ -12,6 +12,7 @@ record JsonCalculatorConfig(
         List<JsonItem> items,
         List<JsonFuelItem> fuelItems,
         List<JsonHandheld> handhelds,
+        List<JsonRobot> robots,
         List<JsonRecipe> recipes) {
 
     @JsonCreator
@@ -21,12 +22,14 @@ record JsonCalculatorConfig(
             @JsonProperty(value = "items", required = true) List<JsonItem> items,
             @JsonProperty(value = "fuelItems", required = true) List<JsonFuelItem> fuelItems,
             @JsonProperty(value = "handhelds", required = true) List<JsonHandheld> handhelds,
+            @JsonProperty(value = "robots", required = true) List<JsonRobot> robots,
             @JsonProperty(value = "recipes", required = true) List<JsonRecipe> recipes) {
         this.makers = ListUtil.requireUniqueMembers(makers, JsonMaker::name);
         this.makerGroups = ListUtil.requireUniqueMembers(makerGroups, JsonMakerGroup::groupName);
         this.items = ListUtil.requireUniqueMembers(items, JsonItem::getName);
         this.fuelItems = ListUtil.requireUniqueMembers(fuelItems, JsonItem::getName);
         this.handhelds = ListUtil.requireUniqueMembers(handhelds, JsonItem::getName);
+        this.robots = ListUtil.requireUniqueMembers(robots, JsonItem::getName);
         this.recipes = ListUtil.requireUniqueMembers(recipes, JsonRecipe::name);
     }
 }
